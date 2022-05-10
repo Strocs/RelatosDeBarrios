@@ -1,0 +1,34 @@
+
+.team__container {
+	align-items: center;
+  background-color: var(--azul);
+	background-image: url(../../../public/images/equipo.jpg);
+	background-position: center;
+	background-size: cover;	
+	box-shadow: 0 2rem 3rem -1rem var(--azul);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.team__container:last-child {
+  background-color: var(--amarillo);
+	background-image: url(../../../public/images/colaboradores.jpg);
+}
+
+.team__title {
+	color: white;
+	font-size: 3rem;
+}
+
+.team__list {
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding-bottom: 1rem;
+}

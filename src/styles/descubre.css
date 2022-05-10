@@ -1,0 +1,181 @@
+.main__descubre {
+    position: relative;
+    margin-top: -30rem;
+    overflow-x: hidden;
+}
+
+.descubre__title {
+    color: var(--pastel);
+}
+
+.descubre__title span {
+    /* color: var(--grey); */
+}
+
+.descubre__subBar {
+    left: 0;
+}
+
+.descubre__content {
+    display: flex;
+    margin: 9rem 10rem 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.descubre__libro-wrapper,
+.descubre__docu-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.libro__img-link,
+.docu__img-link {
+    position: relative;
+    transition: transform 500ms ease;
+    
+}
+
+.libro__img,
+.docu__img {
+    height: 40rem;   
+}
+
+.video__docu,
+.video__libro  {
+    box-shadow: 0 0 4rem 4rem var(--azul) inset;
+    background-size: cover;
+    position: absolute;
+    width: 35rem;
+    height: 32rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 300ms ease; 
+}
+
+.video__docu {
+    background-image: url(../assets/videoGif.gif);
+}
+.video__libro {
+    background-image: url(../assets/bookReading.gif);
+}
+
+
+.docu__text-wrapper,
+.libro__text-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.libro__text-link,
+.docu__text-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    border-radius: 5rem;
+    opacity: 1;
+    gap: 2rem;
+    padding: 0 2rem;
+    transition: transform 500ms ease;
+
+}
+
+.libro__text-link img,
+.docu__text-link img {
+    width: 3rem;
+}
+
+.libro__text-link h3,
+.docu__text-link h3 {
+    color: var(--pastel);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.docu__img-link:hover > .video__docu {
+}
+
+.descubre__libro-wrapper:hover .video__libro,
+.descubre__docu-wrapper:hover .video__docu {
+    opacity: 1;
+    transition: opacity 300ms ease;  
+}
+
+.libro__text-wrapper:hover .libro__text-link,
+.docu__text-wrapper:hover .docu__text-link {
+    transform: scale(1.2);
+    transition: transform 500ms ease;
+}
+
+/* 
+.libro__img-link:hover + .libro__text-link ,
+.docu__img-link:hover + .docu__text-link {
+    opacity: 1;
+    transition: opacity 500ms ease;
+} */
+
+
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+
+    .main__descubre {
+    }
+
+    .descubre__content {
+        margin: 10rem 0 0;
+        gap: 8rem;
+        justify-content: space-around;
+    }
+
+    .descubre__libro-wrapper,
+    .descubre__docu-wrapper {
+        max-width: 50rem;
+        width: 100%;
+    }
+
+    .libro__img,
+    .docu__img {
+        height: auto;
+        width: 100%;
+    }
+
+    .libro__text-link,
+    .docu__text-link {
+        opacity: 1;
+    }
+
+    .video__docu,
+    .video__libro {
+        width: 90%;
+        height: 80%;
+        opacity: 100;
+        overflow: hidden;
+    }
+
+
+}
+
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+    .descubre__libro-wrapper,
+    .descubre__docu-wrapper {
+        max-width: 30rem;
+        width: auto;
+    }
+
+
+}

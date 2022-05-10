@@ -1,0 +1,76 @@
+/* CONTENEDOR DEL TITULO */
+.main__domestico {
+	position: relative;
+}
+.domestico__title {
+	color: var(--pastel);
+	max-width: 100rem;
+}
+
+.domestico__subBar {
+	left: 0;
+}
+
+/* CONTENEDOR DE LAS CAJAS */
+.domestico__content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8rem;
+	gap: 3rem;
+	width: auto;
+}
+
+.domestico__text {
+	color: var(--pastel);
+	width: 100%;
+	max-width: 42rem;
+	min-width: 30rem;
+	min-height: 20rem;	
+	font-size: 1.8rem;
+	font-weight: 300;
+	margin: 0;
+	text-align: justify;
+}
+
+.domestico__box-container {
+	display: flex;
+	width: 100%;
+	gap: 3rem;
+}
+
+.domestico__box {
+	background-color: var(--pastel);
+}
+
+.domestico__levan h2 {
+
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+	.domestico__title {
+		max-width: 80rem;
+		min-width: 10rem;
+	}
+
+	.domestico__content {
+		flex-direction: column;
+		align-items: center;
+	}
+	.domestico__box-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.domestico__text {
+		max-width: 60rem;
+	}
+}
+
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+
+	.domestico__text {
+		font-size: 1.6rem;
+	}
+}

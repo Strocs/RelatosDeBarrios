@@ -1,0 +1,56 @@
+.header {
+	position: relative;
+	height: 100vmax;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.header__container {
+	position: absolute;
+	margin: 20vh 2rem 0 0;
+}
+
+.btn__container {
+	display: flex;
+	gap: 1rem;
+	justify-content: flex-end;
+}
+
+/* UPPER LINE (revisar) */
+.title__container::before {
+	content: '';
+	background-color: var(--amarillo);
+	height: 0.5rem;
+	width: 60vmin;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-right: -2rem;
+}
+
+/* VIDEO */
+.header__video {
+	position: fixed;
+	min-height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: -10;
+}
+
+/* BOTTOM IMG */
+.header__img {
+	background-image: url(../assets/headerCasas.png);
+	background-size: cover;
+	background-position: center;
+	box-shadow: inset 0 -3rem 2rem -1rem #eee3d8;
+	bottom: 0;
+	min-height: 20%;
+	height: 30%;
+	max-height: 50%;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+}
