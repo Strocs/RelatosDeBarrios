@@ -27,7 +27,7 @@ export const TeamList = ({data}) => {
         </animated.div>
       )}
 
-      <img className='equipo__img-container' src={`/images/equipo/${id}.jpg`} alt={`${name}`} />
+      <img className='equipo__img-container' src={`../../../public/images/equipo/${id}.jpg`} alt={`${name}`} />
     </div>
 
   )

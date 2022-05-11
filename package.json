@@ -12,7 +12,8 @@
     "react-dom": "^18.0.0",
     "react-responsive": "^9.0.0-beta.6",
     "react-scroll-parallax": "^3.1.0",
-    "react-spring": "^9.4.5"
+    "react-spring": "^9.4.5",
+    "vite-plugin-require": "^0.0.8"
   },
   "devDependencies": {
     "@andylacko/vite-svg-react-loader": "^2.0.5",

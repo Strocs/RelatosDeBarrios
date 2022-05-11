@@ -7,7 +7,7 @@ export const Box = ({className, title, subTitle}) => {
 				{title}
 			</h2>
 			<h3 className={`box-title ${className}__box-subtitle`}>{subTitle}</h3>
-			<img className={`box-fondo ${className}__box-img`} src={`/images/${className}.jpg`} alt={title + subTitle} />
+			<img className={`box-fondo ${className}__box-img`} src={`../../../public/images/${className}.jpg`} alt={title + subTitle} />
 		</div>
 	)
 }
