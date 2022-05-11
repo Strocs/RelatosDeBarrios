@@ -28,6 +28,11 @@
 	margin-right: -2rem;
 }
 
+.header__title {
+	font-size: 3rem;
+	text-align: right;
+}
+
 /* VIDEO */
 .header__video {
 	position: fixed;

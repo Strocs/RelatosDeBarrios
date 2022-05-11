@@ -1,11 +1,10 @@
 
 .team__container {
 	align-items: center;
-  background-color: var(--azul);
-	background-image: url(../../../public/images/equipo.jpg);
+	background-image: url(/images/equipo.jpg);
 	background-position: center;
 	background-size: cover;	
-	box-shadow: 0 2rem 3rem -1rem var(--azul);
+	box-shadow: 0 1.5rem 3rem -.5rem var(--azul);
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -16,8 +15,7 @@
 }
 
 .team__container:last-child {
-  background-color: var(--amarillo);
-	background-image: url(../../../public/images/colaboradores.jpg);
+	background-image: url(/images/colaboradores.jpg);
 }
 
 .team__title {

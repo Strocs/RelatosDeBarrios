@@ -13,7 +13,7 @@ export const Header = () => {
 
       <Parallax speed={-20} className="header__container">
         <div className="title__container">
-          <Title title={'Imaginario Urbano, Imaginario Barrial'} />
+          <Title className={'header__title'} title={'Imaginario Urbano, Imaginario Barrial'} />
         </div>
         <div className="btn__container">
           <Button text='Ver Libro' />

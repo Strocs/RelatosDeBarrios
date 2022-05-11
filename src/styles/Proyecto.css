@@ -22,18 +22,13 @@
 
 .proyecto__title {
 	color: var(--amarillo);
-	font-size: 5rem;
+	text-align: right;
 }
 
 .proyecto__subTitle {
 	color: var(--azul);
 	font-size: 3rem;
 	margin: 0 0 2rem;
-	text-align: right;
-}
-
-.proyecto__content {
-	max-width: 52rem;
 	text-align: right;
 }
 
