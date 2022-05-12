@@ -1,7 +1,7 @@
 
 .team__container {
 	align-items: center;
-	background-image: url(/images/equipo.jpg);
+	background-image: url(../../assets/images/equipo.jpg);
 	background-position: center;
 	background-size: cover;	
 	box-shadow: 0 1.5rem 3rem -.5rem var(--azul);
@@ -15,7 +15,7 @@
 }
 
 .team__container:last-child {
-	background-image: url(/images/colaboradores.jpg);
+	background-image: url(../../assets/images/colaboradores.jpg);
 }
 
 .team__title {

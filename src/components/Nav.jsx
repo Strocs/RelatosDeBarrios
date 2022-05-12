@@ -6,7 +6,7 @@ import { NavLogo } from './nav/NavLogo'
 import { NavMenu } from './nav/NavMenu'
 import { HamburgerBtn } from './nav/HamburgerBtn'
 
-import  { MENU_LIST } from './data/data'
+import  { MENU_LIST } from '../data/menu.data'
 
 import '../styles/Nav.css'
 

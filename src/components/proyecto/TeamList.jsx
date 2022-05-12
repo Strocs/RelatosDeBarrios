@@ -3,7 +3,7 @@ import { useTransition, animated } from 'react-spring'
 import '../../styles/proyecto/TeamList.css'
 
 export const TeamList = ({data}) => {
-  const {id, name, cargo} = data
+  const {id, name, cargo, img} = data
 
   const [showInfo, setShowInfo] = useState(false)
 
@@ -27,8 +27,7 @@ export const TeamList = ({data}) => {
         </animated.div>
       )}
 
-      <img className='equipo__img-container' src={`../../../public/images/equipo/${id}.jpg`} alt={`${name}`} />
+      <img className='equipo__img-container' src={img} alt={`${name}`} />
     </div>
-
   )
 }
