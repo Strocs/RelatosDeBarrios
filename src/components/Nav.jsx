@@ -6,58 +6,77 @@ import { NavLogo } from './nav/NavLogo'
 import { NavMenu } from './nav/NavMenu'
 import { HamburgerBtn } from './nav/HamburgerBtn'
 
-import  { MENU_LIST } from '../data/menu.data'
+import  { MENU_LIST as menu } from '../data/menu.data'
 
 import '../styles/Nav.css'
 
 export const Nav = () => {
-  const [navBackground, setNavBackground] = useState('')
-  const [navHeight, setNavHeight] = useState('')
-  const [showNav, setShowNav] = useState(false)
+  const [navStyle, setNavStyle] = useState({
+    height: '',
+    background: ''
+  })
+
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', handleWindowScroll)
     return () => window.removeEventListener('scroll', handleWindowScroll)
-  }, [showNav])
+  }, [showMenu])
 
-  
   const handleWindowScroll = () => {
     let top = window.scrollY
 
-    if (top > 0) {
-      setNavBackground('nav__setBackground'), 
-      setNavHeight('nav__setHeight')
-    } else  {
-      setNavBackground(''), 
-      setNavHeight('')
-    }
+    top > 0 
+      ? setNavStyle({
+          height: 'nav__setHeight',
+          background: 'nav__setBackground'
+        }) 
+      : setNavStyle({
+          height: '',
+          background: ''
+        })
   }
 
-  const handleShowNav = (state) => {
-    state ? setShowNav(true) : setShowNav(false)
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+
     let top = window.scrollY
-    if (!showNav && top === 0) {
-      setNavBackground('nav__setBackground'), 
-      setNavHeight('nav__setHeight')
-    } else if (showNav && top === 0) {
-      setNavBackground(''), 
-      setNavHeight('')
+
+    if (!showMenu && top === 0) {
+      setNavStyle({
+        height: 'nav__setHeight',
+        background: 'nav__setBackground'
+      }) 
+    } else if (showMenu && top === 0) {
+      setNavStyle({
+        height: '',
+        background: ''
+      })
     }
   }
-
 
   //Media Queries
   const desktop = useMediaQuery({query: '(min-width: 1224px)'})
   const mobile = useMediaQuery({query: '(max-width: 1224px)'})
 
   return (
-    <nav className={`nav ${navHeight}`}>
-      <div className={`nav__container ${navBackground}`}>
+    <nav className={`nav ${navStyle.height}`}>
+      <div className={`nav__container ${navStyle.background}`}>
         <NavLogo />
 
-        {showNav && mobile && <NavMenu list={MENU_LIST} />}
-        
-        {mobile && <HamburgerBtn onClick={handleShowNav} />}
+        { mobile && 
+            <HamburgerBtn 
+              onClick={toggleMenu} 
+              menuState={showMenu}
+            />}
+
+        { showMenu && 
+          mobile && 
+            <NavMenu 
+              list={menu}
+              onClick={toggleMenu}
+              menuState={showMenu}
+            />}
       </div>
     </nav>
   )

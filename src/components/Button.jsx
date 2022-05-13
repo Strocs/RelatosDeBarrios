@@ -1,4 +1,4 @@
-import '../styles/button.css'
+import '../styles/Button.css'
 
 export const Button = ({className = '', text = '', href = ''}) => {
   return (

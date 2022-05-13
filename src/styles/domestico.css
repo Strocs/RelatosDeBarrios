@@ -1,11 +1,11 @@
 /* CONTENEDOR DEL TITULO */
 .domestico {
 	position: relative;
-	margin-top: -30rem;
+	margin-top: -40rem;
 }
 
 .domestico__container {
-	margin-top: -10rem;
+	padding-top: 10rem;
 }
 .domestico__title {
 	color: var(--pastel);
@@ -20,6 +20,9 @@
 /* CONTENEDOR DE LAS CAJAS */
 .domestico__content {
 	margin-top: 6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
 }
 
 .domestico__text {
@@ -32,15 +35,17 @@
 	word-spacing:-2px;
 }
 
-.domestico__box-container {
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	gap: 3rem;
+.plani__box {
+  background-image: url(../assets/images/plani.jpg);
+	background-position: center;
+	background-size: cover;	
 }
 
-.domestico__box {
-	background-color: var(--pastel);
+.levan__box {
+  background-image: url(../assets/images/levan.jpg);
+	background-position: center;
+	background-size: cover;	
 }
+
 
 

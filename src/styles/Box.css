@@ -1,0 +1,35 @@
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 46rem;
+  min-width: 30rem;
+  min-height: 15rem;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem -.5rem rgba(0, 0, 0, 0.50);
+}
+
+.box__name {
+  margin: 2rem;
+}
+
+.box__title, .box__subTitle {
+  color: white;
+  font-weight: 800;
+  font-size: 3rem;   
+  margin: 0;
+  padding: 0;
+  line-height: .9;
+  text-transform: uppercase;
+  text-shadow: 0rem .3rem 1.5rem rgba(0, 0, 0, 0.50);
+}
+
+.box__subTitle {
+  font-weight: 500;
+  font-size: 2rem;
+}
+

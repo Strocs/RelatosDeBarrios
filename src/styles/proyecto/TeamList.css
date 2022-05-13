@@ -4,6 +4,7 @@
   display: flex;
   color: white;
   text-align: center;
+
 }
 .equipo p {
   position: absolute;
@@ -35,4 +36,5 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  box-shadow: 0 0rem 2rem -1rem rgba(0, 0, 0, 0.50);
 }

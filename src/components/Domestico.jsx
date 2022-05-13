@@ -8,7 +8,7 @@ import "../styles/Domestico.css"
 
 export const Domestico = () => {
 	return (
-		<section id="planimetrias" className="domestico">
+		<section id="Planimetrías" className="domestico">
 			<div className="wrappers domestico__container">
 				<div className="domestico__title-wrapper">
 					<Title className={"domestico__title"} title={"Arquitectura de lo doméstico"} />
@@ -23,8 +23,8 @@ export const Domestico = () => {
 						posterior (1958) y denota la intención de consolidar la ciudad con edificios de vivienda.
 					</p>
 
-					<Box className={"plani"} title={"Planimetrías"} subTitle={"Originales"} img={planimetrias} />
-					<Box className={"levan"} title={"Levantamiento"} subTitle={"Digital"} img={levantamiento} />
+					<Box className={"plani"} title={"Planimetrías"} subTitle={"Originales"} />
+					<Box className={"levan"} title={"Levantamiento"} subTitle={"Digital"} />
 				</div>
 			</div>
 		</section>
