@@ -1,6 +1,6 @@
 import "../styles/Box.css"
 
-export const Box = ({ className, title, subTitle}) => {
+export const Box = ({ className = "", title = "", subTitle = ""}) => {
 	return (
 		<div className={`box ${className}__box`}>
 			<div className={`box__name ${className}__box-name`}>

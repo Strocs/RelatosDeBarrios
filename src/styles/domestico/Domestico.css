@@ -10,7 +10,6 @@
 }
 
 .domestico__title {
-	color: var(--pastel);
 	word-spacing: .5rem;
 	line-height: 4rem;
 }
@@ -28,7 +27,7 @@
 }
 
 .domestico__text {
-	color: var(--pastel);
+	color: white;
 	display: inline-block;
 	font-size: 1.6rem;
 	font-weight: 400;

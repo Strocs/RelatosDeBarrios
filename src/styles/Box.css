@@ -13,10 +13,12 @@
   box-shadow: 0 1rem 3rem -.5rem rgba(0, 0, 0, 0.50);
   background-position: center;
 	background-size: cover;	
+  border: solid .2rem var(--pastel);
 }
 
 .box__name {
   margin: 2rem;
+  text-shadow: 0 .5rem 2rem var(--azul);
 }
 
 .box__title, .box__subTitle {
@@ -27,11 +29,11 @@
   padding: 0;
   line-height: .9;
   text-transform: uppercase;
-  text-shadow: 0rem .3rem 1.5rem rgba(0, 0, 0, 0.50);
 }
 
 .box__subTitle {
   font-weight: 500;
   font-size: 2rem;
+  text-transform: uppercase;
 }
 

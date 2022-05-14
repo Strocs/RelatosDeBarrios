@@ -11,7 +11,7 @@ export const Domestico = () => {
 			<div className="wrappers domestico__container">
 				
 				<div className="domestico__title-wrapper">
-					<Title className={"domestico__title"} title={"Arquitectura de lo doméstico"} />
+					<Title className="domestico__title" title="Arquitectura de lo doméstico" />
 					<div className="subBars domestico__subBar"></div>
 				</div>
 

@@ -40,12 +40,14 @@
 
 
 /* CONTENEDOR DE LAS CAJAS */
+.imaginario__content {
+    padding: 5rem 0; 
+}
 
 .imaginario__fotos {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 8rem;
     gap: 3rem;
 }
 

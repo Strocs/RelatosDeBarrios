@@ -12,6 +12,7 @@
 	position: relative;
 	width: 100%;
 	border-radius: 1rem;
+	border: solid .2rem var(--pastel);
 }
 
 .team__container:last-child {
@@ -20,13 +21,16 @@
 
 .team__title {
 	color: white;
-	font-size: 3rem;
+	font-size: 3.6rem;
+	font-weight: 800;
+	margin: 2rem;
+	text-shadow: 0 .5rem 2rem var(--azul);
 }
 
 .team__list {
-	width: 90%;
+	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
 }
