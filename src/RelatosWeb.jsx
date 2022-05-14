@@ -1,6 +1,7 @@
-import {Nav} from './components/Nav'
-import { Header } from './components/Header'
+import {Nav} from './components/nav/Nav'
+import { Header } from './components/header/Header'
 import { Main } from './components/Main'
+import { Footer } from './components/footer/Footer'
 
 export const RelatosWeb = () => {
   return (
@@ -8,6 +9,7 @@ export const RelatosWeb = () => {
       <Nav />
       <Header />
       <Main />
+      <Footer />
     </>
   )
 }

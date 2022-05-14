@@ -1,11 +1,11 @@
 import { Parallax } from 'react-scroll-parallax'
 
-import { Title } from './Title'
-import { Button } from './Button'
+import { Title } from '../Title'
+import { Button } from '../Button'
 
-import '../styles/Header.css'
+import '../../styles/header/Header.css'
 
-import video from '../assets/videos/teaser.mp4'
+import video from '../../assets/videos/teaser.mp4'
 
 export const Header = () => {
   return (
@@ -13,7 +13,7 @@ export const Header = () => {
 
       <Parallax speed={-20} className="header__container">
         <div className="title__container">
-          <Title className={'header__title'} title={'Imaginario Urbano, Imaginario Barrial'} />
+          <Title className={'header__title'} title={'Imaginario Urbano,'} subTitle={' Imaginario Barrial'} br={true} />
         </div>
         <div className="btn__container">
           <Button text='Ver Libro' />

@@ -1,15 +1,15 @@
-import { Box } from "./domestico/Box"
-import { Title } from "./Title"
+import { Box } from "../Box"
+import { Title } from "../Title"
 
-import planimetrias from "../assets/images/plani.jpg"
-import levantamiento from "../assets/images/levan.jpg"
 
-import "../styles/Domestico.css"
+import "../../styles/domestico/Domestico.css"
 
 export const Domestico = () => {
 	return (
 		<section id="Planimetrías" className="domestico">
+
 			<div className="wrappers domestico__container">
+				
 				<div className="domestico__title-wrapper">
 					<Title className={"domestico__title"} title={"Arquitectura de lo doméstico"} />
 					<div className="subBars domestico__subBar"></div>

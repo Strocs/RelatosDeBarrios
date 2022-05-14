@@ -11,6 +11,8 @@
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 1rem 3rem -.5rem rgba(0, 0, 0, 0.50);
+  background-position: center;
+	background-size: cover;	
 }
 
 .box__name {

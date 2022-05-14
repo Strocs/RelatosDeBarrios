@@ -6,7 +6,9 @@
 
 .domestico__container {
 	padding-top: 10rem;
+	padding-bottom: 10rem;
 }
+
 .domestico__title {
 	color: var(--pastel);
 	word-spacing: .5rem;
@@ -36,15 +38,11 @@
 }
 
 .plani__box {
-  background-image: url(../assets/images/plani.jpg);
-	background-position: center;
-	background-size: cover;	
+  background-image: url(../../assets/images/plani.jpg);
 }
 
 .levan__box {
-  background-image: url(../assets/images/levan.jpg);
-	background-position: center;
-	background-size: cover;	
+  background-image: url(../../assets/images/levan.jpg);
 }
 
 

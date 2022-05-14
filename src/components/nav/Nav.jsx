@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 
-import { NavLogo } from './nav/NavLogo'
-import { NavMenu } from './nav/NavMenu'
-import { HamburgerBtn } from './nav/HamburgerBtn'
+import { NavLogo } from './NavLogo'
+import { NavMenu } from './NavMenu'
+import { HamburgerBtn } from './HamburgerBtn'
 
-import  { MENU_LIST as menu } from '../data/menu.data'
+import  { MENU_LIST as menu } from '../../data/menu.data'
 
-import '../styles/Nav.css'
+import '../../styles/nav/Nav.css'
 
 export const Nav = () => {
   const [navStyle, setNavStyle] = useState({

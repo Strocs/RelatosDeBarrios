@@ -1,9 +1,8 @@
-import "../styles/Proyecto.css"
-import { Team } from "./proyecto/Team"
-import { Title } from "./Title"
+import "../../styles/proyecto/Proyecto.css"
+import { Team } from "./Team"
+import { Title } from "../Title"
 
-import { TEAM_LIST } from "../data/team.data"
-import { COLAB_LIST } from "../data/team.data"
+import { TEAM_LIST, COLAB_LIST } from "../../data/team.data"
 
 export const Proyecto = () => {
 	return (

@@ -1,4 +1,4 @@
-import "../../styles/Box.css"
+import "../styles/Box.css"
 
 export const Box = ({ className, title, subTitle}) => {
 	return (
