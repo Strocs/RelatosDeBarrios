@@ -20,3 +20,11 @@ npm run start
 npm run build
 #for production
 ```
+
+For push dist version:
+
+```bash
+git add -f dist
+git commit -m 'vx.x.x: something'
+git subtree push --prefix dist origin gh-pages
+```
