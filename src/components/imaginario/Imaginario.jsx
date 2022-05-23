@@ -3,7 +3,7 @@ import { Box } from "../Box"
 
 import { Title } from "../Title"
 
-export const Imaginario = () => {
+export const Imaginario = ({toggleGallery}) => {
 	return (
 		<section className="imaginario">
 			<div className="imaginario__img"></div>
@@ -16,9 +16,9 @@ export const Imaginario = () => {
 
 				<div className="imaginario__content">
 					<div className="imaginario__fotos">
-						<Box className={"archivo"} title={"Archivo"} subTitle={"Fotográfico"} />
-						<Box className={"actividades"} title={"Fotografías"} subTitle={"Actividades"} />
-						<Box className={"aereas"} title={"Fotografías"} subTitle={"Aéreas"} />
+						<Box onClick={toggleGallery} className={"archivo"} title={"Archivo"} subTitle={"Fotográfico"} />
+						<Box onClick={toggleGallery} className={"actividades"} title={"Fotografías"} subTitle={"Actividades"} />
+						<Box onClick={toggleGallery} className={"aereas"} title={"Fotografías"} subTitle={"Aéreas"} />
 					</div>
 
 					<div className="imaginario__3d">

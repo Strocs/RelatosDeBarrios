@@ -1,10 +1,9 @@
 import { Box } from "../Box"
 import { Title } from "../Title"
 
-
 import "../../styles/domestico/Domestico.css"
 
-export const Domestico = () => {
+export const Domestico = ({toggleGallery}) => {
 	return (
 		<section id="Planimetrías" className="domestico">
 
@@ -23,8 +22,8 @@ export const Domestico = () => {
 						posterior (1958) y denota la intención de consolidar la ciudad con edificios de vivienda.
 					</p>
 
-					<Box className={"plani"} title={"Planimetrías"} subTitle={"Originales"} />
-					<Box className={"levan"} title={"Levantamiento"} subTitle={"Digital"} />
+					<Box onClick={toggleGallery} className={"plani"} title={"Planimetrías"} subTitle={"Originales"} />
+					<Box onClick={toggleGallery} className={"levan"} title={"Levantamiento"} subTitle={"Digital"} />
 				</div>
 			</div>
 		</section>

@@ -1,10 +1,27 @@
+/*  
+    ------------- 
+      VARIABLES
+    ------------- 
+*/
+
+:root {
+  --azul: #344754;
+  --azulOpa: #34475480;
+  --azulDarker: #344754e3;
+  --pastel: #EADFD4;
+  --pastelOpa: #eadfd480;
+  --amarillo: #F3BA74;
+  --amarilloOpa: #f3ba7480;
+  --gris: #D1CDC5;
+  --grisOpa: #d1cdc580;
+
+}
 
 /*  
     ------------- 
         FONTS
     ------------- 
 */
-
 
 @font-face {
   font-family: "Raleway";
@@ -50,25 +67,6 @@
   font-family: "Raleway";
   font-weight: 900;
   src: local(""), url("../assets/fonts/Raleway-Black.woff2") format("woff2"), url("../assets/fonts/Raleway-Black.woff") format("woff"), url("../assets/fonts/Raleway-Black.ttf") format("ttf");
-}
-
-
-/*  
-    ------------- 
-      VARIABLES
-    ------------- 
-*/
-
-:root {
-  --azul: #344754;
-  --azulOpa: #34475480;
-  --pastel: #EADFD4;
-  --pastelOpa: #eadfd480;
-  --amarillo: #F3BA74;
-  --amarilloOpa: #f3ba7480;
-  --gris: #D1CDC5;
-  --grisOpa: #d1cdc580;
-
 }
 
 

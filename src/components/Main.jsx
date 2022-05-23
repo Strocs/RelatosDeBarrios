@@ -4,12 +4,12 @@ import { Domestico } from './domestico/Domestico'
 import { Imaginario } from './imaginario/Imaginario'
 import { Proyecto } from './proyecto/Proyecto'
 
-export const Main = () => {
+export const Main = ({toggleGallery}) => {
   return (
     <main className='main'>
       <Proyecto />
-      <Domestico />
-      <Imaginario />
+      <Domestico toggleGallery={toggleGallery} />
+      <Imaginario toggleGallery={toggleGallery} />
       <Descubre />
     </main>
   )
