@@ -1,25 +1,26 @@
-import {Nav} from './components/nav/Nav'
-import { Header } from './components/header/Header'
-import { Main } from './components/Main'
-import { Footer } from './components/footer/Footer'
-import { Gallery } from './components/gallery/Gallery'
-import { useState } from 'react'
+import { Nav } from "./components/0_nav/Nav"
+import { Header } from "./components/1_header/Header"
+import { Main } from "./components/Main"
+import { Footer } from "./components/6_footer/Footer"
+import { Gallery } from "./components/7_gallery/Gallery"
+import { useState } from "react"
 
 export const RelatosWeb = () => {
-  const [showGallery, setShowGallery] = useState(false)
+	const [showGallery, setShowGallery] = useState(false)
+	const [sliderData, setSliderData] = useState([])
 
-  const toggleGallery = () => {
-    setShowGallery(!showGallery)
-    // console.log('gallery showed');
-  }
+	const toggleGallery = (data) => {
+		setSliderData(data)
+		setShowGallery(!showGallery)
+	}
 
-  return (
-    <>
-      <Nav />
-      <Header />
-      {showGallery && <Gallery toggleGallery={toggleGallery} state={showGallery} />}
-      <Main toggleGallery={toggleGallery} />
-      <Footer />
-    </>
-  )
+	return (
+		<>
+			<Nav />
+			{showGallery && <Gallery toggleGallery={toggleGallery} state={showGallery} data={sliderData} />}
+			<Header />
+			<Main toggleGallery={toggleGallery} />
+			<Footer />
+		</>
+	)
 }

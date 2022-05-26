@@ -1,0 +1,130 @@
+.imaginario {
+    background-image: url(/src/assets/fondo1.2.jpg);
+    background-position: 0 15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.imaginario__img {
+	background-image: url(../../assets/fachada.png);
+	background-size: cover;
+	background-position: left;
+	box-shadow: inset 0 -6rem 2rem -3rem #eee3d8;
+	top: 0;
+	left: 0;
+	height: 20rem;
+	position: absolute;
+	width: 100vw;
+}
+
+.imaginario__container {
+    padding-bottom: 30rem;
+}
+
+/* TITLE */
+.imaginario__title-wrapper {
+    padding-top: 20rem;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.imaginario__title {
+    color: var(--azul);
+    text-align: right;
+    word-spacing: .5rem;
+	line-height: 4rem;
+    max-width: 120rem;
+}
+
+.imaginario__title span {
+    color: var(--gris);
+}
+
+.imaginario__subBar {
+    right: 0;
+    left: auto;
+    bottom: 0;
+    margin-right: -2rem;
+}
+
+
+/* CONTENEDOR DE LAS CAJAS */
+.imaginario__content {
+    padding: 5rem 0; 
+}
+
+.imaginario__fotos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.archivo__box {
+    background-image: url(../../assets/images/archivo.jpg);
+}
+
+.actividades__box {
+    background-image: url(../../assets/images/actividades.jpg);
+}
+
+.aereas__box {
+    background-image: url(../../assets/images/aereas.jpg);   
+}
+
+
+/* CAJAS 3D */
+.imaginario__3d {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 6rem;
+}
+
+.imaginario__3d a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.exterior__box {
+    background-image: url(../../assets/images/exterior.jpg);
+}
+
+.interior__box {
+    background-image: url(../../assets/images/interior.jpg);
+}
+
+@media (min-width: 1281px) {
+
+    .imaginario__title {
+		text-transform: uppercase;
+		line-height: 9rem;
+        margin-bottom: 3rem;
+	}
+    .imaginario__fotos {
+        flex-direction: row;
+        height: 30rem;
+    }
+    .imaginario__3d {
+        flex-direction: row;
+        height: 30rem;
+        gap: 5rem;
+    }
+    .imaginario__subBar {
+        margin-right: -5rem;
+    }
+    .imaginario__content {
+        padding: 8rem 0; 
+    }
+
+    .exterior__box,
+    .interior__box {
+        max-width: 100%;
+        min-height: 20rem;
+    }
+
+  }

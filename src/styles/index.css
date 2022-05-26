@@ -15,6 +15,11 @@
   --gris: #D1CDC5;
   --grisOpa: #d1cdc580;
 
+  --titles: 5rem;
+  --subTitles: 3rem;
+  --subTitles2: 2rem;
+  --parrafos: 1.6rem;
+  --footer: 1.2rem;
 }
 
 /*  
@@ -443,6 +448,10 @@ body {
   overflow-x: hidden;
 }
 
+.scrollLock {
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar {
   width: .5rem;
   margin-right: .5rem;
@@ -455,4 +464,14 @@ body {
 }
 ::-webkit-scrollbar-thumb:window-inactive {
 background: var(--gris); 
+}
+
+@media (min-width: 1281px) {
+  :root {
+    --titles: 10rem;
+    --subTitles: 4rem;
+    --subTitles2: 3rem;
+    --parrafos: 1.8rem;
+    --footer: 1.6rem;
+  }
 }

@@ -6,14 +6,26 @@
 }
 
 .wrappers {
-    padding: 0 2rem;
+    padding: 0 4vmin;
     margin: 0 auto;
+    max-width: 48rem;
+    position: relative;
 }
 
 .subBars {
     background-color: var(--amarillo);
     position: absolute;
 	height: 0.5rem;
-	width: 60vmin;
-	right: 0;
+	width: 30vmax;
+	left: 0;
 }
+
+@media (min-width: 1281px) {
+    .subBars {
+        height: 1rem;
+        width: 60vmax;
+    }
+    .wrappers {
+        max-width: 136rem;
+    }
+  }
