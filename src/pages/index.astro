@@ -1,51 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Nav } from '../components/0_nav/Nav'
+import Layout from '../layouts/Layout.astro'
+import { ParallaxProvider } from 'react-scroll-parallax'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<ParallaxProvider>
+	<Layout>
+		<Nav />
+		<main></main>
+	</Layout>
+</ParallaxProvider>
 
 <style>
+	.wrappers {
+		padding: 0 4vmin;
+		margin: 0 auto;
+		max-width: 48rem;
+		position: relative;
+	}
+
+	.subBars {
+		background-color: var(--amarillo);
+		position: absolute;
+		height: 0.5rem;
+		width: 30vmax;
+		left: 0;
+	}
+
+	@media (min-width: 1281px) {
+		.subBars {
+			height: 1rem;
+			width: 60vmax;
+		}
+		.wrappers {
+			max-width: 136rem;
+		}
+	}
+
 	main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
+		width: 100vw;
+		position: relative;
+		background-color: var(--azul);
 	}
+
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
 	}
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;

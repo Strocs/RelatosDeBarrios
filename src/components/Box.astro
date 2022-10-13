@@ -1,0 +1,66 @@
+---
+export interface Props {
+	onClick: Function
+	data: Array<string>
+	className: string
+	title: string
+	subTitle: string
+}
+
+const { onClick, data, className, title, subTitle } = Astro.props
+// (typeof onClick === 'function' ? onClick(data) : null)
+---
+
+<div onclick='' class={`box ${className}__box`}>
+	<div class={`box__name ${className}__box-name`}>
+		<h2 class={`box__title ${className}__box-title`}>{title}</h2>
+		<h3 class={`box__subTitle ${className}__box-subtitle`}>{subTitle}</h3>
+	</div>
+</div>
+
+<style>
+	.box {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		max-width: 48rem;
+		min-height: 15rem;
+		cursor: pointer;
+		overflow: hidden;
+		border-radius: 1rem;
+		box-shadow: 0 1rem 3rem -0.5rem rgba(0, 0, 0, 0.5);
+		background-position: center;
+		background-size: 100%;
+		border: solid 0.2rem var(--pastel);
+		transition: transform 500ms ease, background-size 1s ease;
+	}
+
+	.box__name {
+		margin: 2rem;
+		text-shadow: 0 0.5rem 2rem var(--azul);
+	}
+
+	.box__title,
+	.box__subTitle {
+		color: white;
+		font-weight: 800;
+		font-size: var(--subTitles);
+		margin: 0;
+		padding: 0;
+		line-height: 0.9;
+		text-transform: uppercase;
+	}
+
+	.box__subTitle {
+		font-weight: 500;
+		font-size: var(--subTitles2);
+		text-transform: uppercase;
+	}
+
+	.box:hover {
+		transform: scale(1.1);
+		background-size: 120%;
+		transition: transform 500ms ease, background-size 1s ease;
+	}
+</style>

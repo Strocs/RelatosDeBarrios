@@ -1,0 +1,68 @@
+.footer {
+    background-image: url(../../assets/muroPiedra.png);
+    background-size: cover;
+    background-position: top;
+    box-shadow: inset 0 -40rem 50rem -5rem var(--azul);
+    margin-top: -1rem;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10rem;
+}
+
+.footer__container svg {
+    fill: #fff;
+    max-width: 50rem;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__logos {
+    display: flex;
+    flex-flow: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.footer__logos img {
+    height: 6rem;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.info__text {
+    color: white;
+    font-size: var(--footer);
+    text-align: center;
+}
+
+.info__text a {
+    text-decoration: none;
+    color: var(--amarillo);
+}
+
+.info__rrss {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (min-width: 1281px) {
+    .footer__logos img {
+        height: 10rem;
+    }
+}

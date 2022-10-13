@@ -1,0 +1,28 @@
+---
+export interface Props {
+	className: string
+	title: string
+	subTitle: string
+	br: boolean
+}
+
+const { className, title, subTitle, br = false } = Astro.props
+---
+
+<h1 class={` title ${className}`}>{title} {br ? <br /> : ''} <span>{subTitle}</span></h1>
+
+<style>
+	.title {
+		color: white;
+		font-size: var(--titles);
+		margin: 2rem 0;
+		font-weight: 800;
+		max-width: 100rem;
+	}
+
+	@media (min-width: 1281px) {
+		.title {
+			font-weight: 900;
+		}
+	}
+</style>

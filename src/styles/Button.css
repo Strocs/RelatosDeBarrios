@@ -1,0 +1,21 @@
+.btn {
+	background-color: transparent;
+	border: 0.15em solid white;
+	border-radius: .8rem;
+	color: white;
+	font-size: var(--parrafos);
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	transition: color 200ms ease, background 300ms ease;
+}
+
+.btn p {
+	margin: 0.3em 1em;
+	font-weight: 600;
+}
+
+.btn:hover {
+	color: var(--azul);
+	background: white;
+	transition: color 200ms ease, background 300ms ease;
+}

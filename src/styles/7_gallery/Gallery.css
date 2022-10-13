@@ -1,0 +1,28 @@
+/* GALLERY */
+.gallery {
+	bottom: 0;
+	position: fixed;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--azulDarker);
+	z-index: 5;
+    padding: 0;
+}
+
+.gallery__container {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding-top: 10rem;
+}
+
+.gallery__close {
+    color: var(--amarillo);
+    position: absolute;
+    right: 5rem;
+    bottom: 5rem;
+    font-size: var(--subTitles);
+    z-index: 6;
+    cursor: pointer;
+}
