@@ -1,15 +1,16 @@
 .equipo {
-  width: calc((100%/3) - .67rem );
+  width: calc((100% / 3) - 0.67rem);
   position: relative;
   display: flex;
   color: white;
+  max-height: 174px;
   text-align: center;
-
+  cursor: pointer;
 }
 .equipo p {
   position: absolute;
   font-size: 1.2rem;
-  margin: 1rem .5rem;
+  margin: 1rem 0.5rem;
   font-weight: 600;
   z-index: 2;
 }
@@ -37,5 +38,5 @@
   max-width: 100%;
   height: auto;
   object-fit: cover;
-  box-shadow: 0 0rem 2rem -1rem rgba(0, 0, 0, 0.50);
+  box-shadow: 0 0rem 2rem -1rem rgba(0, 0, 0, 0.5);
 }
