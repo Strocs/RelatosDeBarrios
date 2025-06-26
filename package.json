@@ -1,5 +1,5 @@
 {
-  "name": "RelatosDeBarrios",
+  "name": "relatos-de-barrios",
   "private": true,
   "scripts": {
     "build": "turbo run build",

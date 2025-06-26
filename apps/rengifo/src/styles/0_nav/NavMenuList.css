@@ -1,0 +1,18 @@
+.nav__menu-section a {
+  text-transform: uppercase;
+  font-size: var(--parrafos);
+	color: white;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+
+.nav__menu-section a:hover {
+  color: var(--amarillo);
+}
+
+@media (min-width: 1281px) {
+  .nav__menu-section a {
+    font-size: 1.6rem;
+
+  }
+}

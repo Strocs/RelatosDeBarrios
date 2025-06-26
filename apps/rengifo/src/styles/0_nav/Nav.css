@@ -1,0 +1,39 @@
+.nav {
+	position: fixed;
+	width: 100vw;
+	height: 10rem;
+	transition: height 300ms ease;
+	z-index: 10;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.nav__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	min-width: 82vw;
+	padding: 0 2rem;
+	margin: 0 1rem;
+	border-radius: 1rem;
+	transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+/* ACTIONS */
+.nav__setBackground {
+	background-color: var(--azul);
+	box-shadow: 0px 0.1rem 5rem black;
+}
+
+.nav__setHeight {
+	height: 8rem;
+}
+
+@media (min-width: 1281px) {
+	.nav__container {
+		max-width: 130rem;
+		width: 130rem;
+	}
+}
