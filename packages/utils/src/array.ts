@@ -2,12 +2,6 @@
  * Array utility functions
  */
 
-/**
- * Removes duplicates from an array
- */
-export function unique<T>(array: T[]): T[] {
-  return Array.from(new Set(array))
-}
 
 /**
  * Removes duplicates from an array based on a key function
@@ -56,14 +50,6 @@ export function chunk<T>(array: T[], size: number): T[][] {
   return chunks
 }
 
-/**
- * Flattens a nested array
- */
-export function flatten<T>(array: (T | T[])[]): T[] {
-  return array.reduce<T[]>((acc, item) => {
-    return acc.concat(Array.isArray(item) ? flatten(item) : item)
-  }, [])
-}
 
 /**
  * Shuffles an array randomly
@@ -72,7 +58,7 @@ export function shuffle<T>(array: T[]): T[] {
   const shuffled = array.slice()
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled
 }
@@ -96,7 +82,7 @@ export function sampleSize<T>(array: T[], size: number): T[] {
 /**
  * Sorts an array by a key function
  */
-export function sortBy<T>(array: T[], keyFn: (item: T) => any): T[] {
+export function sortBy<T, K extends string | number | boolean>(array: T[], keyFn: (item: T) => K): T[] {
   return array.slice().sort((a, b) => {
     const aKey = keyFn(a)
     const bKey = keyFn(b)
@@ -126,15 +112,9 @@ export function difference<T>(array1: T[], array2: T[]): T[] {
  * Finds the union of two arrays (all unique items from both)
  */
 export function union<T>(array1: T[], array2: T[]): T[] {
-  return unique(array1.concat(array2))
+  return Array.from(new Set(array1.concat(array2)))
 }
 
-/**
- * Checks if array is empty
- */
-export function isArrayEmpty<T>(array: T[]): boolean {
-  return array.length === 0
-}
 
 /**
  * Gets the last element of an array

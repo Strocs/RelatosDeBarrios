@@ -157,12 +157,13 @@ export function formatPostalCode(postalCode: string, country = 'ES'): string {
         return cleaned.replace(/(\d{5})(\d{4})/, '$1-$2')
       }
       return cleaned.slice(0, 5)
-    case 'CA':
+    case 'CA': {
       const upper = postalCode.toUpperCase().replace(/[^A-Z0-9]/g, '')
       if (upper.length === 6) {
         return upper.replace(/(\w{3})(\w{3})/, '$1 $2')
       }
       return upper
+    }
     default:
       return postalCode
   }

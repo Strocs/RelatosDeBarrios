@@ -24,13 +24,6 @@ export function isBoolean(value: unknown): value is boolean {
 }
 
 /**
- * Type guard for checking if a value is a function
- */
-export function isFunction(value: unknown): value is Function {
-  return typeof value === 'function'
-}
-
-/**
  * Type guard for checking if a value is an object (but not null or array)
  */
 export function isObject(value: unknown): value is Record<string, unknown> {
@@ -93,8 +86,8 @@ export function isPromise<T = unknown>(value: unknown): value is Promise<T> {
   return (
     value instanceof Promise ||
     (isObject(value) &&
-      isFunction((value as any).then) &&
-      isFunction((value as any).catch))
+      typeof (value as { then?: unknown }).then === 'function' &&
+      typeof (value as { catch?: unknown }).catch === 'function')
   )
 }
 
@@ -148,61 +141,10 @@ export function getType(value: unknown): string {
 }
 
 /**
- * Type assertion function that throws if the condition is false
- */
-export function assert(
-  condition: unknown,
-  message?: string
-): asserts condition {
-  if (!condition) {
-    throw new Error(message || 'Assertion failed')
-  }
-}
-
-/**
- * Type assertion function for checking if a value is of a specific type
- */
-export function assertType<T>(
-  value: unknown,
-  typeGuard: (val: unknown) => val is T,
-  message?: string
-): asserts value is T {
-  if (!typeGuard(value)) {
-    throw new Error(message || `Value is not of expected type`)
-  }
-}
-
-/**
- * Creates a type guard for checking if an object has required properties
- */
-export function hasRequiredProperties<T extends Record<string, unknown>>(
-  requiredProps: (keyof T)[]
-) {
-  return (obj: unknown): obj is T => {
-    if (!isObject(obj)) return false
-    return requiredProps.every((prop) => prop in obj)
-  }
-}
-
-/**
- * Type guard for checking if a value is a non-empty string
- */
-export function isNonEmptyString(value: unknown): value is string {
-  return isString(value) && value.length > 0
-}
-
-/**
- * Type guard for checking if a value is a positive number
- */
-export function isPositiveNumber(value: unknown): value is number {
-  return isNumber(value) && value > 0
-}
-
-/**
  * Type guard for checking if a value is a non-negative number
  */
 export function isNonNegativeNumber(value: unknown): value is number {
-  return isNumber(value) && value >= 0
+  return typeof value === 'number' && !isNaN(value) && value >= 0
 }
 
 /**
@@ -220,7 +162,7 @@ export function isEnumValue<T extends Record<string, string | number>>(
 ) {
   const values = Object.values(enumObject)
   return (value: unknown): value is T[keyof T] => {
-    return values.includes(value as any)
+    return values.includes(value as T[keyof T])
   }
 }
 
@@ -247,19 +189,19 @@ export type Without<T, K extends keyof T> = Omit<T, K>
 // Make nested properties optional
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends (infer U)[]
-    ? DeepPartial<U>[]
-    : T[P] extends object
-      ? DeepPartial<T[P]>
-      : T[P]
+  ? DeepPartial<U>[]
+  : T[P] extends object
+  ? DeepPartial<T[P]>
+  : T[P]
 }
 
 // Make nested properties required
 export type DeepRequired<T> = {
   [P in keyof T]-?: T[P] extends (infer U)[]
-    ? DeepRequired<U>[]
-    : T[P] extends object
-      ? DeepRequired<T[P]>
-      : T[P]
+  ? DeepRequired<U>[]
+  : T[P] extends object
+  ? DeepRequired<T[P]>
+  : T[P]
 }
 
 // Get the values of an object type

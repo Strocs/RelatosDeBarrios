@@ -30,8 +30,11 @@ export function querySelector<T extends Element>(selector: string): T | null {
  */
 export function querySelectorAll<T extends Element>(
   selector: string
-): NodeListOf<T> | [] {
-  if (!isBrowser()) return [] as any
+): NodeListOf<T> {
+  if (!isBrowser()) {
+    // Return an empty NodeList using document.createDocumentFragment().childNodes
+    return document.createDocumentFragment().childNodes as NodeListOf<T>
+  }
   return document.querySelectorAll<T>(selector)
 }
 
@@ -193,7 +196,7 @@ export async function copyToClipboard(text: string): Promise<boolean> {
 /**
  * Debounces a function
  */
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
@@ -208,11 +211,11 @@ export function debounce<T extends (...args: any[]) => any>(
 /**
  * Throttles a function
  */
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
-  let inThrottle: boolean
+  let inThrottle = false
 
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -226,7 +229,7 @@ export function throttle<T extends (...args: any[]) => any>(
 /**
  * Creates a simple event emitter
  */
-export function createEventEmitter<T extends Record<string, any[]>>() {
+export function createEventEmitter<T extends Record<string, unknown[]>>() {
   const events: { [K in keyof T]?: Array<(...args: T[K]) => void> } = {}
 
   return {

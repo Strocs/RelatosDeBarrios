@@ -26,8 +26,8 @@ export function isUrl(value: string): boolean {
  * Checks if a value is a valid phone number (basic format)
  */
 export function isPhone(value: string): boolean {
-  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/
-  return phoneRegex.test(value.replace(/[\s\-\(\)]/g, ''))
+  const phoneRegex = /^[+]?([1-9][\d]{0,15})$/
+  return phoneRegex.test(value.replace(/[\s\-()]/g, ''))
 }
 
 /**
@@ -106,7 +106,7 @@ export function inRange(value: number, min: number, max: number): boolean {
 /**
  * Checks if a value is not null or undefined
  */
-export function isRequired(value: any): boolean {
+export function isRequired(value: unknown): boolean {
   return value !== null && value !== undefined && value !== ''
 }
 
@@ -137,7 +137,7 @@ export function isStrongPassword(
   if (requireNumbers && !/\d/.test(password)) return false
   if (
     requireSpecialChars &&
-    !/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
+    !/[!@#$%^&*()_+\-=\]{};':"\\|,.<>/?]/.test(password)
   )
     return false
 
