@@ -1,7 +1,6 @@
 import { cn } from '@relatos/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import Markdown from 'react-markdown'
 
 interface BarrioCardProps {
   title: string
@@ -36,18 +35,9 @@ export const BarrioCard = ({
           className='absolute inset-0 h-full object-cover opacity-25 mix-blend-hard-light transition-opacity group-hover:opacity-40'
         />
       )}
-      <Markdown
-        components={{
-          h3: ({ ...props }) => (
-            <h3
-              className='text-hub-text relative w-full max-w-xs text-4xl font-bold leading-none'
-              {...props}
-            />
-          ),
-        }}
-      >
+      <h3 className='text-hub-text relative w-full max-w-xs text-4xl font-bold leading-none'>
         {title}
-      </Markdown>
+      </h3>
     </Link>
   )
 }
