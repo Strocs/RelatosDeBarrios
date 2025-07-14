@@ -24,3 +24,6 @@ export * from './math'
 
 // Type utilities
 export * from './types'
+
+// CSS utilities (for styling with Tailwind CSS)
+export * from './css'
