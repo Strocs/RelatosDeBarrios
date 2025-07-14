@@ -7,10 +7,10 @@
 <h1>Relatos de Barrios</h1>
 
 ## Build in Reactjs
+
 This is my first React project, built while I was learning this framework so probably there are many optimizations to do.
 
 I use ViteJs for start the project.
-
 
 ```bash
 npm install
