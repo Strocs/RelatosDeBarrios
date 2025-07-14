@@ -17,6 +17,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@relatos/tailwind-config": "workspace:*"
+    "@relatos/tailwind-config": "workspace:*",
+    "@relatos/typescript-config": "workspace:*",
+    "@relatos/eslint-config": "workspace:*"
   }
 }
