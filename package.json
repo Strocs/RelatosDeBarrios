@@ -26,9 +26,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "next": "^15.4.1",
     "react-markdown": "^10.1.0"
   }
 }
