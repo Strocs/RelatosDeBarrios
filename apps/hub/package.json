@@ -11,12 +11,11 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.4"
+    "next": "15.3.4",
+    "react-markdown": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
     "@relatos/tailwind-config": "workspace:*",
     "@relatos/typescript-config": "workspace:*",
     "@relatos/eslint-config": "workspace:*"
