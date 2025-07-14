@@ -1,0 +1,30 @@
+{
+  "site": {
+    "name": "Relatos de Barrios - Investigación y ciudad",
+    "url": "https://relatosdebarrios.com",
+    "logo": "/assets/images/logo.png",
+    "sections": [
+      {
+        "name": "Inicio",
+        "url": "/"
+      },
+      {
+        "name": "Proyecto",
+        "url": "/proyecto"
+      },
+      {
+        "name": "Equipo",
+        "url": "/equipo"
+      },
+      {
+        "name": "Contacto",
+        "url": "/contacto"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Realtos de Barrios - Investigación y ciudad",
+    "description": "",
+    "favicon_color": "#000000"
+  }
+}
