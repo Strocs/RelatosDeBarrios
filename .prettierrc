@@ -1,9 +1,13 @@
 {
+  "plugins": ["prettier-plugin-tailwindcss"],
   "semi": false,
   "trailingComma": "es5",
   "singleQuote": true,
   "jsxSingleQuote": true,
   "printWidth": 80,
   "tabWidth": 2,
-  "useTabs": false
+  "useTabs": false,
+  "tailwindStylesheet": "./package/tailwind-config/shared-styles.css",
+  "tailwindAttributes": ["className", "class", "style"],
+  "tailwindFunctions": ["clsx", "twMerge", "cn"]
 }
