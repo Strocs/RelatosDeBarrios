@@ -3,19 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.4"
+    "react": "^19",
+    "react-dom": "^19",
+    "next": "^15",
+    "react-markdown": "^10.1.0",
+    "@relatos/config": "workspace:*"
   },
   "devDependencies": {
     "@relatos/tailwind-config": "workspace:*",
     "@relatos/typescript-config": "workspace:*",
-    "@relatos/eslint-config": "workspace:*"
+    "@relatos/eslint-config": "workspace:*",
+    "@relatos/utils": "workspace:*"
   }
 }

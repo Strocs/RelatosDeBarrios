@@ -6,10 +6,7 @@ import svgLoader from '@andylacko/vite-svg-react-loader'
 export default defineConfig({
   base: './',
   server: {
-    port: 3210,
+    port: 3002,
   },
-  plugins: [
-    react(),
-    svgLoader(),
-  ]
+  plugins: [react(), svgLoader()],
 })

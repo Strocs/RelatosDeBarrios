@@ -1,14 +1,24 @@
 {
-  "project_name": "Relatos de Barrios",
+  "title": "Relatos de Barrios",
   "url": {
-    "base": "https://relatosdebarrios.com",
-    "covico": "https://covico.relatosdebarrios.com",
-    "rengifo": "https://rengifo.relatosdebarrios.com"
+    "base": "https://relatosdebarrios.cl",
+    "covico": "https://villacovico.relatosdebarrios.cl/",
+    "rengifo": "https://barriorengifo.relatosdebarrios.cl/"
   },
   "description": "Proyecto dedicado a la investigación, documentación y valorización del patrimonio industrial y habitacional de La Serena y Coquimbo, integrando historia, arquitectura, urbanismo y memoria social para fortalecer la identidad regional y nacional.",
   "contact_email": "relatosdebarrios@gmail.cl",
   "social": {
     "instagram": "https://www.instagram.com/relatosdebarrios"
+  },
+  "projects": {
+    "covico": {
+      "name": "Villa Covico",
+      "description": "Proyecto de investigación y valorización del patrimonio industrial y habitacional de la Villa Covico en Coquimbo."
+    },
+    "rengifo": {
+      "name": "Conjunto Habitacional Rengifo",
+      "description": "Proyecto de investigación y valorización del patrimonio industrial y habitacional del Barrio Rengifo en La Serena."
+    }
   },
   "seo": {
     "title": "Relatos de Barrios",
@@ -23,7 +33,7 @@
       "title": "Relatos de Barrios",
       "description": "Explora el patrimonio industrial y habitacional de La Serena y Coquimbo.",
       "image": "/images/og-image.jpg",
-      "url": "https://relatosdebarrios.com"
+      "url": "https://relatosdebarrios.cl"
     },
     "favicon": "/images/favicon.ico"
   }
