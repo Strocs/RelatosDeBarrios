@@ -5,7 +5,7 @@ import Link from 'next/link'
 interface BarrioCardProps {
   title: string
   imageSrc?: string
-  href: string
+  href: URL | string
   badge?: React.ReactNode
 }
 

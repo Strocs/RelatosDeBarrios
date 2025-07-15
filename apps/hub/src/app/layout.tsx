@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import '@/styles/globals.css'
 import { Background } from '@/components/Background'
-import { cn } from '@relatos/utils/'
+import { cn } from '@relatos/utils'
 import site_data from '@/config/config.json'
+import { Footer } from '@/components/Footer'
 
 const noto_sans = Noto_Sans({
   variable: '--font-noto-sans',
@@ -56,12 +57,13 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'bg-hub-background font-noto antialiased',
+          'bg-hub-background font-noto relative flex h-full min-h-dvh flex-col antialiased',
           noto_sans.variable
         )}
       >
         <Background />
         {children}
+        <Footer />
       </body>
     </html>
   )
