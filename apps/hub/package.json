@@ -1,5 +1,5 @@
 {
-  "name": "hub",
+  "name": "rdb-hub",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {},
   "devDependencies": {
     "@relatos/tailwind-config": "workspace:*",
     "@relatos/typescript-config": "workspace:*",
