@@ -1,13 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/villacovico/:path*",
-      "destination": "https://relatosdebarrios-covico.vercel.app/villacovico/:path*"
+      "destination": "https://villacovico.relatosdebarrios.cl/villacovico/:path*"
     },
     {
       "source": "/conjuntohabitacionalrengifo/:path*",
-      "destination": "https://relatosdebarrios-rengifo.vercel.app/conjuntohabitacionalrengifo/:path*"
+      "destination": "https://conjuntohabitacionalrengifo.relatosdebarrios.cl/conjuntohabitacionalrengifo/:path*"
     }
   ]
 }
