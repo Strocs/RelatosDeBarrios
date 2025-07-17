@@ -1,5 +1,4 @@
 {
-  "extends": "@relatos/typescript-config/tsconfig.json",
-  "include": ["src/**/*"],
-  "exclude": ["dist", "node_modules"]
+  "extends": "@relatos/configs-typescript",
+  "include": ["src/**/*", "index.ts"]
 }

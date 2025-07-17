@@ -1,3 +1,3 @@
-import { baseConfig } from '@relatos/eslint-config/base'
+import { baseConfig } from '@relatos/configs-eslint'
 /** @type {import("eslint").Linter.Config} */
 export default baseConfig
