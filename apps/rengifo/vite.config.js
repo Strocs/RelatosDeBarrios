@@ -5,5 +5,9 @@ import svgLoader from '@andylacko/vite-svg-react-loader'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/conjuntohabitacionalrengifo',
+  build: {
+    outDir: 'dist/conjuntohabitacionalrengifo',
+    assetsDir: 'assets',
+  },
   plugins: [react(), svgLoader()],
 })
