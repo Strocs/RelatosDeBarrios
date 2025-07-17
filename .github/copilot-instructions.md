@@ -64,7 +64,7 @@ Content is organized by domain: `core/` (brand, team), `apps/` (project configs)
 
 ### 3. Styling Architecture
 
-- **Tailwind CSS** shared via `@relatos/configs-tailwindcss`
+- **Tailwind CSS** shared via `@relatos/config-tailwindcss`
 - Use `cn()` utility from `@relatos/utils` for conditional classes (clsx + tailwind-merge)
 - Shared base styles in `packages/configs/tailwindcss/shared-styles.css`
 
@@ -90,13 +90,13 @@ export { seoConfig } from './seo'
 
 Common utilities including `cn()` for class merging, date/string/array helpers.
 
-### `@relatos/configs-*`
+### `@relatos/config-*`
 
 Shared configuration packages:
 
-- `@relatos/configs-eslint` - ESLint rules with Prettier integration
-- `@relatos/configs-tailwindcss` - Tailwind configuration and shared styles
-- `@relatos/configs-typescript` - TypeScript configuration
+- `@relatos/config-eslint` - ESLint rules with Prettier integration
+- `@relatos/config-tailwindcss` - Tailwind configuration and shared styles
+- `@relatos/config-typescript` - TypeScript configuration
 
 ## File Naming Conventions
 
