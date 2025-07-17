@@ -20,10 +20,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "bun@1.2.17",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "dependencies": {}
+  "packageManager": "pnpm@10.13.1"
 }

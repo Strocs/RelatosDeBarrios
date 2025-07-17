@@ -1,7 +1,6 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "globalEnv": ["NODE_ENV"],
-  "ui": "tui",
   "boundaries": {
     "tags": {
       "public": {
