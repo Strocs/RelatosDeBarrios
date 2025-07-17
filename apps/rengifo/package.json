@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --port 3002",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "vite preview --port 3002",
+    "build": "vite build"
   },
   "dependencies": {
     "@relatos/content": "workspace:*",
