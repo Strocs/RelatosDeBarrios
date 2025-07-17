@@ -9,16 +9,16 @@ Successfully implemented a professional configuration structure that respects en
 ```
 packages/
 ├── configs/           # Logical grouping folder
-│   ├── eslint/        # @relatos/configs-eslint
+│   ├── eslint/        # @relatos/config-eslint
 │   │   ├── package.json
 │   │   ├── base.js
 │   │   ├── next.js
 │   │   └── react.js
-│   ├── tailwind/      # @relatos/configs-tailwindcss
+│   ├── tailwind/      # @relatos/config-tailwindcss
 │   │   ├── package.json
 │   │   ├── postcss.config.mjs
 │   │   └── shared-styles.css
-│   └── typescript/    # @relatos/configs-typescript
+│   └── typescript/    # @relatos/config-typescript
 │       ├── package.json
 │       └── tsconfig.json
 ├── content/           # @relatos/content
@@ -40,8 +40,8 @@ Apps can import exactly what they need:
 ```json
 {
   "devDependencies": {
-    "@relatos/configs-eslint": "workspace:*",
-    "@relatos/configs-tailwindcss": "workspace:*"
+    "@relatos/config-eslint": "workspace:*",
+    "@relatos/config-tailwindcss": "workspace:*"
     // Only import what you use
   }
 }
@@ -51,30 +51,30 @@ Apps can import exactly what they need:
 
 ```javascript
 // ESLint config
-import { nextJsConfig } from '@relatos/configs-eslint/next'
+import { nextJsConfig } from '@relatos/config-eslint/next'
 
 // Tailwind config
-import config from '@relatos/configs-tailwindcss/postcss'
+import config from '@relatos/config-tailwindcss/postcss'
 
 // TypeScript config
-import tsConfig from '@relatos/configs-typescript'
+import tsConfig from '@relatos/config-typescript'
 ```
 
 ## 📦 **Package Details:**
 
-### **@relatos/configs-eslint**
+### **@relatos/config-eslint**
 
 - **Dependencies**: ESLint, plugins, Prettier integration
 - **Exports**: base, next, react configurations
 - **Peer Dependencies**: eslint ^9.0.0
 
-### **@relatos/configs-tailwindcss**
+### **@relatos/config-tailwindcss**
 
 - **Dependencies**: Tailwind CSS, PostCSS, Autoprefixer
 - **Exports**: PostCSS config, shared styles
 - **Peer Dependencies**: tailwindcss ^4.0.0, postcss ^8.0.0
 
-### **@relatos/configs-typescript**
+### **@relatos/config-typescript**
 
 - **Dependencies**: TypeScript, Node types
 - **Exports**: Base tsconfig.json

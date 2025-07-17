@@ -1,5 +1,5 @@
 {
-  "name": "@relatos/configs-typescript",
+  "name": "@relatos/config-typescript",
   "version": "0.0.1",
   "private": true,
   "description": "TypeScript configurations for the Relatos de Barrios monorepo",
@@ -9,5 +9,8 @@
   },
   "files": [
     "*.json"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
 }

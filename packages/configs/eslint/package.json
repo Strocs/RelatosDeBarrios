@@ -1,17 +1,17 @@
 {
-  "name": "@relatos/configs-eslint",
+  "name": "@relatos/config-eslint",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "description": "ESLint configurations for the Relatos de Barrios monorepo",
-  "main": "./base.js",
+  "main": "./src/base.js",
   "exports": {
-    ".": "./base.js",
-    "./next": "./next.js",
-    "./react": "./react.js"
+    ".": "./src/base.js",
+    "./next": "./src/next.js",
+    "./react": "./src/react.js"
   },
   "files": [
-    "*.js"
+    "*.ts"
   ],
   "devDependencies": {
     "@eslint/js": "^9.29.0",

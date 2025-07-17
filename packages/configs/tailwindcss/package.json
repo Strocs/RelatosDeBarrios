@@ -1,5 +1,5 @@
 {
-  "name": "@relatos/configs-tailwindcss",
+  "name": "@relatos/config-tailwindcss",
   "version": "0.0.1",
   "private": true,
   "type": "module",

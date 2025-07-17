@@ -1,5 +1,5 @@
 {
-  "extends": "@relatos/configs-typescript",
+  "extends": "@relatos/config-typescript",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

@@ -1,4 +1,4 @@
-import { nextJsConfig } from '@relatos/configs-eslint/next'
+import { nextJsConfig } from '@relatos/config-eslint/next'
 
 /** @type {import("eslint").Linter.Config} */
 export default [...nextJsConfig]

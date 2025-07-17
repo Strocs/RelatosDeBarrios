@@ -9,16 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@relatos/content": "workspace:*",
+    "@relatos/utils": "workspace:*",
+    "next": "^15",
     "react": "^19",
     "react-dom": "^19",
-    "next": "^15",
     "react-markdown": "^10.1.0"
   },
   "devDependencies": {
-    "@relatos/content": "workspace:*",
-    "@relatos/configs-eslint": "workspace:*",
-    "@relatos/configs-tailwindcss": "workspace:*",
-    "@relatos/configs-typescript": "workspace:*",
-    "@relatos/utils": "workspace:*"
+    "@relatos/config-eslint": "workspace:*",
+    "@relatos/config-tailwindcss": "workspace:*",
+    "@relatos/config-typescript": "workspace:*",
+    "typescript": "^5.8.3"
   }
 }

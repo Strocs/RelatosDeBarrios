@@ -17,8 +17,8 @@
     "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {
-    "@relatos/configs-eslint": "workspace:*",
-    "@relatos/configs-typescript": "workspace:*"
+    "@relatos/config-eslint": "workspace:*",
+    "@relatos/config-typescript": "workspace:*"
   },
   "exports": {
     ".": "./src/index.ts",

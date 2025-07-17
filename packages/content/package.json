@@ -41,7 +41,7 @@
     "src/**/*"
   ],
   "devDependencies": {
-    "@relatos/configs-typescript": "workspace:*",
-    "@relatos/configs-eslint": "workspace:*"
+    "@relatos/config-typescript": "workspace:*",
+    "@relatos/config-eslint": "workspace:*"
   }
 }
