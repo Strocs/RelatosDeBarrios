@@ -1,0 +1,13 @@
+{
+  "name": "@relatos/configs-typescript",
+  "version": "0.0.1",
+  "private": true,
+  "description": "TypeScript configurations for the Relatos de Barrios monorepo",
+  "main": "./tsconfig.json",
+  "exports": {
+    ".": "./tsconfig.json"
+  },
+  "files": [
+    "*.json"
+  ]
+}

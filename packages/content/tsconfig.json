@@ -1,0 +1,4 @@
+{
+  "extends": "@relatos/configs-typescript",
+  "include": ["src/**/*", "index.ts"]
+}

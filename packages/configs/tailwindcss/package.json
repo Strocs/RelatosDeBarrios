@@ -1,0 +1,20 @@
+{
+  "name": "@relatos/configs-tailwindcss",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Tailwind CSS configurations for the Relatos de Barrios monorepo",
+  "main": "./postcss.config.mjs",
+  "exports": {
+    ".": "./shared-styles.css",
+    "./postcss": "./postcss.config.mjs"
+  },
+  "files": [
+    "*.mjs",
+    "*.css"
+  ],
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
+  }
+}
