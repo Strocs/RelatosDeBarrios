@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/covico/:path*",
+      "destination": "https://relatosdebarrios-covico.vercel.app/:path*"
+    },
+    {
+      "source": "/rengifo/:path*",
+      "destination": "https://relatosdebarrios-rengifo.vercel.app/:path*"
+    }
+  ]
+}
