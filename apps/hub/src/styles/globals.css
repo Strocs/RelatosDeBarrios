@@ -1,4 +1,4 @@
-@import '@relatos/tailwind-config';
+@import '@relatos/config-tailwindcss';
 
 @theme inline {
   --color-hub-primary: #294581;

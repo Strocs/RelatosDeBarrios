@@ -6,7 +6,7 @@ interface HeaderProps {
 
 export const Header = ({ children }: HeaderProps) => {
   return (
-    <header className='container mx-auto w-full'>
+    <header className='container mx-auto'>
       <NavBar />
       {children}
     </header>
