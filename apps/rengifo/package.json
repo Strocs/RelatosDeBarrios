@@ -14,8 +14,7 @@
     "react-responsive": "^9.0.0-beta.6",
     "react-scroll-parallax": "^3.1.0",
     "react-spring": "^9.4.5",
-    "vite-plugin-require": "^0.0.8",
-    "@relatos/config": "workspace:*"
+    "vite-plugin-require": "^0.0.8"
   },
   "devDependencies": {
     "@andylacko/vite-svg-react-loader": "^2.0.5",
@@ -23,9 +22,9 @@
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.13",
     "vite": "^2.9.5",
-    "@relatos/tailwind-config": "workspace:*",
-    "@relatos/typescript-config": "workspace:*",
-    "@relatos/eslint-config": "workspace:*"
+    "@relatos/configs-tailwindcss": "workspace:*",
+    "@relatos/configs-typescript": "workspace:*",
+    "@relatos/configs-eslint": "workspace:*"
   },
   "browserslist": [
     "defaults"

@@ -12,13 +12,12 @@
     "react": "^19",
     "react-dom": "^19",
     "next": "^15",
-    "react-markdown": "^10.1.0",
-    "@relatos/config": "workspace:*"
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
-    "@relatos/tailwind-config": "workspace:*",
-    "@relatos/typescript-config": "workspace:*",
-    "@relatos/eslint-config": "workspace:*",
+    "@relatos/configs-tailwindcss": "workspace:*",
+    "@relatos/configs-typescript": "workspace:*",
+    "@relatos/configs-eslint": "workspace:*",
     "@relatos/utils": "workspace:*"
   }
 }

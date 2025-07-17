@@ -1,2 +1,2 @@
-import config from "@relatos/tailwind-config/postcss";
-export default config;
+import config from '@relatos/configs/tailwindcss/postcss'
+export default config
