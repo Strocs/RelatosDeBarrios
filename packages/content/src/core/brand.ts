@@ -10,8 +10,13 @@ export const brandConfig: BrandConfig = {
   contact_email: "relatosdebarrios@gmail.cl",
   url: {
     base: "https://relatosdebarrios.cl",
-    covico: "https://villacovico.relatosdebarrios.cl/",
-    rengifo: "https://barriorengifo.relatosdebarrios.cl/"
+    covico: "https://relatosdebarrios.cl/villacovico",
+    rengifo: "https://relatosdebarrios.cl/conjuntohabitacionalrengifo"
+  },
+  paths: {
+    hub: "/",
+    covico: "/villacovico",
+    rengifo: "/conjuntohabitacionalrengifo"
   },
   social: {
     instagram: "https://www.instagram.com/relatosdebarrios"
