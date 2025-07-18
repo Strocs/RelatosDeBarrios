@@ -1,5 +1,5 @@
 {
-  "name": "rdb-villacovico",
+  "name": "covico",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,15 +11,17 @@
   "dependencies": {
     "@relatos/content": "workspace:*",
     "@relatos/utils": "workspace:*",
-    "next": "^15",
-    "react": "^19",
-    "react-dom": "^19",
-    "react-markdown": "^10.1.0"
+    "lucide-react": "catalog:",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-markdown": "catalog:"
   },
   "devDependencies": {
     "@relatos/config-eslint": "workspace:*",
     "@relatos/config-tailwindcss": "workspace:*",
     "@relatos/config-typescript": "workspace:*",
-    "typescript": "^5.8.3"
+    "typescript": "catalog:",
+    "eslint": "catalog:"
   }
 }

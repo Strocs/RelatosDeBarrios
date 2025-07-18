@@ -42,6 +42,7 @@
   ],
   "devDependencies": {
     "@relatos/config-typescript": "workspace:*",
-    "@relatos/config-eslint": "workspace:*"
+    "@relatos/config-eslint": "workspace:*",
+    "eslint": "catalog:"
   }
 }

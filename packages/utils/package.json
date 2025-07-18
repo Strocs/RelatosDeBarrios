@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "@relatos/config-eslint": "workspace:*",
-    "@relatos/config-typescript": "workspace:*"
+    "@relatos/config-typescript": "workspace:*",
+    "eslint": "catalog:"
   },
   "exports": {
     ".": "./src/index.ts",
