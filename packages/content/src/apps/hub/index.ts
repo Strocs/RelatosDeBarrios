@@ -2,4 +2,4 @@
  * Hub app configuration exports
  */
 
-export { hubConfig } from './sections';
+export { hubConfig } from './hub'

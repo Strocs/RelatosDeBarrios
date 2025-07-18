@@ -24,5 +24,12 @@ export interface SectionConfig {
 }
 
 export interface HubConfig {
+  readonly description: string
+  readonly hero_img: {
+    readonly src: string
+    readonly alt: string
+    readonly width: number
+    readonly height: number
+  }
   readonly sections: Record<string, SectionConfig>
 }

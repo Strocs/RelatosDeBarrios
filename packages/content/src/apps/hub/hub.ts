@@ -5,6 +5,14 @@ import type { HubConfig } from '../../types/apps'
  * Contains navigation sections and hub-specific settings
  */
 export const hubConfig: HubConfig = {
+  description:
+    'Voces que construyen identidad en los barrios de la Región de Coquimbo.',
+  hero_img: {
+    src: '/images/hero-image.webp',
+    alt: 'Logo de Relatos de Barrios',
+    width: 1200,
+    height: 531,
+  },
   sections: {
     // inicio: {
     //   title: 'Inicio',
