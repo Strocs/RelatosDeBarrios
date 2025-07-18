@@ -1,5 +1,6 @@
 'use client'
 
+import { uiConfig } from '@relatos/content'
 import { cn } from '@relatos/utils'
 import Link from 'next/link'
 import { useRef } from 'react'
@@ -10,6 +11,7 @@ interface BarrioCardProps {
   videoSrc?: string
   posterSrc?: string
   href: URL | string
+  disabled?: boolean
   badge?: React.ReactNode
 }
 
@@ -19,20 +21,29 @@ export const BarrioCard = ({
   posterSrc,
   badge,
   href,
+  disabled,
 }: BarrioCardProps) => {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const Element = disabled ? 'div' : Link
   return (
-    <Link
+    <Element
       onMouseEnter={() => videoRef.current?.play()}
       onMouseLeave={() => videoRef.current?.pause()}
       href={href}
       className={cn(
-        'ring-hub-accent/50 md:w-md group relative aspect-video w-full content-end overflow-hidden rounded-2xl p-8 transition-all hover:ring-2',
+        'ring-hub-accent/50 md:w-md group relative aspect-video w-full cursor-pointer content-end overflow-hidden rounded-2xl p-8 transition-all hover:ring-2',
         {
           'bg-hub-primary/10': !videoSrc,
         }
       )}
     >
+      {disabled && (
+        <div className='bg-hub-primary/10 absolute inset-0 z-10 flex items-center justify-center transition-opacity group-hover:opacity-100 landscape:opacity-0'>
+          <span className='text-hub-accent text-2xl font-bold'>
+            {uiConfig.messages.coming_soon}
+          </span>
+        </div>
+      )}
       {!!badge && badge}
       {videoSrc && (
         <video
@@ -57,6 +68,6 @@ export const BarrioCard = ({
       >
         {title}
       </Markdown>
-    </Link>
+    </Element>
   )
 }

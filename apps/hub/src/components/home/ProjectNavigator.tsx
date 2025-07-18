@@ -23,7 +23,12 @@ export const ProjectsNavigator = () => {
         title={rengifo.name}
         videoSrc='/videos/rengifo-teaser.mp4'
       />
-      <BarrioCard href={covicoUrl} title={covico.name} badge={<NewBadge />} />
+      <BarrioCard
+        href={covicoUrl}
+        title={covico.name}
+        badge={<NewBadge />}
+        disabled
+      />
     </section>
   )
 }
