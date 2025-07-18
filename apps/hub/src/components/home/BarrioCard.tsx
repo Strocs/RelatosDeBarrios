@@ -27,7 +27,7 @@ export const BarrioCard = ({
       onMouseLeave={() => videoRef.current?.pause()}
       href={href}
       className={cn(
-        'w-md ring-hub-accent/50 group relative aspect-video content-end overflow-hidden rounded-2xl p-8 transition-all hover:ring-2',
+        'ring-hub-accent/50 md:w-md group relative aspect-video w-full content-end overflow-hidden rounded-2xl p-8 transition-all hover:ring-2',
         {
           'bg-hub-primary/10': !videoSrc,
         }
@@ -47,7 +47,7 @@ export const BarrioCard = ({
       )}
       <Markdown
         components={{
-          h2: ({ node, ...props }) => (
+          h2: ({ ...props }) => (
             <h2
               {...props}
               className='text-hub-text relative w-full max-w-xs text-4xl leading-none'

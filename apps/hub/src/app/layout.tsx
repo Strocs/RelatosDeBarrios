@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          'bg-hub-background font-noto relative flex h-full min-h-dvh flex-col antialiased',
+          'bg-hub-background font-noto relative flex h-full min-h-dvh flex-col px-4 antialiased',
           noto_sans.variable
         )}
       >

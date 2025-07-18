@@ -17,7 +17,7 @@ const { rengifoUrl, covicoUrl } = {
 
 export const ProjectsNavigator = () => {
   return (
-    <section className='mx-auto flex w-fit gap-20'>
+    <section className='not-landscape:flex-col mx-auto flex w-fit gap-4 landscape:gap-20'>
       <BarrioCard
         href={rengifoUrl}
         title={rengifo.name}
