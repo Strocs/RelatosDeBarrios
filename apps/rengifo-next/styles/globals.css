@@ -1,0 +1,36 @@
+@import '@relatos/config-tailwindcss';
+
+/* Rengifo App - Design Tokens */
+@theme inline {
+  --color-rengifo-azul: #344754;
+  --color-rengifo-azul-opa: #34475480;
+  --color-rengifo-azul-darker: #344754e3;
+  --color-rengifo-pastel: #eadfd4;
+  --color-rengifo-pastel-opa: #eadfd480;
+  --color-rengifo-amarillo: #f3ba74;
+  --color-rengifo-amarillo-opa: #f3ba7480;
+  --color-rengifo-gris: #d1cdc5;
+  --color-rengifo-gris-opa: #d1cdc580;
+
+  /* Converted from Vite (1rem=10px) to Next.js (1rem=16px) */
+  --text-rengifo-titles: 3.125rem; /* 5rem * 10px ÷ 16px = 50px */
+  --text-rengifo-sub-titles: 1.875rem; /* 3rem * 10px ÷ 16px = 30px */
+  --text-rengifo-sub-titles-2: 1.25rem; /* 2rem * 10px ÷ 16px = 20px */
+  --text-rengifo-parrafos: 1rem; /* 1.6rem * 10px ÷ 16px = 16px */
+  --text-rengifo-footer: 0.75rem; /* 1.2rem * 10px ÷ 16px = 12px */
+
+  /* Font family */
+  --font-raleway: var(--font-raleway);
+}
+
+/* Global styles and responsive adjustments */
+@media (min-width: 1281px) {
+  @theme {
+    /* Desktop converted values (1rem=10px to 1rem=16px) */
+    --text-rengifo-titles: 6.25rem; /* 10rem * 10px ÷ 16px = 100px */
+    --text-rengifo-sub-titles: 2.5rem; /* 4rem * 10px ÷ 16px = 40px */
+    --text-rengifo-sub-titles-2: 1.875rem; /* 3rem * 10px ÷ 16px = 30px */
+    --text-rengifo-parrafos: 1.125rem; /* 1.8rem * 10px ÷ 16px = 18px */
+    --text-rengifo-footer: 1rem; /* 1.6rem * 10px ÷ 16px = 16px */
+  }
+}

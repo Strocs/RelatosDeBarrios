@@ -10,3 +10,7 @@ catalog:
   react-markdown: ^10
   typescript: ^5
   eslint: ^9.29.0
+  gsap: ^3.11.5
+  '@types/node': ^24
+  '@types/react': ^19
+  '@types/react-dom': ^19
