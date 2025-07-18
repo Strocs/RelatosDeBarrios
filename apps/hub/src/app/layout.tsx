@@ -13,11 +13,14 @@ const noto_sans = Noto_Sans({
 })
 
 export const metadata: Metadata = {
-  title: seoConfig.title,
+  title: { default: seoConfig.title, template: `%s | ${seoConfig.title}` },
   description: seoConfig.description,
   metadataBase: new URL(seoConfig.url),
   openGraph: seoConfig.og,
   twitter: seoConfig.twitter,
+  icons: {
+    icon: seoConfig.favicon,
+  },
 }
 
 export default function RootLayout({

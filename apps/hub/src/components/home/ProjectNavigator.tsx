@@ -18,7 +18,11 @@ const { rengifoUrl, covicoUrl } = {
 export const ProjectsNavigator = () => {
   return (
     <section className='mx-auto flex w-fit gap-20'>
-      <BarrioCard href={rengifoUrl} title={rengifo.name} />
+      <BarrioCard
+        href={rengifoUrl}
+        title={rengifo.name}
+        videoSrc='/videos/rengifo-teaser.mp4'
+      />
       <BarrioCard href={covicoUrl} title={covico.name} badge={<NewBadge />} />
     </section>
   )

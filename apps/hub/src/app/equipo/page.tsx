@@ -1,8 +1,14 @@
+import { Header } from '@/components/Header'
+import { Main } from '@/components/Main'
+
 export default function EquipoPage() {
   return (
-    <div>
-      <h1>Equipo</h1>
-      <p>Bienvenido a la sección de Equipo.</p>
-    </div>
+    <>
+      <Header />
+      <Main>
+        <h1>Equipo</h1>
+        <p>Bienvenido a la sección de Equipo.</p>
+      </Main>
+    </>
   )
 }

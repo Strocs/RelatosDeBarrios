@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/home/Hero'
 import { ProjectsNavigator } from '@/components/home/ProjectNavigator'
+import { Main } from '@/components/Main'
 
 export default function Home() {
   return (
@@ -8,9 +9,9 @@ export default function Home() {
       <Header>
         <Hero />
       </Header>
-      <main className='container mx-auto grow content-center'>
+      <Main>
         <ProjectsNavigator />
-      </main>
+      </Main>
     </>
   )
 }
