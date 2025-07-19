@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { hubConfig } from '@relatos/content'
+import { hubConfig } from '@relatos/content/hub'
 
 export const NavBar = () => {
   const navSections = Object.entries(hubConfig.sections)

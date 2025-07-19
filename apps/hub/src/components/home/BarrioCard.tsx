@@ -1,6 +1,6 @@
 'use client'
 
-import { uiConfig } from '@relatos/content'
+import { uiConfig } from '@relatos/content/ui'
 import { cn } from '@relatos/utils'
 import Link from 'next/link'
 import { useRef } from 'react'

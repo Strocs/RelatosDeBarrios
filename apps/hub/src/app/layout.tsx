@@ -3,7 +3,7 @@ import { Noto_Sans } from 'next/font/google'
 import '@/styles/globals.css'
 import { Background } from '@/components/Background'
 import { cn } from '@relatos/utils'
-import { seoConfig } from '@relatos/content'
+import { seoConfig } from '@relatos/content/hub'
 import { Footer } from '@/components/Footer'
 
 const noto_sans = Noto_Sans({

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { hubConfig } from '@relatos/content'
+import { hubConfig } from '@relatos/content/hub'
 
 export const Hero = () => {
   return (

@@ -1,8 +1,9 @@
 import { BarrioCard } from '@/components/home/BarrioCard'
 import { NewBadge } from '@/components/NewBadge'
-import { brandConfig, projectsConfig } from '@relatos/content'
+import { brandConfig } from '@relatos/content/core'
+import { hubConfig } from '@relatos/content/hub'
 
-const { rengifo, covico } = projectsConfig
+const { rengifo, covico } = hubConfig.projects
 
 const { rengifoUrl, covicoUrl } = {
   rengifoUrl:
