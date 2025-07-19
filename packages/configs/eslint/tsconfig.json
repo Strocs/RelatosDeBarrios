@@ -1,0 +1,10 @@
+{
+  "extends": "@relatos/config-typescript",
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.js"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "declaration": true,
+    "declarationMap": true
+  }
+}
