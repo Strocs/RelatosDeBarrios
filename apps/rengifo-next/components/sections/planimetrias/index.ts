@@ -1,1 +1,0 @@
-export { PlanimetriasSection } from './PlanimetriasSection'

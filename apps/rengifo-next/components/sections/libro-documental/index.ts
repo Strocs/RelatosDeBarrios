@@ -1,1 +1,0 @@
-export { LibroDocumentalSection } from './LibroDocumentalSection'

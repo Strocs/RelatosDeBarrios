@@ -3,7 +3,7 @@ import { Raleway } from 'next/font/google'
 
 import '../styles/globals.css'
 import { cn } from '@relatos/utils'
-import { rengifoSeoConfig } from '@relatos/content'
+import { seoConfig } from '@relatos/content'
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -14,26 +14,26 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: rengifoSeoConfig.title,
-    template: `%s | ${rengifoSeoConfig.title}`,
+    default: seoConfig.title,
+    template: `%s | ${seoConfig.title}`,
   },
-  description: rengifoSeoConfig.description,
-  keywords: [...rengifoSeoConfig.keywords],
+  description: seoConfig.description,
+  keywords: [...seoConfig.keywords],
   openGraph: {
-    title: rengifoSeoConfig.openGraph.title,
-    description: rengifoSeoConfig.openGraph.description,
+    title: seoConfig.openGraph.title,
+    description: seoConfig.openGraph.description,
     type: 'website',
-    siteName: rengifoSeoConfig.openGraph.siteName,
-    images: [{ url: rengifoSeoConfig.openGraph.image }],
+    siteName: seoConfig.openGraph.siteName,
+    images: [{ url: seoConfig.openGraph.image }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: rengifoSeoConfig.twitter.title,
-    description: rengifoSeoConfig.twitter.description,
-    images: [rengifoSeoConfig.twitter.image],
+    title: seoConfig.twitter.title,
+    description: seoConfig.twitter.description,
+    images: [seoConfig.twitter.image],
   },
   icons: {
-    icon: rengifoSeoConfig.favicon,
+    icon: seoConfig.favicon,
   },
 }
 

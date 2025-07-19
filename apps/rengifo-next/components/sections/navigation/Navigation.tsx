@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { rengifoNavigationConfig } from '@relatos/content'
+import { navigationConfig } from '@relatos/content'
 import { NavLogo } from './NavLogo'
 import { cn } from '@relatos/utils'
 import { HamburgerButton } from './HamburgerButton'
@@ -32,7 +32,7 @@ export const Navigation = () => {
     }
   }
 
-  const { menu } = rengifoNavigationConfig
+  const { menu } = navigationConfig
 
   return (
     <nav

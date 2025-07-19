@@ -1,15 +1,15 @@
-import { rengifoHeaderConfig } from '@relatos/content'
+import { headerConfig } from '@relatos/content/rengifo'
 import { Title } from '@/components/ui/Title'
 import { Button } from '@/components/ui/Button'
 import Image from 'next/image'
 
-export const Header = () => {
-  const { hero, actions, video, backgroundImage } = rengifoHeaderConfig
+export const HeroSection = () => {
+  const { hero, actions, video, backgroundImage } = headerConfig
 
   return (
-    <header id='inicio' className='relative h-[180dvh]'>
+    <header id='inicio' className='relative h-[160dvh]'>
       {/* Content Container with GSAP Parallax placeholder */}
-      <section className='h-3/7 container mx-auto flex size-full items-center justify-end px-8'>
+      <section className='container mx-auto flex size-full h-screen items-center justify-end px-8'>
         {/* Title Container with decorative bar */}
         <div className='relative flex w-fit flex-col items-end'>
           <div className='bg-rengifo-amarillo h-2 w-full' />
@@ -50,7 +50,7 @@ export const Header = () => {
         alt={backgroundImage.alt}
         width={backgroundImage.width}
         height={backgroundImage.height}
-        className='absolute bottom-0 w-screen'
+        className='absolute -bottom-[20dvh] w-screen'
       />
     </header>
   )

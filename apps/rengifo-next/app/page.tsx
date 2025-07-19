@@ -1,20 +1,18 @@
-import { Navigation } from '@/components/sections/navigation'
-import { Header } from '@/components/sections/header'
-import { ProjectSection } from '@/components/sections/proyecto'
-import { PlanimetriasSection } from '@/components/sections/planimetrias'
-import { ArchivoSection } from '@/components/sections/archivo'
-import { LibroDocumentalSection } from '@/components/sections/libro-documental'
+import { ArchiveSection } from '@/components/sections/archive/ArchiveSection'
+import { DownloadsSection } from '@/components/sections/downloads/DownloadsSection'
+import { HeroSection } from '@/components/sections/hero/HeroSection'
+import { Navigation } from '@/components/sections/navigation/Navigation'
+import { PlansSection } from '@/components/sections/plans/PlansSection'
 
 export default function Home() {
   return (
     <>
       <Navigation />
-      <Header />
+      <HeroSection />
       <main className='min-h-screen'>
-        <ProjectSection />
-        <PlanimetriasSection />
-        <ArchivoSection />
-        <LibroDocumentalSection />
+        <PlansSection />
+        <ArchiveSection />
+        <DownloadsSection />
       </main>
     </>
   )
