@@ -62,6 +62,9 @@ importers:
       turbo:
         specifier: ^2.5.5
         version: 2.5.5
+      typescript:
+        specifier: 'catalog:'
+        version: 5.8.3
 
   apps/covico:
     dependencies:
@@ -285,6 +288,9 @@ importers:
 
   packages/configs/tailwindcss:
     devDependencies:
+      '@relatos/config-typescript':
+        specifier: workspace:*
+        version: link:../typescript
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.11
