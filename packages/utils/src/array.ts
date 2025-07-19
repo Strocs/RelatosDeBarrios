@@ -2,7 +2,6 @@
  * Array utility functions
  */
 
-
 /**
  * Removes duplicates from an array based on a key function
  */
@@ -50,7 +49,6 @@ export function chunk<T>(array: T[], size: number): T[][] {
   return chunks
 }
 
-
 /**
  * Shuffles an array randomly
  */
@@ -58,7 +56,7 @@ export function shuffle<T>(array: T[]): T[] {
   const shuffled = array.slice()
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled
 }
@@ -82,7 +80,10 @@ export function sampleSize<T>(array: T[], size: number): T[] {
 /**
  * Sorts an array by a key function
  */
-export function sortBy<T, K extends string | number | boolean>(array: T[], keyFn: (item: T) => K): T[] {
+export function sortBy<T, K extends string | number | boolean>(
+  array: T[],
+  keyFn: (item: T) => K
+): T[] {
   return array.slice().sort((a, b) => {
     const aKey = keyFn(a)
     const bKey = keyFn(b)
@@ -114,7 +115,6 @@ export function difference<T>(array1: T[], array2: T[]): T[] {
 export function union<T>(array1: T[], array2: T[]): T[] {
   return Array.from(new Set(array1.concat(array2)))
 }
-
 
 /**
  * Gets the last element of an array

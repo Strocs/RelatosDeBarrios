@@ -15,7 +15,9 @@ export function deepClone<T>(obj: T): T {
   }
 
   if (Array.isArray(obj)) {
-    return (obj as unknown as Array<unknown>).map((item) => deepClone(item)) as unknown as T
+    return (obj as unknown as Array<unknown>).map((item) =>
+      deepClone(item)
+    ) as unknown as T
   }
 
   const clonedObj: Record<string, unknown> = {}
@@ -52,12 +54,21 @@ export function deepMerge<T extends Record<string, unknown>>(
 /**
  * Gets a nested property value using dot notation
  */
-export function get<T = unknown>(obj: unknown, path: string, defaultValue?: T): T {
+export function get<T = unknown>(
+  obj: unknown,
+  path: string,
+  defaultValue?: T
+): T {
   const keys = path.split('.')
   let result: unknown = obj
 
   for (const key of keys) {
-    if (result === null || result === undefined || typeof result !== 'object' || !(key in result)) {
+    if (
+      result === null ||
+      result === undefined ||
+      typeof result !== 'object' ||
+      !(key in result)
+    ) {
       return defaultValue as T
     }
     result = (result as Record<string, unknown>)[key]
@@ -69,13 +80,21 @@ export function get<T = unknown>(obj: unknown, path: string, defaultValue?: T): 
 /**
  * Sets a nested property value using dot notation
  */
-export function set(obj: Record<string, unknown>, path: string, value: unknown): void {
+export function set(
+  obj: Record<string, unknown>,
+  path: string,
+  value: unknown
+): void {
   const keys = path.split('.')
   let current: Record<string, unknown> = obj
 
   for (let i = 0; i < keys.length - 1; i++) {
     const key = keys[i]
-    if (!(key in current) || typeof current[key] !== 'object' || current[key] === null) {
+    if (
+      !(key in current) ||
+      typeof current[key] !== 'object' ||
+      current[key] === null
+    ) {
       current[key] = {}
     }
     current = current[key] as Record<string, unknown>
@@ -92,7 +111,12 @@ export function has(obj: unknown, path: string): boolean {
   let current: unknown = obj
 
   for (const key of keys) {
-    if (current === null || current === undefined || typeof current !== 'object' || !(key in current)) {
+    if (
+      current === null ||
+      current === undefined ||
+      typeof current !== 'object' ||
+      !(key in current)
+    ) {
       return false
     }
     current = (current as Record<string, unknown>)[key]
@@ -111,8 +135,11 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(
   const result: Partial<Omit<T, K>> = {}
   const keysSet = new Set(keys)
   for (const key in obj as object) {
-    if (Object.prototype.hasOwnProperty.call(obj, key) && !keysSet.has(key as K)) {
-      (result as Record<string, unknown>)[key] = obj[key as keyof T]
+    if (
+      Object.prototype.hasOwnProperty.call(obj, key) &&
+      !keysSet.has(key as K)
+    ) {
+      ;(result as Record<string, unknown>)[key] = obj[key as keyof T]
     }
   }
   return result as Omit<T, K>
@@ -128,7 +155,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(
   const result: Partial<Pick<T, K>> = {}
   for (const key of keys) {
     if (key in obj) {
-      (result as Pick<T, K>)[key] = obj[key]
+      ;(result as Pick<T, K>)[key] = obj[key]
     }
   }
   return result as Pick<T, K>
@@ -137,22 +164,20 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(
 /**
  * Gets all keys of an object (including nested keys with dot notation)
  */
-export function getAllKeys(obj: Record<string, unknown>, prefix = ''): string[] {
+export function getAllKeys(
+  obj: Record<string, unknown>,
+  prefix = ''
+): string[] {
   const keys: string[] = []
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       const fullKey = prefix ? `${prefix}.${key}` : key
       keys.push(fullKey)
       const value = obj[key]
-      if (
-        value &&
-        typeof value === 'object' &&
-        !Array.isArray(value)
-      ) {
+      if (value && typeof value === 'object' && !Array.isArray(value)) {
         keys.push(...getAllKeys(value as Record<string, unknown>, fullKey))
       }
     }
   }
   return keys
 }
-

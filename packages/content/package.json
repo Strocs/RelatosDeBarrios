@@ -5,6 +5,11 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "description": "Shared content management package with business data, UI texts, team information, and brand content for the Relatos de Barrios monorepo",
+  "scripts": {
+    "lint": "eslint src/**/*.ts",
+    "check-types": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+  },
   "exports": {
     "./core": "./src/core/index.ts",
     "./rengifo": "./src/apps/rengifo/index.ts",

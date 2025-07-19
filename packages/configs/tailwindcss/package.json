@@ -19,6 +19,7 @@
     "*.d.ts"
   ],
   "devDependencies": {
+    "@relatos/config-typescript": "workspace:*",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4"
   }

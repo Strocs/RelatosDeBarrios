@@ -8,7 +8,7 @@
     "src/**"
   ],
   "scripts": {
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint src/*.ts",
     "check-types": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
