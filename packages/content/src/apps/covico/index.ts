@@ -1,0 +1,1 @@
+export { covicoConfig } from './covico'

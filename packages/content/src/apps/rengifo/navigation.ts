@@ -3,7 +3,7 @@
  * Menu items and navigation structure for the Rengifo project
  */
 
-export const rengifoNavigationConfig = {
+export const navigationConfig = {
   menu: [
     {
       id: 'inicio',

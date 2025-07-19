@@ -15,7 +15,7 @@ export type SocialLink = {
   icon: string // Lucide icon name
 }
 
-export const rengifoFooterConfig = {
+export const footerConfig = {
   logos: [
     {
       src: '/images/logos/MINCAP.png',

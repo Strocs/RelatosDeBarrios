@@ -3,3 +3,4 @@
  */
 
 export { hubConfig } from './hub'
+export { seoConfig } from './seo'

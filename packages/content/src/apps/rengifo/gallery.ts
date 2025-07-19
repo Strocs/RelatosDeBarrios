@@ -15,7 +15,7 @@ export type GalleryCollection = {
   images: GalleryImage[]
 }
 
-export const rengifoGalleryConfig = {
+export const galleryConfig = {
   // Domestic Section Galleries
   planimetries: {
     id: 'planimetrias',

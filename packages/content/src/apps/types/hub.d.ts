@@ -32,4 +32,5 @@ export interface HubConfig {
     readonly height: number
   }
   readonly sections: Record<string, SectionConfig>
+  readonly projects: ProjectsConfig
 }

@@ -3,7 +3,7 @@
  * SEO metadata and Open Graph information for the Rengifo project
  */
 
-export const rengifoSeoConfig = {
+export const seoConfig = {
   title: 'Relatos de Barrios | Conjunto Habitacional Rengifo',
   description:
     'Relatos de Barrios busca difundir el valor patrimonial e histórico de éste y otros barrios de La Serena ligados al patrimonio industrial, destacando la experiencia social y patrimonial detrás de la vida de sus habitantes.',

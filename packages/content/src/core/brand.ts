@@ -1,4 +1,4 @@
-import type { BrandConfig } from '../types/core'
+import type { BrandConfig } from './types/core'
 
 /**
  * Brand identity and core business information

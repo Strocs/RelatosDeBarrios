@@ -1,4 +1,4 @@
-import type { UIConfig } from '../types/ui'
+import type { UIConfig } from './types/ui'
 
 /**
  * User interface text strings and labels

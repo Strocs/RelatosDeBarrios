@@ -3,7 +3,7 @@
  * Main header content including hero title and call-to-action buttons
  */
 
-export const rengifoHeaderConfig = {
+export const headerConfig = {
   hero: {
     title: 'Imaginario Urbano,',
     subTitle: 'Imaginario Barrial',

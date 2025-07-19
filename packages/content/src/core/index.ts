@@ -3,5 +3,6 @@
  * Provides access to all core business configurations
  */
 
-export { brandConfig } from './brand';
-export { teamConfig } from './team';
+export { brandConfig } from './brand'
+export { teamConfig } from './team'
+export { seoConfig } from '../apps/hub/seo'
