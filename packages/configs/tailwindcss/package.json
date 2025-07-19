@@ -5,13 +5,18 @@
   "type": "module",
   "description": "Tailwind CSS configurations for the Relatos de Barrios monorepo",
   "main": "./postcss.config.mjs",
+  "types": "./index.d.ts",
   "exports": {
     ".": "./shared-styles.css",
-    "./postcss": "./postcss.config.mjs"
+    "./postcss": {
+      "types": "./index.d.ts",
+      "default": "./postcss.config.mjs"
+    }
   },
   "files": [
     "*.mjs",
-    "*.css"
+    "*.css",
+    "*.d.ts"
   ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
