@@ -25,7 +25,7 @@ export const PlansSection = () => {
           <p className='text-lg text-white'>{archiveConfig.description}</p>
           <div>
             {archiveConfig.cards.map((card) => (
-              <div></div>
+              <div key={card.title}></div>
             ))}
           </div>
         </div>

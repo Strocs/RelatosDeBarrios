@@ -3,7 +3,7 @@ import { Raleway } from 'next/font/google'
 
 import '../styles/globals.css'
 import { cn } from '@relatos/utils'
-import { seoConfig } from '@relatos/content'
+import { seoConfig } from '@relatos/content/rengifo'
 
 const raleway = Raleway({
   variable: '--font-raleway',
