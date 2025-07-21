@@ -3,7 +3,9 @@
  * Menu items and navigation structure for the Rengifo project
  */
 
-export const navigationConfig = {
+import { NavigationConfig } from './types/rengifo'
+
+export const navigationConfig: NavigationConfig = {
   menu: [
     {
       id: 'inicio',

@@ -3,19 +3,9 @@
  * Gallery data for all image collections in the Rengifo project
  */
 
-export type GalleryImage = {
-  src: string // Path to image in public folder
-  name?: string
-  alt?: string
-}
+import { GalleryConfig } from './types/rengifo'
 
-export type GalleryCollection = {
-  id: string
-  title: string
-  images: GalleryImage[]
-}
-
-export const galleryConfig = {
+export const galleryConfig: GalleryConfig = {
   // Domestic Section Galleries
   planimetries: {
     id: 'planimetrias',
@@ -30,7 +20,7 @@ export const galleryConfig = {
       { src: '/images/planimetrias/Doc-07.jpg', name: 'Documento 07' },
       { src: '/images/planimetrias/Doc-08.jpg', name: 'Documento 08' },
     ],
-  } as GalleryCollection,
+  },
 
   survey: {
     id: 'levantamiento',
@@ -42,7 +32,7 @@ export const galleryConfig = {
       { src: '/images/levantamiento/ISO-04.jpg', name: 'Isométrica 04' },
       { src: '/images/levantamiento/ISO-05.jpg', name: 'Isométrica 05' },
     ],
-  } as GalleryCollection,
+  },
 
   // Imaginario Section Galleries
   archive: {
@@ -162,7 +152,7 @@ export const galleryConfig = {
         name: 'Imagen cedida por Carmen Cortés',
       },
     ],
-  } as GalleryCollection,
+  },
 
   activities: {
     id: 'actividades',
@@ -229,7 +219,7 @@ export const galleryConfig = {
         name: 'Actividad Comunitaria 15',
       },
     ],
-  } as GalleryCollection,
+  },
 
   aerial: {
     id: 'aereas',
@@ -250,5 +240,5 @@ export const galleryConfig = {
       { src: '/images/aereas/DRON-13.jpg', name: 'Vista Aérea 13' },
       { src: '/images/aereas/DRON-14.jpg', name: 'Vista Aérea 14' },
     ],
-  } as GalleryCollection,
+  },
 } as const

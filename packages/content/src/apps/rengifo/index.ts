@@ -4,12 +4,9 @@
  */
 
 export { navigationConfig } from './navigation'
-export { headerConfig } from './header'
+export { heroConfig } from './header'
 export { archiveConfig } from './archive'
-export { footerConfig, type SponsorLogo, type SocialLink } from './footer'
-export {
-  galleryConfig,
-  type GalleryImage,
-  type GalleryCollection,
-} from './gallery'
+export { footerConfig } from './footer'
 export { seoConfig } from './seo'
+
+export type * from './types/rengifo'

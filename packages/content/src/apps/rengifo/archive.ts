@@ -3,7 +3,9 @@
  * Main project description, title, and overview content
  */
 
-export const archiveConfig = {
+import { ArchiveConfig } from './types/rengifo'
+
+export const archiveConfig: ArchiveConfig = {
   title: 'Arquitectura de lo Domestico',
   description: `
   Recopilación de las planimetrías y documentos físicos originales correspondientes al proyecto “Casas para obreros CCU, La Serena” posteriormente denominado como “Conjunto Habitacional Rengifo”, diseñado en 1957 por el arquitecto Carlos Feuereisen Polanco, y construido en el año 1958 por Negochea y Vergara.

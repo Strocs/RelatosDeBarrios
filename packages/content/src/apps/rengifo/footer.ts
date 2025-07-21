@@ -3,19 +3,9 @@
  * Footer content including logos, social links and credits
  */
 
-export type SponsorLogo = {
-  src: string
-  alt: string
-}
+import { FooterConfig } from './types/rengifo'
 
-export type SocialLink = {
-  id: string
-  name: string
-  href: string
-  icon: string // Lucide icon name
-}
-
-export const footerConfig = {
+export const footerConfig: FooterConfig = {
   logos: [
     {
       src: '/images/logos/MINCAP.png',
@@ -37,7 +27,7 @@ export const footerConfig = {
       src: '/images/logos/CEDAU.png',
       alt: 'CEDAU',
     },
-  ] as SponsorLogo[],
+  ],
 
   socialLinks: [
     {
@@ -64,7 +54,7 @@ export const footerConfig = {
       href: 'https://www.facebook.com/Relatos-de-Barrios-101242745453386/',
       icon: 'Facebook',
     },
-  ] as SocialLink[],
+  ],
 
   credits: {
     text: 'Relatos de Barrios 2022 - Universidad de La Serena',

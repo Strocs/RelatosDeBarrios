@@ -18,23 +18,10 @@ export const metadata: Metadata = {
     template: `%s | ${seoConfig.title}`,
   },
   description: seoConfig.description,
-  keywords: [...seoConfig.keywords],
-  openGraph: {
-    title: seoConfig.openGraph.title,
-    description: seoConfig.openGraph.description,
-    type: 'website',
-    siteName: seoConfig.openGraph.siteName,
-    images: [{ url: seoConfig.openGraph.image }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: seoConfig.twitter.title,
-    description: seoConfig.twitter.description,
-    images: [seoConfig.twitter.image],
-  },
-  icons: {
-    icon: seoConfig.favicon,
-  },
+  keywords: seoConfig.keywords,
+  openGraph: seoConfig.openGraph,
+  twitter: seoConfig.twitter,
+  icons: seoConfig.icons,
 }
 
 export default function RootLayout({

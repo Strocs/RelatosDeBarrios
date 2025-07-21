@@ -1,4 +1,4 @@
-import type { HubConfig } from '../types/hub'
+import type { HubConfig } from './types/hub'
 
 /**
  * Hub application configuration

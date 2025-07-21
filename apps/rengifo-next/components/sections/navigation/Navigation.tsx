@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { navigationConfig } from '@relatos/content'
+import { navigationConfig } from '@relatos/content/rengifo'
 import { NavLogo } from './NavLogo'
 import { cn } from '@relatos/utils'
 import { HamburgerButton } from './HamburgerButton'

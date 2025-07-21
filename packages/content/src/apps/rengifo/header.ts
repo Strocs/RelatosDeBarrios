@@ -3,23 +3,22 @@
  * Main header content including hero title and call-to-action buttons
  */
 
-export const headerConfig = {
+import { HeroConfig } from './types/rengifo'
+
+export const heroConfig: HeroConfig = {
   hero: {
-    title: 'Imaginario Urbano,',
-    subTitle: 'Imaginario Barrial',
+    title: '# Conjunto Habitacional **Rengifo**',
   },
   actions: [
     {
       id: 'libro',
       label: 'Ver Libro',
       href: '/Libro_RelatosDeBarrios.pdf', // Path in public folder
-      type: 'primary' as const,
     },
     {
       id: 'documental',
       label: 'Ver Documental',
       href: 'https://www.youtube.com/embed/6Vg9ZTJFnj4?fs=1',
-      type: 'primary' as const,
     },
   ],
   video: {

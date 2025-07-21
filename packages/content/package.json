@@ -11,11 +11,26 @@
     "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "exports": {
-    "./core": "./src/core/index.ts",
-    "./rengifo": "./src/apps/rengifo/index.ts",
-    "./hub": "./src/apps/hub/index.ts",
-    "./covico": "./src/apps/covico/index.ts",
-    "./ui": "./src/ui/index.ts"
+    "./core": {
+      "default": "./src/core/index.ts",
+      "types": "./src/core/types/core.d.ts"
+    },
+    "./rengifo": {
+      "default": "./src/apps/rengifo/index.ts",
+      "types": "./src/apps/rengifo/index.ts"
+    },
+    "./hub": {
+      "default": "./src/apps/hub/index.ts",
+      "types": "./src/apps/hub/index.ts"
+    },
+    "./covico": {
+      "default": "./src/apps/covico/index.ts",
+      "types": "./src/apps/covico/index.ts"
+    },
+    "./ui": {
+      "default": "./src/ui/index.ts",
+      "types": "./src/ui/types/ui.ts"
+    }
   },
   "files": [
     "src/**/*"
