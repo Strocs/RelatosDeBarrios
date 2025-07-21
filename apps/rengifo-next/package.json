@@ -11,7 +11,7 @@
   "dependencies": {
     "@relatos/content": "workspace:*",
     "@relatos/utils": "workspace:*",
-    "gsap": "catalog:",
+    "@gsap/react": "catalog:",
     "lucide-react": "catalog:",
     "next": "catalog:",
     "react": "catalog:",

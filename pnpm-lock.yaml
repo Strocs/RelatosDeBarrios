@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    '@gsap/react':
+      specifier: ^2
+      version: 2.1.2
     '@types/node':
       specifier: ^24
       version: 24.0.14
@@ -18,9 +21,6 @@ catalogs:
     eslint:
       specifier: ^9.29.0
       version: 9.31.0
-    gsap:
-      specifier: ^3.11.5
-      version: 3.13.0
     lucide-react:
       specifier: 0.525.0
       version: 0.525.0
@@ -200,15 +200,15 @@ importers:
 
   apps/rengifo-next:
     dependencies:
+      '@gsap/react':
+        specifier: 'catalog:'
+        version: 2.1.2(gsap@3.13.0)(react@19.1.0)
       '@relatos/content':
         specifier: workspace:*
         version: link:../../packages/content
       '@relatos/utils':
         specifier: workspace:*
         version: link:../../packages/utils
-      gsap:
-        specifier: 'catalog:'
-        version: 3.13.0
       lucide-react:
         specifier: 'catalog:'
         version: 0.525.0(react@19.1.0)
@@ -708,6 +708,12 @@ packages:
   '@eslint/plugin-kit@0.3.3':
     resolution: {integrity: sha512-1+WqvgNMhmlAambTvT3KPtCl/Ibr68VldY2XY40SL1CE0ZXiakFR/cbTspaF5HsnpDMvcYYoJHfl4980NBjGag==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@gsap/react@2.1.2':
+    resolution: {integrity: sha512-JqliybO1837UcgH2hVOM4VO+38APk3ECNrsuSM4MuXp+rbf+/2IG2K1YJiqfTcXQHH7XlA0m3ykniFYstfq0Iw==}
+    peerDependencies:
+      gsap: ^3.12.5
+      react: '>=17'
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4473,6 +4479,11 @@ snapshots:
     dependencies:
       '@eslint/core': 0.15.1
       levn: 0.4.1
+
+  '@gsap/react@2.1.2(gsap@3.13.0)(react@19.1.0)':
+    dependencies:
+      gsap: 3.13.0
+      react: 19.1.0
 
   '@humanfs/core@0.19.1': {}
 
