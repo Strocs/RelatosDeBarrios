@@ -3,9 +3,9 @@
  * Footer content including logos, social links and credits
  */
 
-import { FooterConfig } from './types/rengifo'
+import { FooterContent } from './types/rengifo'
 
-export const footerConfig: FooterConfig = {
+export const footerContent: FooterContent = {
   logos: [
     {
       src: '/images/logos/MINCAP.png',

@@ -42,5 +42,4 @@ export interface SEOConfig {
   readonly keywords: string[]
   readonly twitter: TwitterConfig
   readonly openGraph: OpenGraphConfig
-  readonly favicon: string
 }

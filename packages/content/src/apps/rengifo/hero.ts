@@ -3,9 +3,9 @@
  * Main header content including hero title and call-to-action buttons
  */
 
-import { HeroConfig } from './types/rengifo'
+import { HeroContent } from './types/rengifo'
 
-export const heroConfig: HeroConfig = {
+export const heroContent: HeroContent = {
   hero: {
     title: '# Conjunto Habitacional **Rengifo**',
   },

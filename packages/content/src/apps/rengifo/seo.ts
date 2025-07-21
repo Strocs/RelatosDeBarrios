@@ -19,7 +19,7 @@ export const seoConfig: SEOConfig = {
     'chile',
   ],
   url: 'https://relatosdebarrios.cl/rengifo',
-  icons: '/favicon.png',
+  icons: '/icons/favicon.png',
   openGraph: {
     title: 'Conjunto Habitacional Rengifo - Relatos de Barrios',
     description:
@@ -32,5 +32,4 @@ export const seoConfig: SEOConfig = {
     site: '@relatosdebarrios',
     creator: '@relatosdebarrios',
   },
-  favicon: '/favicon.png',
 } as const

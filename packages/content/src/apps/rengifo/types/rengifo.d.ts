@@ -13,9 +13,7 @@ export type NavigationItem = {
   href: string
 }
 
-export type NavigationConfig = {
-  menu: NavigationItem[]
-}
+export type NavigationContent = NavigationItem[]
 
 /**
  * Header/Hero types
@@ -34,7 +32,7 @@ export type HeroVideo = {
   preload: string
 }
 
-export type HeroConfig = {
+export type HeroContent = {
   hero: {
     title: string
   }
@@ -67,7 +65,7 @@ export interface Credits {
   } // Optional link for credits
 }
 
-export type FooterConfig = {
+export type FooterContent = {
   logos: SponsorLogo[]
   socialLinks: SocialLink[]
   credits: Credits
@@ -89,7 +87,7 @@ export type GalleryCollection = {
   images: GalleryImage[]
 }
 
-export type GalleryConfig = {
+export type GalleryContent = {
   [key: string]: GalleryCollection
 }
 
@@ -105,6 +103,7 @@ export type BackgroundImage = {
 
 export type ProjectCard = {
   title: string
+  subTitle?: string
   image: {
     src: string
     width: number
@@ -113,9 +112,12 @@ export type ProjectCard = {
   }
 }
 
-export type ArchiveConfig = {
+export type DocsContent = {
   title: string
   description: string
-  backgroundImage: BackgroundImage
+  utilityImages: {
+    [key: string]: BackgroundImage
+  }
   cards: ProjectCard[]
+  gallery: GalleryContent
 }

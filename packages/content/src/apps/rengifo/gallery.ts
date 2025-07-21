@@ -3,39 +3,11 @@
  * Gallery data for all image collections in the Rengifo project
  */
 
-import { GalleryConfig } from './types/rengifo'
+import { GalleryContent } from './types/rengifo'
 
-export const galleryConfig: GalleryConfig = {
-  // Domestic Section Galleries
-  planimetries: {
-    id: 'planimetrias',
-    title: 'Planimetrías Originales',
-    images: [
-      { src: '/images/planimetrias/Planos-01.jpg', name: 'Plano 01' },
-      { src: '/images/planimetrias/Planos-02.jpg', name: 'Plano 02' },
-      { src: '/images/planimetrias/Planos-03.jpg', name: 'Plano 03' },
-      { src: '/images/planimetrias/Planos-04.jpg', name: 'Plano 04' },
-      { src: '/images/planimetrias/Planos-05.jpg', name: 'Plano 05' },
-      { src: '/images/planimetrias/Doc-06.jpg', name: 'Documento 06' },
-      { src: '/images/planimetrias/Doc-07.jpg', name: 'Documento 07' },
-      { src: '/images/planimetrias/Doc-08.jpg', name: 'Documento 08' },
-    ],
-  },
-
-  survey: {
-    id: 'levantamiento',
-    title: 'Levantamiento Digital',
-    images: [
-      { src: '/images/levantamiento/ISO-01.jpg', name: 'Isométrica 01' },
-      { src: '/images/levantamiento/ISO-02.jpg', name: 'Isométrica 02' },
-      { src: '/images/levantamiento/ISO-03.jpg', name: 'Isométrica 03' },
-      { src: '/images/levantamiento/ISO-04.jpg', name: 'Isométrica 04' },
-      { src: '/images/levantamiento/ISO-05.jpg', name: 'Isométrica 05' },
-    ],
-  },
-
+export const galleryContent: GalleryContent = {
   // Imaginario Section Galleries
-  archive: {
+  photos: {
     id: 'archivo',
     title: 'Archivo Fotográfico',
     images: [
