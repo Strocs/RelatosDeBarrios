@@ -1,37 +1,14 @@
-import { headerConfig } from '@relatos/content/rengifo'
-import { Title } from '@/components/ui/Title'
-import { Button } from '@/components/ui/Button'
+import { heroConfig } from '@relatos/content/rengifo'
 import Image from 'next/image'
+import { HeroTitleAction } from './HeroTitleAction'
 
 export const HeroSection = () => {
-  const { hero, actions, video, backgroundImage } = headerConfig
+  const { hero, actions, video, backgroundImage } = heroConfig
 
   return (
     <header id='inicio' className='relative h-[160dvh]'>
       {/* Content Container with GSAP Parallax placeholder */}
-      <section className='container mx-auto flex size-full h-screen items-center justify-end px-8'>
-        {/* Title Container with decorative bar */}
-        <div className='relative flex w-fit flex-col items-end'>
-          <div className='bg-rengifo-amarillo h-2 w-full' />
-          <Title className='w-fit text-right text-6xl' headingLevel='h1'>
-            {hero.title}
-            <br />
-            {hero.subTitle}
-          </Title>
-          <div className='mt-4 w-fit space-x-4'>
-            {actions.map((action) => (
-              <Button
-                key={action.id}
-                text={action.label}
-                href={action.href}
-                type={action.type}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-      </section>
+      <HeroTitleAction title={hero.title} actions={actions} />
 
       {/* Background Video */}
       <video
