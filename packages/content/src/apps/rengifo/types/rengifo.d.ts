@@ -5,6 +5,16 @@
  */
 
 /**
+ * Common types
+ */
+export interface Image {
+  src: string
+  width: number
+  height: number
+  alt: string
+}
+
+/**
  * Navigation types
  */
 export type NavigationItem = {
@@ -32,23 +42,28 @@ export type HeroVideo = {
   preload: string
 }
 
-export type HeroContent = {
-  hero: {
-    title: string
-  }
+export interface HeroContent extends Section {
+  subTitle: string
   actions: HeroAction[]
   video: HeroVideo
-  backgroundImage: BackgroundImage
+}
+
+export interface GalleryImage extends Image {
+  name?: string
+}
+
+export type GalleryCollection = {
+  id: string
+  images: GalleryImage[]
+}
+
+export type GalleryContent = {
+  [key: string]: GalleryCollection
 }
 
 /**
  * Footer types
  */
-export type SponsorLogo = {
-  src: string
-  alt: string
-}
-
 export type SocialLink = {
   id: string
   name: string
@@ -56,7 +71,7 @@ export type SocialLink = {
   icon: string // Lucide icon name
 }
 
-export interface Credits {
+export type Credits = {
   text: string
   developer?: {
     text: string
@@ -66,58 +81,30 @@ export interface Credits {
 }
 
 export type FooterContent = {
-  logos: SponsorLogo[]
+  logos: Image[]
   socialLinks: SocialLink[]
   credits: Credits
-  backgroundImage?: BackgroundImage // Optional background image for footer
-}
-
-/**
- * Gallery types
- */
-export type GalleryImage = {
-  src: string // Path to image in public folder
-  name?: string
-  alt?: string
-}
-
-export type GalleryCollection = {
-  id: string
-  title: string
-  images: GalleryImage[]
-}
-
-export type GalleryContent = {
-  [key: string]: GalleryCollection
+  backgroundImage?: Image // Optional background image for footer
 }
 
 /**
  * Archive/Project types
  */
-export type BackgroundImage = {
-  src: string
-  width?: number
-  height?: number
-  alt: string
-}
-
-export type ProjectCard = {
+export type Card = {
+  id: string
   title: string
   subTitle?: string
-  image: {
-    src: string
-    width: number
-    height: number
-    alt: string
-  }
+  bgImage: Image
+  disabled?: boolean
 }
 
-export type DocsContent = {
+export type Section = {
   title: string
-  description: string
-  utilityImages: {
-    [key: string]: BackgroundImage
+  subTitle?: string
+  description?: string
+  utilityImages?: {
+    [key: string]: Image
   }
-  cards: ProjectCard[]
-  gallery: GalleryContent
+  cards?: Card[]
+  gallery?: GalleryContent
 }

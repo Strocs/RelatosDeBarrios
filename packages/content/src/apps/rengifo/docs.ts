@@ -3,10 +3,10 @@
  * Main project description, title, and overview content
  */
 
-import { DocsContent } from './types/rengifo'
+import { Section } from './types/rengifo'
 
-export const docsContent: DocsContent = {
-  title: '## **Arquitectura de lo Doméstico**',
+export const docsContent: Section = {
+  title: 'Arquitectura de lo Doméstico',
   description: `
   Recopilación de las planimetrías y documentos físicos originales correspondientes al proyecto “Casas para obreros CCU, La Serena” posteriormente denominado como “Conjunto Habitacional Rengifo”, diseñado en 1957 por el arquitecto Carlos Feuereisen Polanco, y construido en el año 1958 por Negochea y Vergara.
 
@@ -27,9 +27,10 @@ export const docsContent: DocsContent = {
   },
   cards: [
     {
+      id: 'planimetrias',
       title: 'Planimetrías',
       subTitle: 'originales',
-      image: {
+      bgImage: {
         src: '/images/plani.jpg',
         width: 800,
         height: 600,
@@ -37,9 +38,10 @@ export const docsContent: DocsContent = {
       },
     },
     {
+      id: 'levantamiento',
       title: 'Levantamiento',
       subTitle: 'digital',
-      image: {
+      bgImage: {
         src: '/images/levan.jpg',
         width: 800,
         height: 600,
@@ -47,30 +49,108 @@ export const docsContent: DocsContent = {
       },
     },
   ],
+
   gallery: {
     planimetries: {
       id: 'planimetrias',
-      title: 'Planimetrías Originales',
       images: [
-        { src: '/images/planimetrias/Planos-01.jpg', name: 'Plano 01' },
-        { src: '/images/planimetrias/Planos-02.jpg', name: 'Plano 02' },
-        { src: '/images/planimetrias/Planos-03.jpg', name: 'Plano 03' },
-        { src: '/images/planimetrias/Planos-04.jpg', name: 'Plano 04' },
-        { src: '/images/planimetrias/Planos-05.jpg', name: 'Plano 05' },
-        { src: '/images/planimetrias/Doc-06.jpg', name: 'Documento 06' },
-        { src: '/images/planimetrias/Doc-07.jpg', name: 'Documento 07' },
-        { src: '/images/planimetrias/Doc-08.jpg', name: 'Documento 08' },
+        {
+          src: '/images/planimetrias/Planos-01.jpg',
+          name: 'Plano 01',
+          width: 800,
+          height: 600,
+          alt: '',
+        },
+        {
+          src: '/images/planimetrias/Planos-02.jpg',
+          name: 'Plano 02',
+          width: 800,
+          height: 600,
+          alt: '',
+        },
+        {
+          src: '/images/planimetrias/Planos-03.jpg',
+          name: 'Plano 03',
+          width: 800,
+          height: 600,
+          alt: '',
+        },
+        {
+          src: '/images/planimetrias/Planos-04.jpg',
+          name: 'Plano 04',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/planimetrias/Planos-05.jpg',
+          name: 'Plano 05',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/planimetrias/Doc-06.jpg',
+          name: 'Documento 06',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/planimetrias/Doc-07.jpg',
+          name: 'Documento 07',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/planimetrias/Doc-08.jpg',
+          name: 'Documento 08',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
       ],
     },
+
     survey: {
       id: 'levantamiento',
-      title: 'Levantamiento Digital',
       images: [
-        { src: '/images/levantamiento/ISO-01.jpg', name: 'Isométrica 01' },
-        { src: '/images/levantamiento/ISO-02.jpg', name: 'Isométrica 02' },
-        { src: '/images/levantamiento/ISO-03.jpg', name: 'Isométrica 03' },
-        { src: '/images/levantamiento/ISO-04.jpg', name: 'Isométrica 04' },
-        { src: '/images/levantamiento/ISO-05.jpg', name: 'Isométrica 05' },
+        {
+          src: '/images/levantamiento/ISO-01.jpg',
+          name: 'Isométrica 01',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/levantamiento/ISO-02.jpg',
+          name: 'Isométrica 02',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/levantamiento/ISO-03.jpg',
+          name: 'Isométrica 03',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/levantamiento/ISO-04.jpg',
+          name: 'Isométrica 04',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
+        {
+          src: '/images/levantamiento/ISO-05.jpg',
+          name: 'Isométrica 05',
+          alt: '',
+          width: 0,
+          height: 0,
+        },
       ],
     },
   },

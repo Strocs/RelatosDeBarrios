@@ -10,22 +10,32 @@ export const footerContent: FooterContent = {
     {
       src: '/images/logos/MINCAP.png',
       alt: 'Ministerio de las Culturas, las Artes y el Patrimonio',
+      width: 0,
+      height: 0,
     },
     {
       src: '/images/logos/laSerena.png',
       alt: 'Municipio de La Serena',
+      width: 0,
+      height: 0,
     },
     {
       src: '/images/logos/ULS.png',
       alt: 'Universidad de La Serena',
+      width: 0,
+      height: 0,
     },
     {
       src: '/images/logos/colArq.png',
       alt: 'Colegio de Arquitectos de Chile',
+      width: 0,
+      height: 0,
     },
     {
       src: '/images/logos/CEDAU.png',
       alt: 'CEDAU',
+      width: 0,
+      height: 0,
     },
   ],
 
@@ -68,5 +78,7 @@ export const footerContent: FooterContent = {
   backgroundImage: {
     src: '/images/muroPiedra.png',
     alt: 'Muro de piedra del barrio Rengifo',
+    width: 0,
+    height: 0,
   },
 } as const

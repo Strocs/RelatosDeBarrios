@@ -6,8 +6,15 @@
 import { HeroContent } from './types/rengifo'
 
 export const heroContent: HeroContent = {
-  hero: {
-    title: '# Conjunto Habitacional **Rengifo**',
+  title: 'Conjunto Habitacional',
+  subTitle: 'Rengifo',
+  utilityImages: {
+    bg: {
+      src: '/headerCasas.png', // Path in public folder
+      alt: 'Casas del Conjunto Habitacional Rengifo',
+      width: 1654,
+      height: 905,
+    },
   },
   actions: [
     {
@@ -27,11 +34,5 @@ export const heroContent: HeroContent = {
     loop: true,
     muted: true,
     preload: 'auto',
-  },
-  backgroundImage: {
-    src: '/headerCasas.png', // Path in public folder
-    alt: 'Casas del Conjunto Habitacional Rengifo',
-    width: 1654,
-    height: 905,
   },
 } as const
