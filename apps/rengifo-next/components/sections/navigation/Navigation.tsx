@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { navigationConfig } from '@relatos/content/rengifo'
+import { navigationContent as menu } from '@relatos/content/rengifo'
 import { NavLogo } from './NavLogo'
 import { cn } from '@relatos/utils'
 import { HamburgerButton } from './HamburgerButton'
@@ -31,8 +31,6 @@ export const Navigation = () => {
       setIsScrolled(false)
     }
   }
-
-  const { menu } = navigationConfig
 
   return (
     <nav

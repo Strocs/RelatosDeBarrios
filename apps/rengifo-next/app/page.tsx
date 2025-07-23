@@ -1,8 +1,8 @@
-import { ArchiveSection } from '@/components/sections/archive/ArchiveSection'
-import { DownloadsSection } from '@/components/sections/downloads/DownloadsSection'
+import { DocsSection } from '@/components/sections/docs/DocsSection'
 import { HeroSection } from '@/components/sections/hero/HeroSection'
 import { Navigation } from '@/components/sections/navigation/Navigation'
-import { PlansSection } from '@/components/sections/plans/PlansSection'
+import { PhotosSection } from '@/components/sections/photos/PhotosSection'
+import { ResourcesSection } from '@/components/sections/resources/ResourcesSection'
 
 export default function Home() {
   return (
@@ -10,9 +10,9 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <main className='min-h-screen'>
-        <PlansSection />
-        <ArchiveSection />
-        <DownloadsSection />
+        <DocsSection />
+        <PhotosSection />
+        <ResourcesSection />
       </main>
     </>
   )

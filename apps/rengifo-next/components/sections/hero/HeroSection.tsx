@@ -1,14 +1,14 @@
-import { heroConfig } from '@relatos/content/rengifo'
+import { heroContent } from '@relatos/content/rengifo'
 import Image from 'next/image'
 import { HeroTitleAction } from './HeroTitleAction'
 
 export const HeroSection = () => {
-  const { hero, actions, video, backgroundImage } = heroConfig
+  const { title, subTitle, utilityImages, actions, video } = heroContent
 
   return (
     <header id='inicio' className='relative h-[160dvh]'>
       {/* Content Container with GSAP Parallax placeholder */}
-      <HeroTitleAction title={hero.title} actions={actions} />
+      <HeroTitleAction title={title} subTitle={subTitle} actions={actions} />
 
       {/* Background Video */}
       <video
@@ -16,18 +16,15 @@ export const HeroSection = () => {
         muted={video.muted}
         autoPlay={video.autoplay}
         preload={video.preload}
-        className='fixed inset-0 -z-10 aspect-video size-full object-cover'
+        className='pointer-events-none fixed inset-0 -z-10 aspect-video size-full select-none object-cover'
       >
         <source src={video.src} type='video/mp4' />
       </video>
 
       {/* Bottom Background Image */}
       <Image
-        src={backgroundImage.src}
-        alt={backgroundImage.alt}
-        width={backgroundImage.width}
-        height={backgroundImage.height}
-        className='absolute -bottom-[20dvh] w-screen'
+        {...utilityImages!.bg}
+        className='pointer-events-none absolute -bottom-0 z-10 w-screen select-none'
       />
     </header>
   )
