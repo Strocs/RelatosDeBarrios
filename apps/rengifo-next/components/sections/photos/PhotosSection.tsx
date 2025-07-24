@@ -15,7 +15,7 @@ export const PhotosSection = () => {
         sizes='100vw'
         className='pointer-events-none absolute z-0 -mt-32 w-screen select-none'
       />
-      <article className='container relative z-10'>
+      <article className='container relative z-10 px-8'>
         <section className='relative flex w-full flex-col items-end'>
           <Title
             headingLevel='h2'

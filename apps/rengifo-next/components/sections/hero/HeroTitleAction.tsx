@@ -43,13 +43,13 @@ export const HeroTitleAction = ({
   return (
     <section
       ref={sectionRef}
-      className='container mx-auto flex h-1/2 w-full items-center justify-end px-8 will-change-transform'
+      className='container mx-auto flex h-2/3 w-full items-center justify-end px-8 will-change-transform md:h-1/2'
     >
       {/* Title Container with decorative bar */}
       <div className='relative flex w-fit flex-col items-end'>
         <YellowBar />
         <Title
-          className='w-fit max-w-2xl pt-4 text-right text-6xl font-bold'
+          className='w-fit max-w-2xl pt-4 text-right text-4xl font-bold md:text-6xl'
           headingLevel='h1'
         >
           {title} <span className='font-black'>{subTitle}</span>

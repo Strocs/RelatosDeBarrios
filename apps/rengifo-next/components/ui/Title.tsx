@@ -15,7 +15,7 @@ export const Title = ({
   return (
     <Heading
       className={cn(
-        'text-8xl font-black uppercase leading-none text-white',
+        'text-4xl font-black uppercase leading-none text-white md:text-8xl',
         className
       )}
     >

@@ -16,7 +16,7 @@ export const DocsSection = () => {
         {...docsContent.utilityImages!.bg}
         className='pointer-events-none absolute select-none object-cover object-[center_-60vh]'
       />
-      <section className='container z-10'>
+      <section className='container z-10 px-8'>
         <div>
           <Title headingLevel='h2' className='max-w-4xl'>
             {docsContent.title}
@@ -24,7 +24,7 @@ export const DocsSection = () => {
           <YellowBar className='-ml-10 max-w-6xl' />
         </div>
 
-        <section className='flex grow gap-8 py-20'>
+        <section className='flex grow flex-wrap gap-8 py-20'>
           <div className='flex-1 space-y-2'>
             <Markdown
               components={{

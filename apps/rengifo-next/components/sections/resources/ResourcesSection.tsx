@@ -7,25 +7,25 @@ export const ResourcesSection = () => {
   return (
     <section
       id='libro-documental'
-      className='to-rengifo-azul-darker relative -mt-60 min-h-screen bg-gradient-to-b from-transparent pt-24'
+      className='to-rengifo-azul-darker relative -mt-60 bg-gradient-to-b from-transparent to-50% pt-40 2xl:pt-24'
     >
-      <article className='container mx-auto'>
-        <div className='pb-20'>
+      <article className='container mx-auto px-8'>
+        <div>
           <Title headingLevel='h2' className='text-rengifo-amarillo z-10 w-fit'>
             {resourcesContent.title}
             <br />
             <span className='text-white'>{resourcesContent.subTitle}</span>
           </Title>
-          <YellowBar />
+          <YellowBar className='-ml-10' />
         </div>
-        <section className='flex h-full min-h-64 justify-around'>
+        <section className='flex justify-around py-20'>
           {resourcesContent.cards?.map((card) => (
             <Card
               key={card.id}
               title={card.title}
               subTitle={card.subTitle}
               image={card.bgImage}
-              className='max-w-lg'
+              className='min-h-64 max-w-lg'
             />
           ))}
         </section>
