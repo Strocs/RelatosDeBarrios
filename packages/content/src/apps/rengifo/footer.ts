@@ -6,39 +6,15 @@
 import { FooterContent } from './types/rengifo'
 
 export const footerContent: FooterContent = {
-  logos: [
-    {
-      src: '/images/logos/MINCAP.png',
-      alt: 'Ministerio de las Culturas, las Artes y el Patrimonio',
-      width: 0,
-      height: 0,
+  title: 'Relatos de Barrios - Universidad de La Serena',
+  utilityImages: {
+    bg: {
+      src: '/muroPiedra.png',
+      alt: 'Muro de piedra del barrio Rengifo',
+      width: 1920,
+      height: 900,
     },
-    {
-      src: '/images/logos/laSerena.png',
-      alt: 'Municipio de La Serena',
-      width: 0,
-      height: 0,
-    },
-    {
-      src: '/images/logos/ULS.png',
-      alt: 'Universidad de La Serena',
-      width: 0,
-      height: 0,
-    },
-    {
-      src: '/images/logos/colArq.png',
-      alt: 'Colegio de Arquitectos de Chile',
-      width: 0,
-      height: 0,
-    },
-    {
-      src: '/images/logos/CEDAU.png',
-      alt: 'CEDAU',
-      width: 0,
-      height: 0,
-    },
-  ],
-
+  },
   socialLinks: [
     {
       id: 'youtube',
@@ -67,18 +43,41 @@ export const footerContent: FooterContent = {
   ],
 
   credits: {
-    text: 'Relatos de Barrios 2022 - Universidad de La Serena',
+    collaborators: [
+      {
+        src: '/images/logos/MINCAP.png',
+        alt: 'Ministerio de las Culturas, las Artes y el Patrimonio',
+        width: 1080,
+        height: 549,
+      },
+      {
+        src: '/images/logos/laSerena.png',
+        alt: 'Municipio de La Serena',
+        width: 1080,
+        height: 1080,
+      },
+      {
+        src: '/images/logos/ULS.png',
+        alt: 'Universidad de La Serena',
+        width: 1080,
+        height: 549,
+      },
+      {
+        src: '/images/logos/colArq.png',
+        alt: 'Colegio de Arquitectos de Chile',
+        width: 1149,
+        height: 549,
+      },
+      {
+        src: '/images/logos/CEDAU.png',
+        alt: 'CEDAU',
+        width: 1080,
+        height: 549,
+      },
+    ],
     developer: {
-      text: 'Desarrollado con ♥ por',
-      name: '_Strocs',
+      text: 'Desarrollado con ♥  por Strocs',
       href: 'https://github.com/Strocs',
     },
-  },
-
-  backgroundImage: {
-    src: '/images/muroPiedra.png',
-    alt: 'Muro de piedra del barrio Rengifo',
-    width: 0,
-    height: 0,
   },
 } as const

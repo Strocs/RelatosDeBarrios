@@ -68,23 +68,23 @@ export type SocialLink = {
   id: string
   name: string
   href: string
-  icon: string // Lucide icon name
+  icon: string
 }
 
 export type Credits = {
-  text: string
+  collaborators: Image[]
   developer?: {
     text: string
-    name: string
     href: string
-  } // Optional link for credits
+  }
 }
 
-export type FooterContent = {
-  logos: Image[]
+export interface FooterContent extends Section {
+  utilityImages: {
+    bg: Image
+  }
   socialLinks: SocialLink[]
   credits: Credits
-  backgroundImage?: Image // Optional background image for footer
 }
 
 /**

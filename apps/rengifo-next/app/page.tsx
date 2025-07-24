@@ -1,4 +1,5 @@
 import { DocsSection } from '@/components/sections/docs/DocsSection'
+import { Footer } from '@/components/sections/footer/Footer'
 import { HeroSection } from '@/components/sections/hero/HeroSection'
 import { Navigation } from '@/components/sections/navigation/Navigation'
 import { PhotosSection } from '@/components/sections/photos/PhotosSection'
@@ -14,6 +15,7 @@ export default function Home() {
         <PhotosSection />
         <ResourcesSection />
       </main>
+      <Footer />
     </>
   )
 }
