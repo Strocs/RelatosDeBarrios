@@ -39,6 +39,9 @@ catalogs:
     typescript:
       specifier: ^5
       version: 5.8.3
+    zustand:
+      specifier: ^5.0.6
+      version: 5.0.6
 
 importers:
 
@@ -224,6 +227,9 @@ importers:
       react-markdown:
         specifier: 'catalog:'
         version: 10.1.0(@types/react@19.1.8)(react@19.1.0)
+      zustand:
+        specifier: 'catalog:'
+        version: 5.0.6(@types/react@19.1.8)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0))
     devDependencies:
       '@relatos/config-eslint':
         specifier: workspace:*

@@ -9,14 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "catalog:",
     "@relatos/content": "workspace:*",
     "@relatos/utils": "workspace:*",
-    "@gsap/react": "catalog:",
     "lucide-react": "catalog:",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-markdown": "catalog:"
+    "react-markdown": "catalog:",
+    "zustand": "catalog:"
   },
   "devDependencies": {
     "@relatos/config-eslint": "workspace:*",
