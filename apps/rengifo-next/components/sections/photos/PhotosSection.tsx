@@ -8,14 +8,14 @@ export const PhotosSection = () => {
   return (
     <div
       id='archivo'
-      className='bg-rengifo-pastel relative -mt-20 flex h-[140dvh] flex-col items-center pt-24'
+      className='bg-rengifo-azul-darker relative z-10 flex flex-col items-center overflow-clip pt-24 xl:-mt-20 xl:overflow-visible 2xl:h-[140dvh]'
     >
       <Image
         {...photosContent.utilityImages!.bg}
         sizes='100vw'
-        className='pointer-events-none absolute z-0 -mt-32 w-screen select-none'
+        className='pointer-events-none absolute z-0 -mt-32 h-full w-screen select-none object-cover object-center xl:h-auto'
       />
-      <article className='container relative z-10 px-8'>
+      <article className='container relative z-10 px-4 md:px-8'>
         <section className='relative flex w-full flex-col items-end'>
           <Title
             headingLevel='h2'
@@ -27,8 +27,8 @@ export const PhotosSection = () => {
           </Title>
           <YellowBar className='-mr-10 max-w-7xl' />
         </section>
-        <section className='space-y-12 py-20'>
-          <div className='flex h-full min-h-72 gap-8'>
+        <section className='space-y-12 py-10 md:py-20'>
+          <div className='flex h-full min-h-72 flex-wrap justify-center gap-8 xl:flex-nowrap'>
             {photosContent.cards?.slice(0, 3).map((card) => (
               <Card
                 key={card.id}
@@ -38,7 +38,7 @@ export const PhotosSection = () => {
               />
             ))}
           </div>
-          <div className='flex h-full min-h-48 gap-8'>
+          <div className='flex h-full min-h-48 flex-wrap justify-center gap-8 xl:flex-nowrap'>
             {photosContent.cards?.slice(3).map((card) => (
               <Card
                 key={card.id}
@@ -46,6 +46,7 @@ export const PhotosSection = () => {
                 image={card.bgImage}
                 subTitle={card.subTitle}
                 disabled={card.disabled}
+                className='max-w-lg xl:max-w-full'
               />
             ))}
           </div>

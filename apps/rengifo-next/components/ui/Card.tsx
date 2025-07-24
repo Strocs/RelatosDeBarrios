@@ -25,10 +25,10 @@ export const Card = ({
   return (
     <button
       onClick={!disabled ? action : () => {}}
-      className={cn(
-        'bg-rengifo-gris/20 border-rengifo-pastel min-w-sm group relative grid w-full cursor-pointer items-end overflow-clip rounded-lg border-2 p-4 shadow-2xl transition-transform duration-500 hover:scale-105',
-        className
-      )}
+      className={cn([
+        'bg-rengifo-gris/20 border-rengifo-pastel min-h-38 xl:min-h-auto group relative grid w-full max-w-lg cursor-pointer items-end overflow-clip rounded-lg border-2 p-4 shadow-2xl transition-transform duration-500 hover:scale-105',
+        className,
+      ])}
     >
       {disabled && (
         <div className='bg-rengifo-azul/20 backdrop-blur-xs absolute inset-0 z-20 hidden size-full place-items-center group-hover:grid'>
@@ -37,9 +37,9 @@ export const Card = ({
           </p>
         </div>
       )}
-      <h3 className='text-shadow-lg text-shadow-rengifo-azul/20 relative z-10 text-left text-4xl font-black uppercase leading-7 text-white'>
+      <h3 className='text-shadow-lg text-shadow-rengifo-azul/20 relative z-10 text-left text-3xl font-black uppercase leading-7 text-white md:text-4xl'>
         {title} <br />
-        <span className='text-3xl font-medium'>{subTitle}</span>
+        <span className='text-2xl font-medium md:text-3xl'>{subTitle}</span>
       </h3>
       <Image
         {...image}

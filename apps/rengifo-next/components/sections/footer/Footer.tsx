@@ -25,21 +25,24 @@ export const Footer = () => {
       ></div>
       <Image
         {...footerContent.utilityImages.bg}
-        className='pointer-events-none absolute top-0 z-0 select-none object-cover object-top'
+        className='pointer-events-none absolute top-0 z-0 h-full select-none object-cover object-top'
       />
-      <section className='container relative z-10 mx-auto space-y-4 pb-8 pt-24'>
+      <section className='container relative z-10 mx-auto space-y-4 px-4 pb-8 pt-24'>
         {/* Logo */}
         <Logo className='text-rengifo-pastel mx-auto w-fit max-w-lg' />
         {/* Collaborators */}
         <ul className='flex flex-wrap items-center justify-center'>
           {footerContent.credits.collaborators.map((collaborator) => (
             <li key={collaborator.src} className='size-fit'>
-              <Image {...collaborator} className='aspect-auto max-h-24 w-fit' />
+              <Image
+                {...collaborator}
+                className='aspect-auto max-h-16 w-fit md:max-h-24'
+              />
             </li>
           ))}
         </ul>
         {/* Text */}
-        <div className='text-center leading-tight text-white'>
+        <div className='text-center text-sm leading-tight text-white md:text-base'>
           <p>{footerContent.title}</p>
           {/* Dev */}
           <Link

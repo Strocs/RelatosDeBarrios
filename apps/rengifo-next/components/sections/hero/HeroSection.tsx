@@ -6,7 +6,7 @@ export const HeroSection = () => {
   const { title, subTitle, utilityImages, actions, video } = heroContent
 
   return (
-    <header id='inicio' className='relative h-screen md:h-[160dvh]'>
+    <header id='inicio' className='relative h-screen landscape:h-[160dvh]'>
       {/* Content Container with GSAP Parallax placeholder */}
       <HeroTitleAction title={title} subTitle={subTitle} actions={actions} />
 
@@ -16,7 +16,7 @@ export const HeroSection = () => {
         muted={video.muted}
         autoPlay={video.autoplay}
         preload={video.preload}
-        className='not-landscape:h-screen pointer-events-none fixed inset-0 -z-10 aspect-video select-none object-cover landscape:w-screen'
+        className='pointer-events-none fixed inset-0 -z-10 aspect-video h-screen w-screen origin-center select-none object-cover'
       >
         <source src={video.src} type='video/mp4' />
       </video>

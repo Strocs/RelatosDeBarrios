@@ -9,14 +9,15 @@ export const DocsSection = () => {
   return (
     <article
       id='planimetrias'
-      className='bg-rengifo-azul relative flex min-h-[180dvh] flex-col items-center justify-end'
+      className='bg-rengifo-azul relative z-30 flex min-h-[180dvh] flex-col items-center justify-end overflow-y-clip'
     >
       {/* Background Image */}
       <Image
         {...docsContent.utilityImages!.bg}
-        className='pointer-events-none absolute select-none object-cover object-[center_-60vh]'
+        sizes='100vw'
+        className='pointer-events-none absolute -top-[50%] h-full select-none object-cover'
       />
-      <section className='container z-10 px-8'>
+      <section className='container z-10 px-4 md:px-8'>
         <div>
           <Title headingLevel='h2' className='max-w-4xl'>
             {docsContent.title}
@@ -24,13 +25,13 @@ export const DocsSection = () => {
           <YellowBar className='-ml-10 max-w-6xl' />
         </div>
 
-        <section className='flex grow flex-wrap gap-8 py-20'>
-          <div className='flex-1 space-y-2'>
+        <section className='flex flex-col gap-8 py-10 md:py-20 xl:flex-row'>
+          <div className='mx-auto flex w-full max-w-md flex-col gap-2'>
             <Markdown
               components={{
                 p: ({ ...props }) => (
                   <p
-                    className='text-lg font-light leading-tight text-white'
+                    className='font-light leading-tight text-white md:text-lg'
                     {...props}
                   ></p>
                 ),
@@ -39,7 +40,7 @@ export const DocsSection = () => {
               {docsContent.description}
             </Markdown>
           </div>
-          <section className='max-w-2/3 grid shrink-0 grow grid-cols-2 gap-8'>
+          <section className='not-landscape:flex-col flex w-full items-center gap-8 xl:items-stretch'>
             {docsContent.cards?.map((card) => (
               <Card
                 key={card.id}
