@@ -1,6 +1,9 @@
+'use client'
+
 import { Image as ImageType } from '@relatos/content/rengifo'
 import { cn } from '@relatos/utils'
 import Image from 'next/image'
+import { uiConfig } from '@relatos/content/ui'
 
 interface CardProps {
   title: string
@@ -8,6 +11,7 @@ interface CardProps {
   image: ImageType
   action?: () => void
   className?: string
+  disabled?: boolean
 }
 
 export const Card = ({
@@ -16,15 +20,23 @@ export const Card = ({
   subTitle,
   action,
   className,
+  disabled,
 }: CardProps) => {
   return (
     <button
-      onClick={action}
+      onClick={!disabled ? action : () => {}}
       className={cn(
         'bg-rengifo-gris/20 border-rengifo-pastel min-w-sm group relative grid w-full cursor-pointer items-end overflow-clip rounded-lg border-2 p-4 shadow-2xl transition-transform duration-500 hover:scale-105',
         className
       )}
     >
+      {disabled && (
+        <div className='bg-rengifo-azul/20 backdrop-blur-xs absolute inset-0 z-20 hidden size-full place-items-center group-hover:grid'>
+          <p className='text-4xl font-bold text-white'>
+            {uiConfig.messages.not_available}
+          </p>
+        </div>
+      )}
       <h3 className='text-shadow-lg text-shadow-rengifo-azul/20 relative z-10 text-left text-4xl font-black uppercase leading-7 text-white'>
         {title} <br />
         <span className='text-3xl font-medium'>{subTitle}</span>

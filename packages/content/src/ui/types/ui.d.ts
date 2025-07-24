@@ -38,10 +38,7 @@ export interface UINavigationConfig {
 }
 
 export interface UIMessagesConfig {
-  readonly loading: string
-  readonly error: string
-  readonly not_found: string
-  readonly coming_soon: string
+  [key: string]: string
 }
 
 export interface UIConfig {

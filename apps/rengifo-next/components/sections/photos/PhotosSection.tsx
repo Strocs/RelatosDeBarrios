@@ -45,6 +45,7 @@ export const PhotosSection = () => {
                 title={card.title}
                 image={card.bgImage}
                 subTitle={card.subTitle}
+                disabled={card.disabled}
               />
             ))}
           </div>
