@@ -44,9 +44,11 @@ export const DocsSection = () => {
             {docsContent.cards?.map((card) => (
               <Card
                 key={card.id}
+                id={card.id}
                 title={card.title}
                 image={card.bgImage}
                 subTitle={card.subTitle}
+                disabled={card.disabled}
               />
             ))}
           </section>

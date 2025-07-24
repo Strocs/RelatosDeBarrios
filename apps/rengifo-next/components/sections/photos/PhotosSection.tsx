@@ -32,9 +32,11 @@ export const PhotosSection = () => {
             {photosContent.cards?.slice(0, 3).map((card) => (
               <Card
                 key={card.id}
+                id={card.id}
                 title={card.title}
                 image={card.bgImage}
                 subTitle={card.subTitle}
+                disabled={card.disabled}
               />
             ))}
           </div>
@@ -43,6 +45,7 @@ export const PhotosSection = () => {
               <Card
                 key={card.id}
                 title={card.title}
+                id={card.id}
                 image={card.bgImage}
                 subTitle={card.subTitle}
                 disabled={card.disabled}

@@ -4,12 +4,14 @@ import { Image as ImageType } from '@relatos/content/rengifo'
 import { cn } from '@relatos/utils'
 import Image from 'next/image'
 import { uiConfig } from '@relatos/content/ui'
+import { useGalleryStore } from '@/store/galleryStore'
+import { getImagesById } from '@/utils/galleryUtils'
 
 interface CardProps {
   title: string
+  id?: string
   subTitle?: string
   image: ImageType
-  action?: () => void
   className?: string
   disabled?: boolean
 }
@@ -17,14 +19,24 @@ interface CardProps {
 export const Card = ({
   title,
   image,
+  id,
   subTitle,
-  action,
   className,
   disabled,
 }: CardProps) => {
+  const openGallery = useGalleryStore((state) => state.openGallery)
+
+  const handleOpenGallery = () => {
+    const images = getImagesById(id!)
+
+    if (images.length > 0) {
+      openGallery(images, 0, id!)
+    }
+  }
+
   return (
     <button
-      onClick={!disabled ? action : () => {}}
+      onClick={!disabled ? handleOpenGallery : () => {}}
       className={cn([
         'bg-rengifo-gris/20 border-rengifo-pastel min-h-38 xl:min-h-auto group relative grid w-full max-w-lg cursor-pointer items-end overflow-clip rounded-lg border-2 p-4 shadow-2xl transition-transform duration-500 hover:scale-105',
         className,
