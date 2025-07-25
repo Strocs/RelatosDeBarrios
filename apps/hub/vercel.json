@@ -11,12 +11,12 @@
       "destination": "https://villacovico.relatosdebarrios.cl/villacovico/:path*"
     },
     {
-      "source": "/conjuntohabitacionalrengifo/:path*",
-      "destination": "https://conjuntohabitacionalrengifo.relatosdebarrios.cl/conjuntohabitacionalrengifo/:path*"
-    },
-    {
       "source": "/conjuntohabitacionalrengifo",
       "destination": "https://conjuntohabitacionalrengifo.relatosdebarrios.cl/conjuntohabitacionalrengifo"
+    },
+    {
+      "source": "/conjuntohabitacionalrengifo/:path*",
+      "destination": "https://conjuntohabitacionalrengifo.relatosdebarrios.cl/conjuntohabitacionalrengifo/:path*"
     }
   ]
 }
