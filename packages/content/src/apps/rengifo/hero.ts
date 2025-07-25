@@ -4,13 +4,14 @@
  */
 
 import { HeroContent } from './types/rengifo'
+import { brandConfig } from '../../core'
 
 export const heroContent: HeroContent = {
   title: 'Conjunto Habitacional',
   subTitle: 'Rengifo',
   utilityImages: {
     bg: {
-      src: '/headerCasas.webp', // Path in public folder
+      src: `${brandConfig.paths.rengifo}/headerCasas.webp`, // Path in public folder
       alt: 'Casas del Conjunto Habitacional Rengifo',
       width: 1440,
       height: 653,
@@ -20,7 +21,7 @@ export const heroContent: HeroContent = {
     {
       id: 'libro',
       label: 'Ver Libro',
-      href: '/Libro_RelatosDeBarrios.pdf', // Path in public folder
+      href: `${brandConfig.paths.rengifo}/Libro_RelatosDeBarrios.pdf`, // Path in public folder
     },
     {
       id: 'documental',
@@ -29,7 +30,7 @@ export const heroContent: HeroContent = {
     },
   ],
   video: {
-    src: '/videos/teaser.mp4', // Path in public folder
+    src: `${brandConfig.paths.rengifo}/videos/teaser.mp4`, // Path in public folder
     autoplay: true,
     loop: true,
     muted: true,

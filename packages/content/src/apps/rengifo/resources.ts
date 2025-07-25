@@ -1,3 +1,5 @@
+
+import { brandConfig } from '../../core'
 import { Section } from './types/rengifo'
 
 export const resourcesContent: Section = {
@@ -9,7 +11,7 @@ export const resourcesContent: Section = {
       title: 'Libro',
       subTitle: 'Descárgalo Aquí',
       bgImage: {
-        src: '/images/ventana1.png',
+        src: `${brandConfig.paths.rengifo}/images/ventana1.png`,
         width: 300,
         height: 300,
         alt: 'Portada del libro documental Rengifo',
@@ -20,7 +22,7 @@ export const resourcesContent: Section = {
       title: 'Documental',
       subTitle: 'Míralo Aquí',
       bgImage: {
-        src: '/images/ventana2.png',
+        src: `${brandConfig.paths.rengifo}/images/ventana2.png`,
         width: 300,
         height: 300,
         alt: 'Portada del libro documental Rengifo 2',

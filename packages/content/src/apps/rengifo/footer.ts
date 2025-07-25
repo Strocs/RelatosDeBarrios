@@ -3,13 +3,14 @@
  * Footer content including logos, social links and credits
  */
 
+import { brandConfig } from '../../core'
 import { FooterContent } from './types/rengifo'
 
 export const footerContent: FooterContent = {
   title: 'Relatos de Barrios - Universidad de La Serena',
   utilityImages: {
     bg: {
-      src: '/muroPiedra.webp',
+      src: `${brandConfig.paths.rengifo}/muroPiedra.webp`,
       alt: 'Muro de piedra del barrio Rengifo',
       width: 1440,
       height: 675,
@@ -45,31 +46,31 @@ export const footerContent: FooterContent = {
   credits: {
     collaborators: [
       {
-        src: '/images/logos/MINCAP.png',
+        src: `${brandConfig.paths.rengifo}/images/logos/MINCAP.png`,
         alt: 'Ministerio de las Culturas, las Artes y el Patrimonio',
         width: 1080,
         height: 549,
       },
       {
-        src: '/images/logos/laSerena.png',
+        src: `${brandConfig.paths.rengifo}/images/logos/laSerena.png`,
         alt: 'Municipio de La Serena',
         width: 1080,
         height: 1080,
       },
       {
-        src: '/images/logos/ULS.png',
+        src: `${brandConfig.paths.rengifo}/images/logos/ULS.png`,
         alt: 'Universidad de La Serena',
         width: 1080,
         height: 549,
       },
       {
-        src: '/images/logos/colArq.png',
+        src: `${brandConfig.paths.rengifo}/images/logos/colArq.png`,
         alt: 'Colegio de Arquitectos de Chile',
         width: 1149,
         height: 549,
       },
       {
-        src: '/images/logos/CEDAU.png',
+        src: `${brandConfig.paths.rengifo}/images/logos/CEDAU.png`,
         alt: 'CEDAU',
         width: 1080,
         height: 549,

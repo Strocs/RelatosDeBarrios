@@ -3,6 +3,8 @@
  * SEO metadata and Open Graph information for the Rengifo project
  */
 
+
+import { brandConfig } from '../../core'
 import { SEOConfig } from '../types/seo'
 
 export const seoConfig: SEOConfig = {
@@ -19,12 +21,12 @@ export const seoConfig: SEOConfig = {
     'chile',
   ],
   url: 'https://relatosdebarrios.cl/rengifo',
-  icons: '/icons/favicon.png',
+    icons: `${brandConfig.paths.rengifo}/icons/favicon.png`,
   openGraph: {
     title: 'Conjunto Habitacional Rengifo - Relatos de Barrios',
     description:
       'Proyecto de investigación y valorización del patrimonio industrial y habitacional del Barrio Rengifo en La Serena.',
-    image: '/images/og-rengifo.jpg', // Path in public folder
+      image: `${brandConfig.paths.rengifo}/images/og-rengifo.jpg`, // Path in public folder
     type: 'website',
   },
 
