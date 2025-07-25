@@ -49,7 +49,7 @@ export const hubConfig: HubConfig = {
       description:
         'Proyecto de investigación y valorización del patrimonio industrial y habitacional del Barrio Rengifo en La Serena.',
       teaser: {
-        src: '/images/rengifo-teaser.mp4',
+        src: '/videos/rengifo-teaser.mp4',
       },
     },
   },

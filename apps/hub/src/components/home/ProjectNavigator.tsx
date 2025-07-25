@@ -22,7 +22,7 @@ export const ProjectsNavigator = () => {
       <BarrioCard
         href={rengifoUrl}
         title={rengifo.name}
-        videoSrc='/videos/rengifo-teaser.mp4'
+        videoSrc={rengifo.teaser.src}
       />
       <BarrioCard
         href={covicoUrl}
