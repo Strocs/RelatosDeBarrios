@@ -1,33 +1,32 @@
 {
   "name": "rengifo",
-  "private": true,
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vite --port 3002",
-    "start": "vite preview --port 3002",
-    "build": "vite build"
+    "dev": "next dev --port 3002",
+    "build": "next build",
+    "start": "next start --port 3002",
+    "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "catalog:",
     "@relatos/content": "workspace:*",
+    "@relatos/utils": "workspace:*",
+    "lucide-react": "catalog:",
+    "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "react-icons": "^5.5.0",
-    "react-responsive": "^10.0.1",
-    "react-scroll-parallax": "^3.4.5",
-    "react-spring": "^10.0.1",
-    "vite-plugin-require": "^1.2.14"
+    "react-markdown": "catalog:",
+    "zustand": "catalog:"
   },
   "devDependencies": {
-    "@andylacko/vite-svg-react-loader": "^3.0.16",
     "@relatos/config-eslint": "workspace:*",
     "@relatos/config-tailwindcss": "workspace:*",
-    "@vitejs/plugin-react": "^4.6.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "vite": "^7.0.5",
-    "eslint": "catalog:"
-  },
-  "browserslist": [
-    "defaults"
-  ]
+    "@relatos/config-typescript": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
 }

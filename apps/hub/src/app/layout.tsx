@@ -3,7 +3,7 @@ import { Noto_Sans } from 'next/font/google'
 import '@/styles/globals.css'
 import { Background } from '@/components/Background'
 import { cn } from '@relatos/utils'
-import { seoConfig } from '@relatos/content'
+import { seoConfig } from '@relatos/content/hub'
 import { Footer } from '@/components/Footer'
 
 const noto_sans = Noto_Sans({
@@ -13,14 +13,8 @@ const noto_sans = Noto_Sans({
 })
 
 export const metadata: Metadata = {
-  title: { default: seoConfig.title, template: `%s | ${seoConfig.title}` },
-  description: seoConfig.description,
   metadataBase: new URL(seoConfig.url),
-  openGraph: seoConfig.og,
-  twitter: seoConfig.twitter,
-  icons: {
-    icon: seoConfig.favicon,
-  },
+  ...seoConfig,
 }
 
 export default function RootLayout({

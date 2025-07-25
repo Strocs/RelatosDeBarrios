@@ -7,24 +7,24 @@ import { twMerge } from 'tailwind-merge'
 
 /**
  * Combines clsx and tailwind-merge for optimal class name handling
- * 
+ *
  * This utility function:
  * - Uses clsx for conditional class names
  * - Uses tailwind-merge to merge conflicting Tailwind classes intelligently
- * 
+ *
  * @example
  * ```tsx
  * // Basic usage
  * cn('px-4 py-2', 'bg-blue-500', 'text-white')
  * // "px-4 py-2 bg-blue-500 text-white"
- * 
+ *
  * // Conditional classes
  * cn('px-4 py-2', isActive && 'bg-blue-500', !isActive && 'bg-gray-500')
- * 
+ *
  * // Merges conflicting Tailwind classes (last one wins)
- * cn('px-4 px-6', 'py-2 py-4') 
+ * cn('px-4 px-6', 'py-2 py-4')
  * // "px-6 py-4"
- * 
+ *
  * // Works with objects and arrays
  * cn(['px-4', 'py-2'], { 'bg-blue-500': isActive }, undefined, null)
  * ```
@@ -35,7 +35,7 @@ export function cn(...inputs: ClassValue[]): string {
 
 /**
  * Creates a variant-based class name utility
- * 
+ *
  * @example
  * ```tsx
  * const buttonVariants = createVariants({
@@ -57,22 +57,22 @@ export function cn(...inputs: ClassValue[]): string {
  *     size: 'md',
  *   },
  * })
- * 
+ *
  * // Usage
  * buttonVariants() // base + default variants
  * buttonVariants({ variant: 'destructive', size: 'lg' })
  * buttonVariants({ variant: 'outline' }, 'custom-class')
  * ```
  */
-export function createVariants<T extends Record<string, Record<string, string>>>(
-  config: {
-    base?: string
-    variants?: T
-    defaultVariants?: {
-      [K in keyof T]?: keyof T[K]
-    }
+export function createVariants<
+  T extends Record<string, Record<string, string>>,
+>(config: {
+  base?: string
+  variants?: T
+  defaultVariants?: {
+    [K in keyof T]?: keyof T[K]
   }
-) {
+}) {
   return function (
     props: {
       [K in keyof T]?: keyof T[K]
@@ -168,7 +168,13 @@ export function interactive(
  * Utility for transition classes with common presets
  */
 export function transition(
-  preset: 'none' | 'colors' | 'opacity' | 'shadow' | 'transform' | 'all' = 'all',
+  preset:
+    | 'none'
+    | 'colors'
+    | 'opacity'
+    | 'shadow'
+    | 'transform'
+    | 'all' = 'all',
   duration: 'fast' | 'normal' | 'slow' = 'normal'
 ): string {
   const presets = {

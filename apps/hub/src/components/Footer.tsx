@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { brandConfig } from '@relatos/content'
+import { brandConfig } from '@relatos/content/core'
 import { Instagram, Mail } from 'lucide-react'
 
 export const Footer = () => {

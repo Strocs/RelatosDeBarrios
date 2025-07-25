@@ -5,15 +5,29 @@
   "type": "module",
   "description": "ESLint configurations for the Relatos de Barrios monorepo",
   "main": "./src/base.js",
+  "types": "./src/index.d.ts",
   "exports": {
-    ".": "./src/base.js",
-    "./next": "./src/next.js",
-    "./react": "./src/react.js"
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/base.js"
+    },
+    "./next": {
+      "types": "./src/index.d.ts",
+      "default": "./src/next.js"
+    },
+    "./react": {
+      "types": "./src/index.d.ts",
+      "default": "./src/react.js"
+    }
   },
   "files": [
-    "*.ts"
+    "*.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.d.ts"
   ],
   "devDependencies": {
+    "@relatos/config-typescript": "workspace:*",
     "eslint": "catalog:",
     "@eslint/js": "^9.29.0",
     "@next/eslint-plugin-next": "^15.3.0",

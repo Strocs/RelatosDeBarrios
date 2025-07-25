@@ -189,19 +189,19 @@ export type Without<T, K extends keyof T> = Omit<T, K>
 // Make nested properties optional
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends (infer U)[]
-  ? DeepPartial<U>[]
-  : T[P] extends object
-  ? DeepPartial<T[P]>
-  : T[P]
+    ? DeepPartial<U>[]
+    : T[P] extends object
+      ? DeepPartial<T[P]>
+      : T[P]
 }
 
 // Make nested properties required
 export type DeepRequired<T> = {
   [P in keyof T]-?: T[P] extends (infer U)[]
-  ? DeepRequired<U>[]
-  : T[P] extends object
-  ? DeepRequired<T[P]>
-  : T[P]
+    ? DeepRequired<U>[]
+    : T[P] extends object
+      ? DeepRequired<T[P]>
+      : T[P]
 }
 
 // Get the values of an object type

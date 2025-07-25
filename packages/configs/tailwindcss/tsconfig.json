@@ -1,0 +1,5 @@
+{
+  "extends": "@relatos/config-typescript",
+  "include": ["*.d.ts", "*.mjs"],
+  "exclude": ["node_modules"]
+}

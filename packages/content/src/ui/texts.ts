@@ -1,4 +1,4 @@
-import type { UIConfig } from '../types/ui'
+import type { UIConfig } from './types/ui'
 
 /**
  * User interface text strings and labels
@@ -41,5 +41,6 @@ export const uiConfig: UIConfig = {
     error: 'Ha ocurrido un error',
     not_found: 'Página no encontrada',
     coming_soon: 'Próximamente',
+    not_available: 'No disponible',
   },
 } as const
