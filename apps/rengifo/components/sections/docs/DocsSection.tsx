@@ -15,7 +15,7 @@ export const DocsSection = () => {
       <Image
         {...docsContent.utilityImages!.bg}
         sizes='100vw'
-        className='pointer-events-none absolute -top-[50%] h-full select-none object-cover'
+        className='pointer-events-none absolute -top-[50%] h-full w-full select-none object-cover md:-top-[40%]'
       />
       <section className='container z-10 px-4 md:px-8'>
         <div>
@@ -58,7 +58,7 @@ export const DocsSection = () => {
         <Image
           {...docsContent.utilityImages!.bottom}
           sizes='100vw'
-          className='pointer-events-none select-none object-cover'
+          className='pointer-events-none w-full select-none object-cover'
         />
         <div className='z-1 to-rengifo-pastel absolute bottom-0 h-full w-full bg-gradient-to-b from-transparent from-60%'></div>
       </div>

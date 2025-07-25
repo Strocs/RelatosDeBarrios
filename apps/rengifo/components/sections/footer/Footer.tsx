@@ -25,7 +25,7 @@ export const Footer = () => {
       ></div>
       <Image
         {...footerContent.utilityImages.bg}
-        className='pointer-events-none absolute top-0 z-0 h-full select-none object-cover object-top'
+        className='pointer-events-none absolute top-0 z-0 h-full w-full select-none object-cover object-top'
       />
       <section className='container relative z-10 mx-auto space-y-4 px-4 pb-8 pt-24'>
         {/* Logo */}
