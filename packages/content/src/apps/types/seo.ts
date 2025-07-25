@@ -24,7 +24,7 @@ export interface OpenGraphConfig {
   readonly url?: string
   readonly siteName?: string
   readonly locale?: string
-  readonly image: ImageConfig | string // Can be a URL or an object
+  readonly image: ImageConfig[] | string // Can be a URL or an object
 }
 
 export interface IconsConfig {

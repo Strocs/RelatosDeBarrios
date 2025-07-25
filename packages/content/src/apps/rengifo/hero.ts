@@ -10,10 +10,10 @@ export const heroContent: HeroContent = {
   subTitle: 'Rengifo',
   utilityImages: {
     bg: {
-      src: '/headerCasas.png', // Path in public folder
+      src: '/headerCasas.webp', // Path in public folder
       alt: 'Casas del Conjunto Habitacional Rengifo',
-      width: 1654,
-      height: 905,
+      width: 1440,
+      height: 653,
     },
   },
   actions: [

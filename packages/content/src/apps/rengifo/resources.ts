@@ -10,8 +10,8 @@ export const resourcesContent: Section = {
       subTitle: 'Descárgalo Aquí',
       bgImage: {
         src: '/images/ventana1.png',
-        width: 800,
-        height: 600,
+        width: 300,
+        height: 300,
         alt: 'Portada del libro documental Rengifo',
       },
     },
@@ -21,8 +21,8 @@ export const resourcesContent: Section = {
       subTitle: 'Míralo Aquí',
       bgImage: {
         src: '/images/ventana2.png',
-        width: 800,
-        height: 600,
+        width: 300,
+        height: 300,
         alt: 'Portada del libro documental Rengifo 2',
       },
     },

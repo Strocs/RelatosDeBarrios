@@ -8,19 +8,18 @@ export const seoConfig: SEOConfig = {
   title: 'Relatos de Barrios',
   description:
     'Explora el patrimonio industrial y habitacional de La Serena y Coquimbo.',
-  url: 'https://relatosdebarrios.cl',
   keywords: ['Relatos de Barrios', 'patrimonio', 'La Serena', 'Coquimbo'],
-  twitter: {
-    card: 'summary_large_image',
-    site: '@relatosdebarrios',
-    creator: '@relatosdebarrios',
-  },
-  og: {
-    type: 'website',
+  url: 'https://relatosdebarrios.cl',
+  icons: '/favicon.png',
+  openGraph: {
     title: 'Relatos de Barrios',
     description:
       'Explora el patrimonio industrial y habitacional de La Serena y Coquimbo.',
-    images: [{ url: '/' }],
+    image: '/',
+    type: 'website',
   },
-  favicon: '/favicon.png',
+  twitter: {
+    site: '@relatosdebarrios',
+    creator: '@relatosdebarrios',
+  },
 } as const

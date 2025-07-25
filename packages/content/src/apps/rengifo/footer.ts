@@ -9,10 +9,10 @@ export const footerContent: FooterContent = {
   title: 'Relatos de Barrios - Universidad de La Serena',
   utilityImages: {
     bg: {
-      src: '/muroPiedra.png',
+      src: '/muroPiedra.webp',
       alt: 'Muro de piedra del barrio Rengifo',
-      width: 1920,
-      height: 900,
+      width: 1440,
+      height: 675,
     },
   },
   socialLinks: [

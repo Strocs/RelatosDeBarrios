@@ -1,4 +1,4 @@
-import { reactConfig } from '@relatos/config-eslint/react'
+import { nextJsConfig } from '@relatos/config-eslint/next'
 
 /** @type {import("eslint").Linter.Config} */
-export default reactConfig
+export default [...nextJsConfig]
