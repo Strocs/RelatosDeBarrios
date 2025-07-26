@@ -4,5 +4,3 @@
  */
 
 export { brandConfig } from './brand'
-export { teamConfig } from './team'
-export { seoConfig } from '../apps/hub/seo'

@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui/Card'
+import { OpenGalleryCard } from '@/components/ui/OpenGalleryCard'
 import { Title } from '@/components/ui/Title'
 import { YellowBar } from '@/components/ui/YellowBar'
 import { docsContent } from '@relatos/content/rengifo'
@@ -42,14 +42,7 @@ export const DocsSection = () => {
           </div>
           <section className='not-landscape:flex-col flex w-full items-center gap-8 xl:items-stretch'>
             {docsContent.cards?.map((card) => (
-              <Card
-                key={card.id}
-                id={card.id}
-                title={card.title}
-                image={card.bgImage}
-                subTitle={card.subTitle}
-                disabled={card.disabled}
-              />
+              <OpenGalleryCard key={card.id} {...card} />
             ))}
           </section>
         </section>

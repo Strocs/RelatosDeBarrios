@@ -3,6 +3,7 @@ import { photosContent } from '@relatos/content/rengifo'
 import { Title } from '@/components/ui/Title'
 import { YellowBar } from '@/components/ui/YellowBar'
 import { Card } from '@/components/ui/Card'
+import { OpenGalleryCard } from '@/components/ui/OpenGalleryCard'
 
 export const PhotosSection = () => {
   return (
@@ -30,25 +31,16 @@ export const PhotosSection = () => {
         <section className='space-y-12 py-10 md:py-20'>
           <div className='flex h-full min-h-72 flex-wrap justify-center gap-8 xl:flex-nowrap'>
             {photosContent.cards?.slice(0, 3).map((card) => (
-              <Card
-                key={card.id}
-                id={card.id}
-                title={card.title}
-                image={card.bgImage}
-                subTitle={card.subTitle}
-                disabled={card.disabled}
-              />
+              <OpenGalleryCard key={card.id} {...card} />
             ))}
           </div>
           <div className='flex h-full min-h-48 flex-wrap justify-center gap-8 xl:flex-nowrap'>
             {photosContent.cards?.slice(3).map((card) => (
               <Card
+                variant='link'
+                href={card.href!}
                 key={card.id}
-                title={card.title}
-                id={card.id}
-                image={card.bgImage}
-                subTitle={card.subTitle}
-                disabled={card.disabled}
+                {...card}
                 className='max-w-lg xl:max-w-full'
               />
             ))}
