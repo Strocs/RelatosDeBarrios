@@ -1,7 +1,7 @@
-import { Card } from '@/components/ui/Card'
 import { Title } from '@/components/ui/Title'
 import { YellowBar } from '@/components/ui/YellowBar'
 import { resourcesContent } from '@relatos/content/rengifo'
+import { Card } from '@/components/ui/Card'
 
 export const ResourcesSection = () => {
   return (
@@ -21,10 +21,12 @@ export const ResourcesSection = () => {
         <section className='flex flex-wrap justify-around gap-8 py-10 md:py-20'>
           {resourcesContent.cards?.map((card) => (
             <Card
+              variant='link'
               key={card.id}
-              title={card.title}
-              subTitle={card.subTitle}
-              image={card.bgImage}
+              target='_blank'
+              rel='noopener noreferrer'
+              href={card.href!}
+              {...card}
               className='min-h-38 xl:min-h-64! h-full max-w-lg'
             />
           ))}

@@ -96,6 +96,7 @@ export type Card = {
   subTitle?: string
   bgImage: Image
   disabled?: boolean
+  href?: string
 }
 
 export type Section = {

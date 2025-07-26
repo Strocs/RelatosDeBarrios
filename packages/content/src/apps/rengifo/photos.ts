@@ -3,7 +3,6 @@
  * Gallery data for all image collections in the Rengifo project
  */
 
-
 import { brandConfig } from '../../core'
 import { Section } from './types/rengifo'
 
@@ -59,6 +58,7 @@ export const photosContent: Section = {
       id: '3d-exterior',
       title: 'Recorrido 3D',
       subTitle: 'Exterior',
+      href: '',
       bgImage: {
         src: `${brandConfig.paths.rengifo}/images/exterior.jpg`,
         width: 900,
@@ -72,6 +72,7 @@ export const photosContent: Section = {
       id: '3d-interior',
       title: 'Recorrido 3D',
       subTitle: 'Interior',
+      href: '',
       bgImage: {
         src: `${brandConfig.paths.rengifo}/images/interior.jpg`,
         width: 899,
