@@ -30,6 +30,9 @@ turbo run build
 # Lint and format
 turbo run lint
 pnpm run format
+
+# Type checking
+pnpm run check-types
 ```
 
 ### Port Assignment Pattern
@@ -60,7 +63,7 @@ Content is organized by domain: `core/` (brand, team), `apps/` (project configs)
 ### 2. Component Organization
 
 - **Next.js apps**: Group by feature folders (`components/home/`, `components/equipo/`)
-- **Rengifo (Vite)**: Numbered section folders (`0_nav/`, `1_header/`, `2_proyecto/`)
+- **Rengifo**: Feature-based section folders (`components/sections/hero/`, `components/sections/navigation/`) and shared UI components (`components/ui/`)
 
 ### 3. Styling Architecture
 
@@ -71,7 +74,7 @@ Content is organized by domain: `core/` (brand, team), `apps/` (project configs)
 ### 4. Technology Stack Differences
 
 - **Hub/Covico**: Next.js 15 + App Router, TypeScript, react-markdown
-- **Rengifo**: Vite + React 19, JSX (no TypeScript), react-spring animations, parallax scrolling
+- **Rengifo**: Next.js 15, TypeScript, GSAP animations, Zustand for state management
 
 ## Workspace Package System
 
@@ -88,7 +91,19 @@ export { seoConfig } from './seo'
 
 ### `@relatos/utils`
 
-Common utilities including `cn()` for class merging, date/string/array helpers.
+Common utilities including `cn()` for class merging, date/string/array helpers:
+
+```typescript
+// Example: Using the cn() utility for conditional classes
+import { cn } from '@relatos/utils'
+
+// In your component
+<div className={cn(
+  'base-class',
+  isActive && 'active-class',
+  variant === 'primary' ? 'primary-class' : 'secondary-class'
+)}>
+```
 
 ### `@relatos/config-*`
 
@@ -101,7 +116,7 @@ Shared configuration packages:
 ## File Naming Conventions
 
 - **Next.js apps**: `PascalCase.tsx` for components, `kebab-case` for routes
-- **Rengifo**: `PascalCase.jsx` for components, organized by numbered sections
+- **Rengifo**: `PascalCase.tsx` for components, organized by feature sections
 - **Packages**: `kebab-case.ts` for utilities, `PascalCase.tsx` for shared components
 
 ## Integration Points
@@ -116,11 +131,11 @@ Shared configuration packages:
 ### Media Assets
 
 - **Hub**: `public/images/`, `public/videos/`
-- **Rengifo**: `src/assets/` with nested organization by type
+- **Rengifo**: `public/` with images, videos, and other static assets
 
 ## Development Notes
 
-- **Bun-specific**: Uses `workspace:*` for internal package references
+- **Package versioning**: Uses `catalog:` in package.json for centralized dependency versions
 - **Turbo boundaries**: Public tag system prevents dependency violations
 - **React 19**: All apps use latest React with modern patterns
 - **Build outputs**: Next.js apps output to `.next/`, Vite to `dist/`
@@ -132,3 +147,4 @@ When working on this codebase:
 3. Follow existing component organization patterns per app
 4. Use `cn()` for all conditional styling
 5. Update `@relatos/content` for cross-app data changes
+6. Run type checking with `pnpm run check-types` before committing changes
