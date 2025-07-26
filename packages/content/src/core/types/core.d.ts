@@ -25,16 +25,3 @@ export interface UrlConfig {
 export interface SocialConfig {
   readonly instagram: string
 }
-
-export interface TeamMemberConfig {
-  readonly order: number
-  readonly name: string
-  readonly degree: string
-  readonly bio: string
-}
-
-export interface TeamConfig {
-  readonly teamMembers: readonly TeamMemberConfig[]
-  readonly collaborators: readonly string[]
-  readonly participants: readonly string[]
-}
