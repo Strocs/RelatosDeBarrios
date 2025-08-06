@@ -4,7 +4,10 @@ import { HeroTitleAction } from './HeroTitleAction'
 
 export const HeroSection = () => {
   return (
-    <header id='inicio' className='relative h-screen landscape:h-[160dvh]'>
+    <header
+      id={heroContent.id}
+      className='relative h-screen landscape:h-[160dvh]'
+    >
       <HeroTitleAction
         title={heroContent.title}
         subTitle={heroContent.subTitle}

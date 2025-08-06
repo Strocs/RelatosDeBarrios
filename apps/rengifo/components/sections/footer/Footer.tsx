@@ -18,7 +18,10 @@ const ICONS: IconMap = {
 
 export const Footer = () => {
   return (
-    <footer className='relative -mt-3 w-full overflow-clip'>
+    <footer
+      id={footerContent.id}
+      className='relative -mt-3 w-full overflow-clip'
+    >
       <div
         aria-hidden
         className='to-rengifo-azul-darker z-1 absolute top-0 size-full bg-gradient-to-b from-transparent'

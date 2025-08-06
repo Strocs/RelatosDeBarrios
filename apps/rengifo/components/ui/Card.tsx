@@ -1,11 +1,11 @@
-import { uiConfig } from '@relatos/content/ui'
+import { uiContent } from '@relatos/content/ui'
 import { cn } from '@relatos/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ComponentProps } from 'react'
-import type { Card as CardType } from '@relatos/content/rengifo'
+import type { Card as CardType, ImageType } from '@relatos/content/types'
 
-interface BaseCardProps extends Omit<CardType, 'id' | 'href'> {
+interface BaseCardProps extends Omit<CardType<''>, 'id' | 'href'> {
   className?: string
 }
 
@@ -43,13 +43,13 @@ const getCardStyles = (className?: string) => {
   return cn([...CARD_BASE_STYLES, className])
 }
 
-const CardContent = ({ title, subTitle, bgImage, disabled }: BaseCardProps) => (
+const CardContent = ({ title, subTitle, bg, disabled }: BaseCardProps) => (
   <>
     {/* Disabled Overlay */}
     {disabled && (
       <div className='bg-rengifo-azul/20 backdrop-blur-xs absolute inset-0 z-20 hidden size-full place-items-center group-hover:grid'>
         <p className='text-4xl font-bold text-white'>
-          {uiConfig.messages.not_available}
+          {uiContent.messages.not_available}
         </p>
       </div>
     )}
@@ -67,7 +67,7 @@ const CardContent = ({ title, subTitle, bgImage, disabled }: BaseCardProps) => (
 
     {/* Background Image */}
     <Image
-      {...bgImage}
+      {...(bg as ImageType)}
       sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       className='pointer-events-none absolute inset-0 size-full select-none object-cover transition-transform delay-75 duration-700 group-hover:scale-125'
     />
@@ -76,14 +76,14 @@ const CardContent = ({ title, subTitle, bgImage, disabled }: BaseCardProps) => (
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CardButton = ({ variant, ...buttonProps }: CardButtonProps) => {
-  const { className, disabled, bgImage, title, subTitle, ...rest } = buttonProps
+  const { className, disabled, bg, title, subTitle, ...rest } = buttonProps
 
   return (
     <button className={getCardStyles(className)} disabled={disabled} {...rest}>
       <CardContent
         title={title}
         subTitle={subTitle}
-        bgImage={bgImage}
+        bg={bg}
         disabled={disabled}
       />
     </button>
@@ -92,7 +92,7 @@ const CardButton = ({ variant, ...buttonProps }: CardButtonProps) => {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CardLink = ({ variant, ...linkProps }: CardLinkProps) => {
-  const { className, disabled, bgImage, title, subTitle, ...rest } = linkProps
+  const { className, disabled, bg, title, subTitle, ...rest } = linkProps
 
   return (
     <Link
@@ -103,7 +103,7 @@ const CardLink = ({ variant, ...linkProps }: CardLinkProps) => {
       <CardContent
         title={title}
         subTitle={subTitle}
-        bgImage={bgImage}
+        bg={bg}
         disabled={disabled}
       />
     </Link>

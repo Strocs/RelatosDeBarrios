@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
 import '../styles/globals.css'
 import { cn } from '@relatos/utils'
-import { seoConfig } from '@relatos/content/rengifo'
+import { seoContent } from '@relatos/content/rengifo'
 import { Gallery } from '../components/ui/Gallery'
 
 const raleway = Raleway({
@@ -14,14 +14,14 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: seoConfig.title,
-    template: `%s | ${seoConfig.title}`,
+    default: seoContent.title,
+    template: `%s | ${seoContent.title}`,
   },
-  description: seoConfig.description,
-  keywords: seoConfig.keywords,
-  openGraph: seoConfig.openGraph,
-  twitter: seoConfig.twitter,
-  icons: seoConfig.icons,
+  description: seoContent.description,
+  keywords: seoContent.keywords,
+  openGraph: seoContent.openGraph,
+  twitter: seoContent.twitter,
+  icons: seoContent.icons,
 }
 
 export default function RootLayout({

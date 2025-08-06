@@ -1,7 +1,7 @@
 'use client'
 
 import { navigationContent } from '@relatos/content/rengifo'
-import { handleScrollTo } from '@/utils/handleScrollTo'
+import { scrollTo } from '@relatos/utils'
 
 export const NavMenu = () => {
   return (
@@ -9,7 +9,7 @@ export const NavMenu = () => {
       {navigationContent.map((item) => (
         <li key={item.id}>
           <button
-            onClick={() => handleScrollTo({ to: item.href })}
+            onClick={() => scrollTo('#' + item.id)}
             className='hover:text-rengifo-amarillo cursor-pointer text-base uppercase text-white transition-colors duration-300'
           >
             {item.label}

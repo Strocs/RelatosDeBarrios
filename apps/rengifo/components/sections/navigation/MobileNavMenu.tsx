@@ -2,15 +2,14 @@
 
 import { navigationContent } from '@relatos/content/rengifo'
 import { useNavigationMenuStore } from '@/store/navigationMenuStore'
-import { handleScrollTo } from '@/utils/handleScrollTo'
-import { cn } from '@relatos/utils'
+import { cn, scrollTo } from '@relatos/utils'
 
 export const MobileNavMenu = () => {
   const isMenuOpen = useNavigationMenuStore((state) => state.isMenuOpen)
   const setIsMenuOpen = useNavigationMenuStore((state) => state.setIsMenuOpen)
 
   const handleSectionClick = (href: string) => {
-    handleScrollTo({ to: href })
+    scrollTo(href)
     setIsMenuOpen(false)
   }
 
@@ -24,7 +23,7 @@ export const MobileNavMenu = () => {
       {navigationContent.map((item) => (
         <li key={item.id}>
           <button
-            onClick={() => handleSectionClick(item.href)}
+            onClick={() => handleSectionClick('#' + item.id)}
             className='hover:text-rengifo-amarillo cursor-pointer text-lg font-semibold uppercase leading-tight text-white transition-colors duration-300'
           >
             {item.label}

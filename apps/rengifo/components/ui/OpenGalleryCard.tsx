@@ -11,7 +11,7 @@ export const OpenGalleryCard = ({
   id,
   title,
   subTitle,
-  bgImage,
+  bg,
   className,
   disabled,
 }: OpenGalleryCardProps) => {
@@ -30,7 +30,7 @@ export const OpenGalleryCard = ({
       onClick={handleOpenGallery}
       title={title}
       subTitle={subTitle}
-      bgImage={bgImage}
+      bg={bg}
       className={className}
       disabled={disabled}
     />

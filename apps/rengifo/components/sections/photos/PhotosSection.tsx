@@ -5,10 +5,12 @@ import { YellowBar } from '@/components/ui/YellowBar'
 import { Card } from '@/components/ui/Card'
 import { OpenGalleryCard } from '@/components/ui/OpenGalleryCard'
 
+const cardsList = Object.values(photosContent.cards || {})
+
 export const PhotosSection = () => {
   return (
     <div
-      id='archivo'
+      id={photosContent.id}
       className='bg-rengifo-azul-darker relative z-10 flex flex-col items-center overflow-clip pt-24 xl:-mt-20 xl:overflow-visible 2xl:h-[140dvh]'
     >
       <Image
@@ -30,12 +32,12 @@ export const PhotosSection = () => {
         </section>
         <section className='space-y-12 py-10 md:py-20'>
           <div className='flex h-full min-h-72 flex-wrap justify-center gap-8 xl:flex-nowrap'>
-            {photosContent.cards?.slice(0, 3).map((card) => (
+            {cardsList.slice(0, 3).map((card) => (
               <OpenGalleryCard key={card.id} {...card} />
             ))}
           </div>
           <div className='flex h-full min-h-48 flex-wrap justify-center gap-8 xl:flex-nowrap'>
-            {photosContent.cards?.slice(3).map((card) => (
+            {cardsList.slice(3).map((card) => (
               <Card
                 variant='link'
                 href={card.href!}

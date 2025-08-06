@@ -1,11 +1,10 @@
 import { GalleryImage } from '../store/galleryStore'
 import { docsContent, photosContent } from '@relatos/content/rengifo'
-import { Section } from '@relatos/content/rengifo'
 
 /**
  * Content sources to search for gallery collections
  */
-const CONTENT_SOURCES: Section[] = [docsContent, photosContent]
+const CONTENT_SOURCES = [docsContent, photosContent]
 
 /**
  * Searches for a gallery collection by ID across all content sources

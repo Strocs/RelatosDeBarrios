@@ -5,10 +5,12 @@ import { docsContent } from '@relatos/content/rengifo'
 import Image from 'next/image'
 import Markdown from 'react-markdown'
 
+const { planimetries, survey } = docsContent.cards!
+
 export const DocsSection = () => {
   return (
     <article
-      id='planimetrias'
+      id={docsContent.id}
       className='bg-rengifo-azul relative z-30 flex min-h-[180dvh] flex-col items-center justify-end overflow-y-clip'
     >
       {/* Background Image */}
@@ -29,7 +31,12 @@ export const DocsSection = () => {
           <div className='mx-auto flex w-full max-w-md flex-col gap-2'>
             <Markdown
               components={{
-                p: ({ ...props }) => (
+                p: (
+                  props: React.HTMLAttributes<HTMLParagraphElement> & {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    node?: any
+                  }
+                ) => (
                   <p
                     className='font-light leading-tight text-white md:text-lg'
                     {...props}
@@ -41,9 +48,8 @@ export const DocsSection = () => {
             </Markdown>
           </div>
           <section className='not-landscape:flex-col flex w-full items-center gap-8 xl:items-stretch'>
-            {docsContent.cards?.map((card) => (
-              <OpenGalleryCard key={card.id} {...card} />
-            ))}
+            <OpenGalleryCard key={planimetries.id} {...planimetries} />
+            <OpenGalleryCard key={survey.id} {...survey} />
           </section>
         </section>
       </section>

@@ -1,15 +1,12 @@
 'use client'
 
 import { Logo } from '@/components/ui/Logo'
+import { scrollTo } from '@relatos/utils'
 
 export const NavLogo = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <button
-      onClick={scrollToTop}
+      onClick={() => scrollTo('top')}
       className='flex items-center text-white'
       aria-label='Ir al inicio'
     >
