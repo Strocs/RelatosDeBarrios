@@ -20,9 +20,9 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/hub/*": ["./app/(projects)/(hub)/*"],
-      "@/rengifo/*": ["./app/(projects)/conjuntohabitacionalrengifo/*"],
-      "@/covico/*": ["./app/(projects)/villacovico/*"]
+      "@/hub/*": ["./app/(hub)/*"],
+      "@/rengifo/*": ["./app/conjuntohabitacionalrengifo/*"],
+      "@/covico/*": ["./app/villacovico/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
