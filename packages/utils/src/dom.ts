@@ -73,37 +73,39 @@ export function hasClass(element: Element | null, className: string): boolean {
 }
 
 /**
- * Gets the scroll position
+ * Options for scrollTo function.
  */
-export function getScrollPosition(): { x: number; y: number } {
-  if (!isBrowser()) return { x: 0, y: 0 }
-  return {
-    x: window.pageXOffset || document.documentElement.scrollLeft,
-    y: window.pageYOffset || document.documentElement.scrollTop,
+interface scrollToOptions {
+  /**
+   * Whether to use smooth scrolling (default: true)
+   */
+  smooth?: boolean
+  /**
+   * Vertical alignment after scrolling (default: 'start')
+   */
+  block?: 'start' | 'center' | 'end' | 'nearest'
+}
+
+/**
+ * Scrolls the window to the top or scrolls an element into view.
+ *
+ * @param to - CSS selector for the element to scroll to, or 'top' to scroll to the top of the page.
+ * @param options - Optional scroll options (smooth scrolling, block alignment).
+ */
+export function scrollTo(
+  to: string | 'top',
+  { smooth = true }: scrollToOptions = {}
+): void {
+  if (!to || !isBrowser()) return
+  const behavior = smooth ? 'smooth' : 'auto'
+  if (to === 'top') {
+    window.scrollTo({ top: 0, behavior })
+  } else {
+    document.querySelector(to)?.scrollIntoView({
+      behavior,
+      block: 'start',
+    })
   }
-}
-
-/**
- * Scrolls to a specific position
- */
-export function scrollTo(x: number, y: number, smooth = true): void {
-  if (!isBrowser()) return
-  window.scrollTo({
-    left: x,
-    top: y,
-    behavior: smooth ? 'smooth' : 'auto',
-  })
-}
-
-/**
- * Scrolls to an element
- */
-export function scrollToElement(element: Element | null, smooth = true): void {
-  if (!element || !isBrowser()) return
-  element.scrollIntoView({
-    behavior: smooth ? 'smooth' : 'auto',
-    block: 'start',
-  })
 }
 
 /**

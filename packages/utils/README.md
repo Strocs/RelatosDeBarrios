@@ -65,16 +65,6 @@ if (isString(value)) {
 - `getInitials(name)` - Extracts initials
 - `randomString(length)` - Generates random string
 
-### Date Utilities (`date.ts`)
-
-- `formatDate(date)` - Formats date for Spanish locale
-- `formatDateTime(date)` - Formats date with time
-- `getRelativeTime(date)` - Gets relative time (e.g., "2 hours ago")
-- `isToday(date)` - Checks if date is today
-- `isYesterday(date)` - Checks if date is yesterday
-- `addDays(date, days)` - Adds days to date
-- `diffInDays(date1, date2)` - Calculates difference in days
-
 ### Array Utilities (`array.ts`)
 
 - `unique(array)` - Removes duplicates
@@ -122,6 +112,7 @@ if (isString(value)) {
 - `maskSensitive(value, start, end)` - Masks sensitive data
 - `formatDuration(milliseconds)` - Formats duration
 - `formatAddress(address)` - Formats address object
+- `formatPath(path)` - Format paths
 
 ### DOM Utilities (`dom.ts`)
 
@@ -137,21 +128,6 @@ Browser-only utilities for DOM manipulation:
 - `copyToClipboard(text)` - Copies to clipboard
 - `debounce(func, wait)` - Debounces function calls
 - `throttle(func, limit)` - Throttles function calls
-
-### Math Utilities (`math.ts`)
-
-- `clamp(value, min, max)` - Clamps value between bounds
-- `randomBetween(min, max)` - Random number in range
-- `roundTo(number, decimals)` - Rounds to decimal places
-- `distance(x1, y1, x2, y2)` - Calculates distance
-- `percentage(value, total)` - Calculates percentage
-- `lerp(start, end, factor)` - Linear interpolation
-- `average(numbers)` - Calculates average
-- `median(numbers)` - Calculates median
-- `standardDeviation(numbers)` - Calculates std deviation
-- `isPrime(num)` - Checks if number is prime
-- `factorial(n)` - Calculates factorial
-- `fibonacci(n)` - Calculates Fibonacci number
 
 ### Type Utilities (`types.ts`)
 

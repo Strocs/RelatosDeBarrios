@@ -24,13 +24,11 @@
   "exports": {
     ".": "./src/index.ts",
     "./string": "./src/string.ts",
-    "./date": "./src/date.ts",
     "./array": "./src/array.ts",
     "./object": "./src/object.ts",
     "./validation": "./src/validation.ts",
     "./format": "./src/format.ts",
     "./dom": "./src/dom.ts",
-    "./math": "./src/math.ts",
     "./types": "./src/types.ts",
     "./css": "./src/css.ts"
   }
