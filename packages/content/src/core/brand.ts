@@ -1,10 +1,11 @@
-import type { BrandConfig } from './types/core'
+import type { BrandContent } from './types/core'
 
 /**
  * Brand identity and core business information
  * Contains fundamental brand data, URLs, and contact information
  */
-export const brandConfig: BrandConfig = {
+
+export const brandContent: BrandContent = {
   title: 'Relatos de Barrios',
   description:
     'Proyecto dedicado a la investigación, documentación y valorización del patrimonio industrial y habitacional de La Serena y Coquimbo, integrando historia, arquitectura, urbanismo y memoria social para fortalecer la identidad regional y nacional.',

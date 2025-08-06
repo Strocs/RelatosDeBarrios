@@ -3,25 +3,37 @@
  * Contains types for brand identity, team, and fundamental business entities
  */
 
-export interface BrandConfig {
+export interface BrandContent {
   readonly title: string
   readonly description: string
   readonly contact_email: string
-  readonly url: UrlConfig
+  readonly url: UrlContent
   readonly paths: {
     readonly hub: string
     readonly covico: string
     readonly rengifo: string
   }
-  readonly social: SocialConfig
+  readonly social: SocialContent
 }
 
-export interface UrlConfig {
+export interface UrlContent {
   readonly base: string
   readonly covico: string
   readonly rengifo: string
 }
 
-export interface SocialConfig {
+export interface SocialContent {
   readonly instagram: string
+}
+
+export interface TeamMember {
+  readonly name: string
+  readonly role: string
+  readonly description: string
+}
+
+export interface TeamContent {
+  readonly members: TeamMember[]
+  readonly collaborators: string[]
+  readonly participants: string[]
 }

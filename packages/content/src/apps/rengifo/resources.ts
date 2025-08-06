@@ -1,34 +1,36 @@
-import { brandConfig } from '../../core'
-import { Section } from './types/rengifo'
+import { brandContent } from '../../core'
+import { ResourcesContent } from './types/rengifo'
+import { formatPath } from '@relatos/utils/format'
 
-export const resourcesContent: Section = {
+export const resourcesContent: ResourcesContent = {
+  id: 'resources',
   title: 'Descubre',
   subTitle: 'Relatos de Barrios',
-  cards: [
-    {
-      id: 'libro',
+  cards: {
+    book: {
+      id: 'book',
       title: 'Libro',
       subTitle: 'Descárgalo Aquí',
       href: `/Libro_RelatosDeBarrios.pdf`,
 
-      bgImage: {
-        src: `${brandConfig.paths.rengifo}/images/ventana1.png`,
+      bg: {
+        src: formatPath(`${brandContent.paths.rengifo}/images/ventana1.png`),
         width: 300,
         height: 300,
         alt: 'Portada del libro documental Rengifo',
       },
     },
-    {
-      id: 'documental',
+    documentary: {
+      id: 'documentary',
       title: 'Documental',
       subTitle: 'Míralo Aquí',
       href: 'https://www.youtube.com/embed/6Vg9ZTJFnj4?fs=1',
-      bgImage: {
-        src: `${brandConfig.paths.rengifo}/images/ventana2.png`,
+      bg: {
+        src: formatPath(`${brandContent.paths.rengifo}/images/ventana2.png`),
         width: 300,
         height: 300,
         alt: 'Portada del libro documental Rengifo 2',
       },
     },
-  ],
+  },
 }

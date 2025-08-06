@@ -3,27 +3,24 @@
  * Menu items and navigation structure for the Rengifo project
  */
 
-import { NavigationContent } from './types/rengifo'
+import { NavigationContent } from '../types/general'
+import { RengifoSections } from './types/rengifo'
 
-export const navigationContent: NavigationContent = [
+export const navigationContent: NavigationContent<RengifoSections> = [
   {
-    id: 'inicio',
+    id: 'hero',
     label: 'Inicio',
-    href: '#inicio',
   },
   {
-    id: 'planimetrias',
+    id: 'docs',
     label: 'Planimetrías',
-    href: '#planimetrias',
   },
   {
-    id: 'archivo',
+    id: 'photos',
     label: 'Archivo Fotográfico',
-    href: '#archivo',
   },
   {
-    id: 'libro-documental',
+    id: 'resources',
     label: 'Libro / Documental',
-    href: '#libro-documental',
   },
 ] as const

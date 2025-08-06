@@ -3,7 +3,7 @@
  * Contains types for UI texts, navigation, and user-facing elements
  */
 
-export interface UIButtonsConfig {
+export interface UIButtonsContent {
   readonly save: string
   readonly cancel: string
   readonly submit: string
@@ -16,7 +16,7 @@ export interface UIButtonsConfig {
   readonly contact: string
 }
 
-export interface UIFormsConfig {
+export interface UIFormsContent {
   readonly required: string
   readonly email_invalid: string
   readonly phone_invalid: string
@@ -28,7 +28,7 @@ export interface UIFormsConfig {
   readonly submit_error: string
 }
 
-export interface UINavigationConfig {
+export interface UINavigationContent {
   readonly home: string
   readonly about: string
   readonly projects: string
@@ -37,19 +37,19 @@ export interface UINavigationConfig {
   readonly menu: string
 }
 
-export interface UIMessagesConfig {
+export interface UIMessagesContent {
   [key: string]: string
 }
 
-export interface UIConfig {
-  readonly buttons: UIButtonsConfig
-  readonly forms: UIFormsConfig
-  readonly navigation: UINavigationConfig
-  readonly messages: UIMessagesConfig
+export interface UIContent {
+  readonly buttons: UIButtonsContent
+  readonly forms: UIFormsContent
+  readonly navigation: UINavigationContent
+  readonly messages: UIMessagesContent
 }
 
 // Legacy compatibility interface
-export interface LegacyUIConfig {
+export interface LegacyUIContent {
   readonly buttons: Record<string, string>
   readonly forms: Record<string, string>
   readonly navigation: Record<string, string>

@@ -1,3 +1,3 @@
-import { CovicoConfig } from './types/covico'
+import { CovicoContent } from './types/covico'
 
-export const covicoConfig: CovicoConfig = {}
+export const covicoContent: CovicoContent = {}

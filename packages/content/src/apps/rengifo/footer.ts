@@ -1,16 +1,13 @@
-/**
- * Rengifo Footer Configuration
- * Footer content including logos, social links and credits
- */
-
-import { brandConfig } from '../../core'
+import { brandContent } from '../../core'
 import { FooterContent } from './types/rengifo'
+import { formatPath } from '@relatos/utils/format'
 
 export const footerContent: FooterContent = {
+  id: 'footer',
   title: 'Relatos de Barrios - Universidad de La Serena',
   utilityImages: {
     bg: {
-      src: `${brandConfig.paths.rengifo}/muroPiedra.webp`,
+      src: formatPath(`${brandContent.paths.rengifo}/muroPiedra.webp`),
       alt: 'Muro de piedra del barrio Rengifo',
       width: 1440,
       height: 675,
@@ -46,31 +43,37 @@ export const footerContent: FooterContent = {
   credits: {
     collaborators: [
       {
-        src: `${brandConfig.paths.rengifo}/images/logos/MINCAP.png`,
+        src: formatPath(
+          `${brandContent.paths.rengifo}/images/logos/MINCAP.png`
+        ),
         alt: 'Ministerio de las Culturas, las Artes y el Patrimonio',
         width: 1080,
         height: 549,
       },
       {
-        src: `${brandConfig.paths.rengifo}/images/logos/laSerena.png`,
+        src: formatPath(
+          `${brandContent.paths.rengifo}/images/logos/laSerena.png`
+        ),
         alt: 'Municipio de La Serena',
         width: 1080,
         height: 1080,
       },
       {
-        src: `${brandConfig.paths.rengifo}/images/logos/ULS.png`,
+        src: formatPath(`${brandContent.paths.rengifo}/images/logos/ULS.png`),
         alt: 'Universidad de La Serena',
         width: 1080,
         height: 549,
       },
       {
-        src: `${brandConfig.paths.rengifo}/images/logos/colArq.png`,
+        src: formatPath(
+          `${brandContent.paths.rengifo}/images/logos/colArq.png`
+        ),
         alt: 'Colegio de Arquitectos de Chile',
         width: 1149,
         height: 549,
       },
       {
-        src: `${brandConfig.paths.rengifo}/images/logos/CEDAU.png`,
+        src: formatPath(`${brandContent.paths.rengifo}/images/logos/CEDAU.png`),
         alt: 'CEDAU',
         width: 1080,
         height: 549,

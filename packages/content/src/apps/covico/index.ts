@@ -1,3 +1,3 @@
-export { covicoConfig } from './covico'
+export { covicoContent } from './covico'
 
 export type * from './types/covico'

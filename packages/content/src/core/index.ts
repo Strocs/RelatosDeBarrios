@@ -3,4 +3,5 @@
  * Provides access to all core business configurations
  */
 
-export { brandConfig } from './brand'
+export { brandContent } from './brand'
+export { teamContent } from './team'

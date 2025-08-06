@@ -3,4 +3,4 @@
  * Provides access to all user interface configurations
  */
 
-export { uiConfig } from './texts'
+export { uiContent } from './texts'

@@ -27,6 +27,10 @@
       "default": "./src/apps/covico/index.ts",
       "types": "./src/apps/covico/index.ts"
     },
+    "./types": {
+      "default": "./src/apps/types/index.ts",
+      "types": "./src/apps/types/index.ts"
+    },
     "./ui": {
       "default": "./src/ui/index.ts",
       "types": "./src/ui/types/ui.ts"
@@ -38,6 +42,7 @@
   "devDependencies": {
     "@relatos/config-typescript": "workspace:*",
     "@relatos/config-eslint": "workspace:*",
+    "@relatos/utils": "workspace:*",
     "eslint": "catalog:"
   }
 }

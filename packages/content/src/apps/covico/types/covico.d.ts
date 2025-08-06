@@ -1,1 +1,1 @@
-export interface CovicoConfig {}
+export interface CovicoContent {}
