@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "Relatos de Barrios Monorepo",
+  "version": "0.1.0",
+  "system_prompt": "You are an expert assistant for the Relatos de Barrios monorepo. This project is a Turborepo-managed collection of Next.js web apps and shared packages, using Bun as the package manager. The codebase is modular, with apps and packages for content, utilities, and configuration. Provide context-aware, concise, and actionable answers for development, debugging, and documentation.",
+  "groups": [
+    {
+      "name": "Covico App",
+      "system_prompt": "You are working on the Covico web application. Focus on Next.js, React, and integration with shared packages.",
+      "data": ["covico_app", "covico_readme"]
+    },
+    {
+      "name": "Hub App",
+      "system_prompt": "You are working on the Hub web application. Focus on Next.js, React, and integration with shared packages.",
+      "data": ["hub_app", "hub_readme"]
+    },
+    {
+      "name": "Rengifo App",
+      "system_prompt": "You are working on the Rengifo web application. Focus on Next.js, React, and integration with shared packages.",
+      "data": ["rengifo_app", "rengifo_readme"]
+    },
+    {
+      "name": "Content Management Package",
+      "system_prompt": "You are working on the @relatos/content package. Focus on business data, UI texts, team information, and brand content.",
+      "data": ["content_pkg", "content_readme"]
+    },
+    {
+      "name": "Utilities Package",
+      "system_prompt": "You are working on the @relatos/utils package. Focus on reusable utility functions for strings, arrays, validation, formatting, and DOM operations.",
+      "data": ["utils_pkg", "utils_readme"]
+    },
+    {
+      "name": "Configuration Packages",
+      "system_prompt": "You are working on shared configuration packages for ESLint, TailwindCSS, and TypeScript. Focus on code quality, styling, and type safety.",
+      "data": [
+        "eslint_config",
+        "tailwind_config",
+        "typescript_config",
+        "configs_readme"
+      ]
+    }
+  ],
+  "data": {
+    "root_readme": {
+      "type": "file",
+      "path": "README.md",
+      "description": "Root monorepo README. Overview, installation, and running instructions."
+    },
+    "covico_app": {
+      "type": "file",
+      "path": "apps/covico/package.json",
+      "description": "Covico web application package manifest. Contains scripts, dependencies, and integration points."
+    },
+    "covico_readme": {
+      "type": "file",
+      "path": "apps/covico/README.md",
+      "description": "Covico app README. Project-specific documentation and usage."
+    },
+    "hub_app": {
+      "type": "file",
+      "path": "apps/hub/package.json",
+      "description": "Hub web application package manifest. Contains scripts, dependencies, and integration points."
+    },
+    "hub_readme": {
+      "type": "file",
+      "path": "apps/hub/README.md",
+      "description": "Hub app README. Project-specific documentation and usage."
+    },
+    "rengifo_app": {
+      "type": "file",
+      "path": "apps/rengifo/package.json",
+      "description": "Rengifo web application package manifest. Contains scripts, dependencies, and integration points."
+    },
+    "rengifo_readme": {
+      "type": "file",
+      "path": "apps/rengifo/README.md",
+      "description": "Rengifo app README. Project-specific documentation and usage."
+    },
+    "content_pkg": {
+      "type": "file",
+      "path": "packages/content/package.json",
+      "description": "@relatos/content package manifest. Shared business data, UI texts, team info, and brand content."
+    },
+    "content_readme": {
+      "type": "file",
+      "path": "packages/content/README.md",
+      "description": "@relatos/content package README. Architecture and usage documentation."
+    },
+    "utils_pkg": {
+      "type": "file",
+      "path": "packages/utils/package.json",
+      "description": "@relatos/utils package manifest. Shared utility functions for all apps."
+    },
+    "utils_readme": {
+      "type": "file",
+      "path": "packages/utils/README.md",
+      "description": "@relatos/utils package README. Usage and API documentation."
+    },
+    "eslint_config": {
+      "type": "file",
+      "path": "packages/configs/eslint/package.json",
+      "description": "ESLint configuration package for code quality and linting."
+    },
+    "configs_readme": {
+      "type": "file",
+      "path": "packages/configs/README.md",
+      "description": "Shared configs README. Architecture and principles documentation."
+    },
+    "tailwind_config": {
+      "type": "file",
+      "path": "packages/configs/tailwindcss/package.json",
+      "description": "TailwindCSS configuration package for shared styling."
+    },
+    "typescript_config": {
+      "type": "file",
+      "path": "packages/configs/typescript/package.json",
+      "description": "TypeScript configuration package for type safety across the monorepo."
+    }
+  }
+}
