@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3000",
-    "build": "next build",
+    "dev": "next dev --turbopack --port 3000",
+    "build": "next build --turbopack",
     "start": "next start --port 3000",
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "catalog:",
     "@relatos/content": "workspace:*",
     "@relatos/utils": "workspace:*",
     "lucide-react": "catalog:",

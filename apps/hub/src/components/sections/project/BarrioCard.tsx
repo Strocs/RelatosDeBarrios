@@ -1,6 +1,6 @@
 'use client'
 
-import { uiConfig } from '@relatos/content/ui'
+import { uiContent } from '@relatos/content/ui'
 import { cn } from '@relatos/utils'
 import Link from 'next/link'
 import { useRef } from 'react'
@@ -40,7 +40,7 @@ export const BarrioCard = ({
       {disabled && (
         <div className='bg-hub-primary/10 absolute inset-0 z-10 flex items-center justify-center transition-opacity group-hover:opacity-100 landscape:opacity-0'>
           <span className='text-hub-accent text-2xl font-bold'>
-            {uiConfig.messages.coming_soon}
+            {uiContent.messages.coming_soon}
           </span>
         </div>
       )}

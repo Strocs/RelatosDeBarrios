@@ -3,8 +3,7 @@ import { Noto_Sans } from 'next/font/google'
 import '@/styles/globals.css'
 import { Background } from '@/components/Background'
 import { cn } from '@relatos/utils'
-import { seoConfig } from '@relatos/content/hub'
-import { Footer } from '@/components/Footer'
+import { seoContent } from '@relatos/content/hub'
 
 const noto_sans = Noto_Sans({
   variable: '--font-noto-sans',
@@ -13,8 +12,8 @@ const noto_sans = Noto_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(seoConfig.url),
-  ...seoConfig,
+  metadataBase: new URL(seoContent.url),
+  ...seoContent,
 }
 
 export default function RootLayout({
@@ -32,7 +31,6 @@ export default function RootLayout({
       >
         <Background />
         {children}
-        <Footer />
       </body>
     </html>
   )
