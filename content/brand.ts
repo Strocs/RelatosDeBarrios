@@ -15,8 +15,12 @@ export const brandContent: BrandContent = {
     covico: 'https://relatosdebarrios.cl/villacovico',
     rengifo: 'https://relatosdebarrios.cl/conjuntohabitacionalrengifo',
   },
+  projects: {
+    rengifo: 'Conjunto Habitacional Rengifo',
+    covico: 'Villa Covico',
+  },
   paths: {
-    hub: '/hub',
+    hub: '/',
     covico: '/villacovico',
     rengifo: '/conjuntohabitacionalrengifo',
   },

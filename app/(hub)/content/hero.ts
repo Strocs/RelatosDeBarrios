@@ -13,10 +13,10 @@ export const heroContent: Section<HubSections> = {
     'Voces que construyen identidad en los barrios de la Región de Coquimbo.',
   utilityImages: {
     logo: {
-      src: '/hub/images/hero-image.webp',
+      src: '/hub/images/hero-blue.png',
       alt: 'Logo de Relatos de Barrios',
-      width: 1200,
-      height: 531,
+      width: 772,
+      height: 325,
     },
   },
 } as const

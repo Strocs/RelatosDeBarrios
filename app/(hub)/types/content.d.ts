@@ -15,6 +15,46 @@ export interface TeamSection extends Section<HubSections> {
   cards: TeamContent
 }
 
+export interface InputType {
+  id: string
+  type: 'text' | 'email' | 'file' | 'textarea' | 'select'
+  label: string
+  placeholder: string
+  required: boolean
+  requiredMessage?: string
+  invalidMessage?: string
+}
+
+export interface AttachmentsType extends InputType {
+  maxSize: number
+  allowedTypes: string[]
+}
+
+export interface SubmitButtonType {
+  id: string
+  type: 'submit'
+  label: string
+  success: string
+  error: {
+    validation: string
+    server: string
+  }
+}
+
+export interface ContributionType extends InputType {
+  options: {
+    id: projectCards
+    label: string
+  }[]
+}
+
 export interface ContactSection extends Section<HubSections> {
-  form: ''
+  form: {
+    name: InputType
+    email: InputType
+    commentary: InputType
+    contribution: ContributionType
+    attachments: AttachmentsType
+    submit: SubmitButtonType
+  }
 }

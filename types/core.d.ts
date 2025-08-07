@@ -8,6 +8,10 @@ export interface BrandContent {
   readonly description: string
   readonly contact_email: string
   readonly url: UrlContent
+  readonly projects: {
+    rengifo: 'Conjunto Habitacional Rengifo'
+    covico: 'Villa Covico'
+  }
   readonly paths: {
     readonly hub: string
     readonly covico: string

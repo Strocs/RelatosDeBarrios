@@ -20,21 +20,11 @@ export const uiContent: UIContent = {
   forms: {
     required: 'Campo requerido',
     email_invalid: 'Email inválido',
-    phone_invalid: 'Teléfono inválido',
     name_placeholder: 'Nombre completo',
     email_placeholder: 'Correo electrónico',
-    phone_placeholder: 'Teléfono',
     message_placeholder: 'Mensaje',
     submit_success: 'Mensaje enviado correctamente',
     submit_error: 'Error al enviar el mensaje',
-  },
-  navigation: {
-    home: 'Inicio',
-    about: 'Acerca de',
-    projects: 'Proyectos',
-    team: 'Equipo',
-    contact: 'Contacto',
-    menu: 'Menú',
   },
   messages: {
     loading: 'Cargando...',
