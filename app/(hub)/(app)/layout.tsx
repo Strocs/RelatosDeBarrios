@@ -22,16 +22,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={cn(
-          'bg-hub-background font-noto relative flex h-full min-h-dvh flex-col px-4 antialiased',
-          noto_sans.variable
-        )}
-      >
-        <Background />
-        {children}
-      </body>
-    </html>
+    <body
+      className={cn(
+        'bg-hub-background font-noto relative flex h-full min-h-dvh flex-col px-4 antialiased',
+        noto_sans.variable
+      )}
+    >
+      <Background />
+      {children}
+    </body>
   )
 }

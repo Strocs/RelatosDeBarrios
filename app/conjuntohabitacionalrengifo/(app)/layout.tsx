@@ -30,16 +30,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='es'>
-      <body
-        className={cn(
-          'font-raleway overflow-x-hidden antialiased',
-          raleway.variable
-        )}
-      >
-        <Gallery />
-        {children}
-      </body>
-    </html>
+    <body
+      className={cn(
+        'font-raleway overflow-x-hidden antialiased',
+        raleway.variable
+      )}
+    >
+      <Gallery />
+      {children}
+    </body>
   )
 }
