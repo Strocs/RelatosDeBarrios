@@ -27,7 +27,10 @@ export const Footer = () => {
         className='to-rengifo-azul-darker absolute top-0 z-1 size-full bg-gradient-to-b from-transparent'
       ></div>
       <Image
-        {...footerContent.utilityImages.bg}
+        src={footerContent.utilityImages.bg.src}
+        alt={footerContent.utilityImages.bg.alt}
+        width={footerContent.utilityImages.bg.width}
+        height={footerContent.utilityImages.bg.height}
         className='pointer-events-none absolute top-0 z-0 h-full w-full object-cover object-top select-none'
       />
       <section className='relative z-10 container mx-auto space-y-4 px-4 pt-24 pb-8'>
@@ -35,14 +38,19 @@ export const Footer = () => {
         <Logo className='text-rengifo-pastel mx-auto w-fit max-w-lg' />
         {/* Collaborators */}
         <ul className='flex flex-wrap items-center justify-center'>
-          {footerContent.credits.collaborators.map((collaborator) => (
-            <li key={collaborator.src} className='size-fit'>
-              <Image
-                {...collaborator}
-                className='aspect-auto max-h-16 w-fit md:max-h-24'
-              />
-            </li>
-          ))}
+          {footerContent.credits.collaborators.map(
+            ({ src, alt, width, height }) => (
+              <li key={src} className='size-fit'>
+                <Image
+                  src={src}
+                  alt={alt}
+                  height={height}
+                  width={width}
+                  className='aspect-auto max-h-16 w-fit md:max-h-24'
+                />
+              </li>
+            )
+          )}
         </ul>
         {/* Text */}
         <div className='text-center text-sm leading-tight text-white md:text-base'>

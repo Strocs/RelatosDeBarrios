@@ -15,7 +15,10 @@ export const DocsSection = () => {
     >
       {/* Background Image */}
       <Image
-        {...docsContent.utilityImages!.bg}
+        src={docsContent.utilityImages!.bg.src}
+        alt={docsContent.utilityImages!.bg.alt}
+        width={docsContent.utilityImages!.bg.width}
+        height={docsContent.utilityImages!.bg.height}
         sizes='100vw'
         className='pointer-events-none absolute -top-[50%] h-full w-full object-cover select-none md:-top-[40%]'
       />
@@ -48,14 +51,27 @@ export const DocsSection = () => {
             </Markdown>
           </div>
           <section className='flex w-full items-center gap-8 not-landscape:flex-col xl:items-stretch'>
-            <OpenGalleryCard key={planimetries.id} {...planimetries} />
-            <OpenGalleryCard key={survey.id} {...survey} />
+            <OpenGalleryCard
+              id={planimetries.id}
+              bg={planimetries.bg}
+              title={planimetries.title}
+              subTitle={planimetries.subTitle}
+            />
+            <OpenGalleryCard
+              id={survey.id}
+              bg={survey.bg}
+              title={survey.title}
+              subTitle={survey.subTitle}
+            />
           </section>
         </section>
       </section>
       <div className='relative z-10 h-auto w-full'>
         <Image
-          {...docsContent.utilityImages!.bottom}
+          src={docsContent.utilityImages!.bottom.src}
+          alt={docsContent.utilityImages!.bottom.alt}
+          height={docsContent.utilityImages!.bottom.height}
+          width={docsContent.utilityImages!.bottom.width}
           sizes='100vw'
           className='pointer-events-none w-full object-cover select-none'
         />

@@ -25,7 +25,10 @@ export const HeroSection = () => {
       </video>
 
       <Image
-        {...heroContent.utilityImages!.bg}
+        src={heroContent.utilityImages!.bg.src}
+        alt={heroContent.utilityImages!.bg.alt}
+        width={heroContent.utilityImages!.bg.width}
+        height={heroContent.utilityImages!.bg.height}
         className='pointer-events-none absolute -bottom-0 z-10 w-screen select-none'
       />
     </header>
