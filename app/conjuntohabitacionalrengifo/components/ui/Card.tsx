@@ -7,6 +7,7 @@ import type { Card as CardType, ImageType } from '@/types/general'
 
 interface BaseCardProps extends Omit<CardType<''>, 'id' | 'href'> {
   className?: string
+  bg: ImageType
 }
 
 type CardButtonProps = BaseCardProps &
@@ -67,7 +68,10 @@ const CardContent = ({ title, subTitle, bg, disabled }: BaseCardProps) => (
 
     {/* Background Image */}
     <Image
-      {...(bg as ImageType)}
+      alt={bg.alt}
+      src={bg.src}
+      width={bg.width}
+      height={bg.height}
       sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       className='pointer-events-none absolute inset-0 size-full object-cover transition-transform delay-75 duration-700 select-none group-hover:scale-125'
     />

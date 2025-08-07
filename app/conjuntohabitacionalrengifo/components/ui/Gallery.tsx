@@ -69,7 +69,10 @@ export const Gallery = () => {
             />
           </button>
           <Image
-            {...images[currentIndex]}
+            src={images[currentIndex].src}
+            alt={images[currentIndex].alt}
+            width={images[currentIndex].width}
+            height={images[currentIndex].height}
             className='mx-auto max-h-[60vh] object-contain select-none'
             priority
           />

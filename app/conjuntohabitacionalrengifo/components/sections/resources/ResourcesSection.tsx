@@ -27,7 +27,11 @@ export const ResourcesSection = () => {
             target='_blank'
             rel='noopener noreferrer'
             href={book.href!}
-            {...book}
+            title={book.title}
+            subTitle={book.subTitle}
+            id={book.id}
+            bg={book.bg}
+            disabled={book.disabled}
             className='h-full min-h-38 max-w-lg xl:min-h-64!'
           />
 
@@ -37,7 +41,11 @@ export const ResourcesSection = () => {
             target='_blank'
             rel='noopener noreferrer'
             href={documentary.href!}
-            {...documentary}
+            title={documentary.title}
+            subTitle={documentary.subTitle}
+            id={documentary.id}
+            bg={documentary.bg}
+            disabled={documentary.disabled}
             className='h-full min-h-38 max-w-lg xl:min-h-64!'
           />
         </section>

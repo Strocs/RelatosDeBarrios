@@ -14,7 +14,10 @@ export const PhotosSection = () => {
       className='bg-rengifo-azul-darker relative z-10 flex flex-col items-center overflow-clip pt-24 xl:-mt-20 xl:overflow-visible 2xl:h-[140dvh]'
     >
       <Image
-        {...photosContent.utilityImages!.bg}
+        src={photosContent.utilityImages!.bg.src}
+        alt={photosContent.utilityImages!.bg.alt}
+        width={photosContent.utilityImages!.bg.width}
+        height={photosContent.utilityImages!.bg.height}
         sizes='100vw'
         className='pointer-events-none absolute z-0 -mt-32 h-full w-screen object-cover object-center select-none xl:h-auto'
       />
@@ -32,20 +35,35 @@ export const PhotosSection = () => {
         </section>
         <section className='space-y-12 py-10 md:py-20'>
           <div className='flex h-full min-h-72 flex-wrap justify-center gap-8 xl:flex-nowrap'>
-            {cardsList.slice(0, 3).map((card) => (
-              <OpenGalleryCard key={card.id} {...card} />
-            ))}
+            {cardsList
+              .slice(0, 3)
+              .map(({ id, title, subTitle, disabled, bg }) => (
+                <OpenGalleryCard
+                  key={id}
+                  id={id}
+                  title={title}
+                  subTitle={subTitle}
+                  bg={bg}
+                  disabled={disabled}
+                />
+              ))}
           </div>
           <div className='flex h-full min-h-48 flex-wrap justify-center gap-8 xl:flex-nowrap'>
-            {cardsList.slice(3).map((card) => (
-              <Card
-                variant='link'
-                href={card.href!}
-                key={card.id}
-                {...card}
-                className='max-w-lg xl:max-w-full'
-              />
-            ))}
+            {cardsList
+              .slice(3)
+              .map(({ href, id, title, subTitle, bg, disabled }) => (
+                <Card
+                  variant='link'
+                  href={href}
+                  key={id}
+                  id={id}
+                  bg={bg}
+                  subTitle={subTitle}
+                  title={title}
+                  disabled={disabled}
+                  className='max-w-lg xl:max-w-full'
+                />
+              ))}
           </div>
         </section>
       </article>

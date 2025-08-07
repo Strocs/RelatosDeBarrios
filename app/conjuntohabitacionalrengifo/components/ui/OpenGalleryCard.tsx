@@ -2,6 +2,7 @@
 import { useGalleryStore } from '@/rengifo/store/galleryStore'
 import { type BaseCardProps, Card } from './Card'
 import { getImagesById } from '@/rengifo/utils/galleryUtils'
+import { ImageType } from '@/types/general'
 
 interface OpenGalleryCardProps extends BaseCardProps {
   id: string
@@ -30,7 +31,7 @@ export const OpenGalleryCard = ({
       onClick={handleOpenGallery}
       title={title}
       subTitle={subTitle}
-      bg={bg}
+      bg={bg as ImageType}
       className={className}
       disabled={disabled}
     />
