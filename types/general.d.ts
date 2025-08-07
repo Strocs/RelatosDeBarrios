@@ -27,7 +27,6 @@ export interface Section<T, C extends string = string> {
     [key: string]: ImageType
   }
   cards?: Record<C, Card<C>>
-
   gallery?: GalleryContent<C>
 }
 

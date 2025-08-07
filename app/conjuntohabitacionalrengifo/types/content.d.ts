@@ -23,11 +23,19 @@ export type Photos =
   | 'interior'
 export type Resources = 'book' | 'documentary'
 
-export type DocsContent = Section<RengifoSections, Docs>
+export type RengifoCard<T> = Omit<Card<T>, 'bg'> & { bg: ImageType }
+
+export interface DocsContent extends Section<RengifoSections, Docs> {
+  cards: Record<Docs, RengifoCard<Docs>>
+}
+
 export interface PhotoContent extends Section<RengifoSections, Photos> {
   gallery: GalleryContent<Exclude<Photos, 'exterior' | 'interior'>>
+  cards: Record<Photos, RengifoCard<Photos>>
 }
-export type ResourcesContent = Section<RengifoSections, Resources>
+export interface ResourcesContent extends Section<RengifoSections, Resources> {
+  cards: Record<Resources, RengifoCard<Resources>>
+}
 
 export type HeroAction = {
   id: string
