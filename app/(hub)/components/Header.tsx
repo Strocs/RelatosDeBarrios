@@ -1,4 +1,4 @@
-// import { NavBar } from './NavBar'
+import { NavBar } from './NavBar'
 
 interface HeaderProps {
   children?: React.ReactNode
@@ -7,7 +7,7 @@ interface HeaderProps {
 export const Header = ({ children }: HeaderProps) => {
   return (
     <header className='container mx-auto'>
-      {/* <NavBar /> */}
+      <NavBar />
       {children}
     </header>
   )

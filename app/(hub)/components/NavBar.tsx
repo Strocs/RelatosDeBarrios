@@ -3,7 +3,7 @@ import { NavButton } from './NavButton'
 
 export const NavBar = () => {
   return (
-    <nav className='bg-hub-background/0 fixed top-3 right-1/2 z-50 flex translate-x-1/2 gap-6 rounded-xl px-6 py-3 backdrop-blur-sm'>
+    <nav className='bg-hub-background/10 fixed top-3 right-0 left-0 z-50 mx-auto flex w-fit gap-6 rounded-xl px-6 py-3 backdrop-blur-sm'>
       {navigationContent.map(({ id, label }) => (
         <NavButton
           key={id}
