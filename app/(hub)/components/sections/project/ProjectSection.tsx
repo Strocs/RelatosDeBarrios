@@ -1,0 +1,16 @@
+import Markdown from 'react-markdown'
+import { projectContent } from '@/hub/content/project'
+import { Title } from '@/hub/components/ui/Title'
+
+export const ProjectSection = () => {
+  return (
+    <section id={projectContent.id} className='container flex flex-col py-10'>
+      <article className='space-y-10 pt-10'>
+        <Title>{projectContent.title}</Title>
+        <div className='text-hub-primary mx-auto max-w-prose space-y-8 px-4 py-2'>
+          <Markdown>{projectContent.description}</Markdown>
+        </div>
+      </article>
+    </section>
+  )
+}

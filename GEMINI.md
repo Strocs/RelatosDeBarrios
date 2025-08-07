@@ -1,37 +1,43 @@
-# GEMINI.md
+# Project Overview
 
-This project is a JavaScript/TypeScript monorepo managed with pnpm and TurboRepo. It contains multiple frontend applications and shared packages, structured for scalability and code reuse.
+This is a Next.js web project called "Relatos de Barrios". Its main purpose is to document and showcase the industrial and architectural heritage of neighborhoods in La Serena and Coquimbo, Chile. The project highlights specific areas like "Villa Covico" and "Conjunto Habitacional Rengifo", presenting historical information, architectural plans, and digital archives.
 
-## Structure
+The project is built with a modern web stack, including:
 
-- `apps/`: Deployable frontend applications.
-  - `covico`, `hub`, `rengifo-next`: Next.js (TypeScript)
-  - `rengifo`: Vite + React (JavaScript)
-- `packages/`: Shared code and configuration.
-  - `configs`: ESLint, Tailwind, and TypeScript shared configs
-  - `content`: Shared content/data
-  - `utils`: Shared utility functions
+*   **Framework**: Next.js (with Turbopack)
+*   **Language**: TypeScript
+*   **UI Library**: React
+*   **Styling**: Tailwind CSS
+*   **Animation**: GSAP (GreenSock Animation Platform)
+*   **State Management**: Zustand
+*   **Linting**: ESLint
+*   **Package Manager**: pnpm
 
-## Technologies
+# Building and Running
 
-- **Monorepo management:** pnpm, TurboRepo
-- **Frontend frameworks:** Next.js (TypeScript), Vite + React (JavaScript)
-- **Styling:** Tailwind CSS, CSS Modules, Prettier
-- **Linting:** ESLint (custom shared configs)
-- **Type safety:** TypeScript (most apps and packages)
-- **Assets:** Static assets (images, PDFs, videos) per app
+The following scripts are available in `package.json` to run, build, and manage the project.
 
-## Key Decisions
+*   **Run in development mode**:
+    ```bash
+    pnpm dev
+    ```
+*   **Create a production build**:
+    ```bash
+    pnpm build
+    ```
+*   **Start the production server**:
+    ```bash
+    pnpm start
+    ```
+*   **Lint the codebase**:
+    ```bash
+    pnpm lint
+    ```
 
-- **Monorepo:** Enables code sharing and consistent tooling across apps.
-- **TypeScript:** Used for type safety in most apps; one app (`rengifo`) is JavaScript.
-- **Shared configs:** Centralized ESLint, Tailwind, and TypeScript configs for consistency.
-- **Utilities and content:** Shared via packages to avoid duplication.
-- **Styling:** Tailwind CSS and CSS Modules for scalable, maintainable styles.
+# Development Conventions
 
-## Rules
-
-- Never add a new dependency unless it's absolutely necessary. If you need to add a new dependecy, first check if exists in root package.json, if not, ask me first before adding it.
-- Always use the shared configs from `packages/configs` for ESLint, Tailwind,
-- Always use the shared content from `packages/content` for data.
-- Always use context7 when you need to read documentation or need to understand how to use a package.
+*   **Project Structure**: The project follows the Next.js `app` directory structure. It is organized into sub-projects for different neighborhoods, such as `(hub)`, `conjuntohabitacionalrengifo`, and `villacovico`.
+*   **Path Aliases**: The project uses path aliases for cleaner imports, configured in `tsconfig.json`. For example, `@/*` points to the root directory.
+*   **Content Management**: Content is decoupled from the UI code and is managed in dedicated `content` folders within each sub-project. This makes it easier to update information without touching the application logic.
+*   **Styling**: The project uses Tailwind CSS for styling, with a `globals.css` file for base styles.
+*   **Types**: TypeScript types are defined in `.d.ts` files within the `types` directories, ensuring type safety across the application.

@@ -7,7 +7,7 @@
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
-  "tailwindStylesheet": "./package/config-tailwindcss/shared-styles.css",
+  "tailwindStylesheet": "./styles/globals.css",
   "tailwindAttributes": ["className", "class", "style"],
   "tailwindFunctions": ["clsx", "twMerge", "cn"]
 }
