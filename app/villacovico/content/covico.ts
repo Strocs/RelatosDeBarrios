@@ -1,3 +1,5 @@
 import { CovicoContent } from '../types/covico'
 
-export const covicoContent: CovicoContent = {}
+export const covicoContent: CovicoContent = {
+  title: 'covico',
+}

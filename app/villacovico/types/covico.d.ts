@@ -1,1 +1,3 @@
-export interface CovicoContent {}
+export interface CovicoContent {
+  title: string
+}
