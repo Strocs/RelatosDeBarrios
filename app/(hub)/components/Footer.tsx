@@ -4,7 +4,7 @@ import { Instagram, Mail } from 'lucide-react'
 
 export const Footer = () => {
   return (
-    <footer className='mx-auto w-fit items-center space-y-2 py-6 text-center text-gray-600'>
+    <footer className='absolute right-0 bottom-0 left-0 mx-auto w-fit items-center space-y-2 py-6 text-center text-gray-600'>
       <p className='text-sm'>{new Date().getFullYear()} Relatos de Barrios.</p>
       <nav className='flex items-center justify-center gap-2'>
         {/* Instagram */}
