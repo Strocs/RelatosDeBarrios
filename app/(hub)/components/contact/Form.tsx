@@ -1,5 +1,6 @@
+import { sendEmail } from '../../actions/contactAction'
 import { contactContent } from '../../content/contact'
-import { FormAttachments } from './FormAttachments'
+import { FormContribution } from './FormContribution'
 import { FormButton } from './FormButton'
 import { FormInput } from './FormInput'
 
@@ -8,7 +9,10 @@ const { name, email, commentary, contribution, attachments, submit } =
 
 export const Form = () => {
   return (
-    <form className='bg-hub-background/20 mx-auto w-full max-w-2xl rounded-2xl p-4 backdrop-blur-2xl md:p-8'>
+    <form
+      action={sendEmail}
+      className='bg-hub-background/20 mx-auto w-full max-w-2xl rounded-2xl p-4 backdrop-blur-2xl md:p-8'
+    >
       {/* Name field */}
       <FormInput inputContent={name} />
       {/* Email field */}
@@ -16,7 +20,7 @@ export const Form = () => {
       {/* Message/Commentary field */}
       <FormInput inputContent={commentary} />
       {/* Material contribution */}
-      <FormAttachments contribution={contribution} attachments={attachments} />
+      <FormContribution contribution={contribution} attachments={attachments} />
       {/* Submit button */}
       <FormButton submitContent={submit} />
     </form>

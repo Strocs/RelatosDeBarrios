@@ -3,6 +3,7 @@
  * Contains types for individual apps and their configurations
  */
 
+import type { Accept } from 'react-dropzone'
 import { TeamContent } from '@/types/core'
 import { Section } from '@/types/general'
 
@@ -27,7 +28,7 @@ export interface InputType {
 
 export interface AttachmentsType extends InputType {
   maxSize: number
-  allowedTypes: string[]
+  accept: Accept
 }
 
 export interface SubmitButtonType {
