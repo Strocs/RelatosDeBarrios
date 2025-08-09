@@ -49,13 +49,15 @@ export interface ContributionType extends InputType {
   }[]
 }
 
+export type ContactForm = {
+  name: InputType
+  email: InputType
+  commentary: InputType
+  contribution: ContributionType
+  attachments: AttachmentsType
+  submit: SubmitButtonType
+}
+
 export interface ContactSection extends Section<HubSections> {
-  form: {
-    name: InputType
-    email: InputType
-    commentary: InputType
-    contribution: ContributionType
-    attachments: AttachmentsType
-    submit: SubmitButtonType
-  }
+  form: ContactForm
 }

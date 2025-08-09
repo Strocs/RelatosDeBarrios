@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState, useEffect } from 'react'
 import { useDropzone } from 'react-dropzone'
-import type { AttachmentFile } from '../types/attachments'
+import type { DropzoneFile } from '../types/attachments'
 import {
   processImageFile,
   processNonImageFile,
@@ -10,7 +10,7 @@ import {
 import { AttachmentsType } from '../types/content'
 
 export function useFileAttachments(attachments: AttachmentsType) {
-  const [files, setFiles] = useState<AttachmentFile[]>([])
+  const [files, setFiles] = useState<DropzoneFile[]>([])
   const hiddenInputRef = useRef<HTMLInputElement>(null)
 
   const onDrop = useCallback(
@@ -26,7 +26,7 @@ export function useFileAttachments(attachments: AttachmentsType) {
       // Add to state
       setFiles((prev) => [...prev, ...processedFiles])
 
-      // Update hidden input
+      // Update files in hidden input to send it with form submission
       if (hiddenInputRef.current) {
         const allFiles = [...files, ...processedFiles].map((f) => f.file)
         const dataTransfer = createDataTransfer(allFiles)

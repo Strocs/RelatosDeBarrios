@@ -2,11 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import { Book } from 'lucide-react'
 import { truncate } from '@/utils/string'
-import type { AttachmentFile } from '../../types/attachments'
+import type { DropzoneFile } from '../../types/attachments'
 
-export const FilePreviewItem: React.FC<{ file: AttachmentFile }> = ({
-  file,
-}) => {
+export const FilePreviewItem: React.FC<{ file: DropzoneFile }> = ({ file }) => {
   if (file.src) {
     return (
       <Image

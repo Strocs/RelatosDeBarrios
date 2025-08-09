@@ -1,9 +1,9 @@
 import React from 'react'
-import type { AttachmentFile } from '../../types/attachments'
+import type { DropzoneFile } from '../../types/attachments'
 import { FilePreviewItem } from './FilePreviewItem'
 
 interface FilePreviewGridProps {
-  files: AttachmentFile[]
+  files: DropzoneFile[]
 }
 
 export const FilePreviewGrid: React.FC<FilePreviewGridProps> = ({ files }) => (

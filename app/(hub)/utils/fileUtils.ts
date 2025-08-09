@@ -1,6 +1,6 @@
-import type { AttachmentFile } from '../types/attachments'
+import type { DropzoneFile } from '../types/attachments'
 
-export function processImageFile(file: File): Promise<AttachmentFile> {
+export function processImageFile(file: File): Promise<DropzoneFile> {
   return new Promise((resolve) => {
     const objectUrl = URL.createObjectURL(file)
     const img = new window.Image()
@@ -27,7 +27,7 @@ export function processImageFile(file: File): Promise<AttachmentFile> {
   })
 }
 
-export function processNonImageFile(file: File): AttachmentFile {
+export function processNonImageFile(file: File): DropzoneFile {
   return {
     file,
     type: file.type,
