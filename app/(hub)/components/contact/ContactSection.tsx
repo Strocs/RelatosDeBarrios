@@ -5,9 +5,6 @@ import { Form } from './Form'
 const { id, title, subTitle } = contactContent
 
 export const ContactSection = () => {
-  // Placeholder for custom hook integration
-  // const { formData, errors, isSubmitting, isSuccess, handleChange, handleSubmit } = useContactForm()
-
   return (
     <article
       id={id}
