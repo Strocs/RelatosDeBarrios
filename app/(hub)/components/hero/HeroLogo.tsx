@@ -9,6 +9,7 @@ export const HeroLogo = (image: ImageType) => {
       width={image.width}
       height={image.height}
       sizes='512px'
+      priority
       className='w-full mix-blend-luminosity'
     />
   )
