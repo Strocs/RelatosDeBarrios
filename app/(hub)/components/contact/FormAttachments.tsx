@@ -21,7 +21,7 @@ export const FormAttachments = ({ attachments }: FormAttachmentsProps) => {
   } = useFileAttachments(attachments)
 
   return (
-    <div className='mb-6'>
+    <div>
       <label
         htmlFor={attachments.id}
         className='text-hub-text mb-2 block font-medium'

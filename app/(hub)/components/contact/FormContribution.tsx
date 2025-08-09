@@ -21,7 +21,7 @@ export const FormContribution = ({
   return (
     <>
       {/* Contribution question and project selection */}
-      <div className='mb-2'>
+      <div>
         <p className='text-hub-text block font-medium'>{contribution.label}</p>
         <select
           id={contribution.id}
