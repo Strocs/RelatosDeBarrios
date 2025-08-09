@@ -7,13 +7,21 @@ interface InputFormProps {
   className?: string
 }
 
+const inputValue = {
+  form_email: 'test@email.com',
+  form_name: 'John Doe',
+  form_commentary: 'Hello! This is a test message.',
+}
+
+const isDev = process.env.NODE_ENV === 'development'
+
 export const FormInput = ({ inputContent, className }: InputFormProps) => {
   const Element = inputContent.type === 'textarea' ? Textarea : Input
 
   return (
     <label
       htmlFor={inputContent.id}
-      className='text-hub-text mb-4 block font-medium'
+      className='text-hub-text block font-medium'
     >
       {inputContent.label}
       {inputContent.required && (
@@ -34,6 +42,11 @@ const Input = ({ inputContent, className }: InputFormProps) => {
   return (
     <input
       type={inputContent.type}
+      defaultValue={
+        isDev
+          ? inputValue[inputContent.id as keyof typeof inputValue]
+          : undefined
+      }
       id={inputContent.id}
       name={inputContent.id}
       placeholder={inputContent.placeholder}
@@ -47,6 +60,11 @@ const Textarea = ({ inputContent, className }: InputFormProps) => {
   return (
     <textarea
       id={inputContent.id}
+      defaultValue={
+        isDev
+          ? inputValue[inputContent.id as keyof typeof inputValue]
+          : undefined
+      }
       name={inputContent.id}
       placeholder={inputContent.placeholder}
       required={inputContent.required}
