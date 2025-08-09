@@ -48,21 +48,23 @@ export const contactContent: ContactSection = {
       ],
       required: false,
     },
-     attachments: {
-       id: 'form_attachments',
-       type: 'file',
-       label: 'Archivos adjuntos',
-       placeholder: 'Arrastra aquí tus archivos o haz clic para seleccionarlos',
-       required: false,
-       maxSize: 40,
-       accept: {
-         'image/jpeg': ['.jpeg', '.jpg'],
-         'image/png': ['.png'],
-         'application/pdf': ['.pdf'],
-         'application/msword': ['.doc'],
-         'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'],
-       },
-     },    submit: {
+    attachments: {
+      id: 'form_attachments',
+      type: 'file',
+      label: 'Archivos adjuntos',
+      placeholder: 'Arrastra aquí tus archivos o haz clic para seleccionarlos',
+      required: false,
+      maxSize: 30,
+      accept: {
+        'image/jpeg': ['.jpeg', '.jpg'],
+        'image/png': ['.png'],
+        'application/pdf': ['.pdf'],
+        'application/msword': ['.doc'],
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+          ['.docx'],
+      },
+    },
+    submit: {
       id: 'form_button',
       type: 'submit',
       label: 'Enviar mensaje',
